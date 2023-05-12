@@ -9,7 +9,7 @@ const swiper = useSwiper()
 <style>
 .next{
   position: absolute;
-    bottom: 130px;
+    bottom: 250px;
     right: 27px;
     z-index: 9999;
     background-color: transparent;
@@ -21,7 +21,7 @@ const swiper = useSwiper()
 .prev{
     position: absolute;
     left: 27px;
-    bottom: 130px;
+    bottom: 250px;
     z-index: 9999;
     background-color: transparent;
     color: #ffff;

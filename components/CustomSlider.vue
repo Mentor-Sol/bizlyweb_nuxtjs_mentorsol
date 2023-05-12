@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <Swiper :height="700" :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
-      :effect="'creative'" :creative-effect="{
+  <div className="feature">
+    <Swiper
+      :height="700"
+      :modules="[SwiperAutoplay, SwiperEffectCreative]"
+      :slides-per-view="1"
+      :loop="true"
+      :effect="'creative'"
+    
+      :creative-effect="{
         prev: {
           shadow: false,
           translate: ['-20%', 0, -1],
@@ -9,19 +15,17 @@
         next: {
           translate: ['100%', 0, 0],
         },
-      }">
+      }"
+    >
       <SwiperSlide v-for="(slide, idx) in filtered" :key="idx">
         <img :src="slide" className="feature_img" />
         <div className="count ">
           <p>FEATURED</p>
           <div className="inner d-flex ">
-
             <img :src="MultipleImg" alt=" MultipleImg" />
             <span>{{ idx + 1 }}/{{ filtered.length }}</span>
-
           </div>
         </div>
-
       </SwiperSlide>
       <SwiperControls />
     </Swiper>
@@ -43,7 +47,7 @@ watchEffect(() => {
 });
 </script>
 <style>
-.swiper-slide {
+.feature .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,18 +55,18 @@ watchEffect(() => {
   font-size: 4rem;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
+  height: 550px;
 }
 
-.feature_img {
+.feature .feature_img {
   width: 100%;
+  height: 100%
 }
-
 .swiper-wrapper {
   min-width: 100vh;
   width: 100vh;
   position: relative;
 }
-
 
 .count {
   right: 10px;
@@ -75,7 +79,6 @@ watchEffect(() => {
   color: white;
   top: 7px;
   font-size: large;
-
 }
 
 .count p {
@@ -100,4 +103,5 @@ watchEffect(() => {
 .swiper-cards .swiper-slide {
   border-radius: 6px;
   border: 1px solid black;
-}</style>
+}
+</style>

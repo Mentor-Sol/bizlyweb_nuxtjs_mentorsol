@@ -69,7 +69,8 @@
             <div className="col-lg-6 tabsInner">
               <div className="socialIcon">
                 <p>Socials</p>
-                <div className="d-flex Icons">
+                <span className="text-light" v-if="!data?.social_networks?.length">No Social networks added yet</span >
+                <div className="d-flex Icons" v-if="data?.social_networks?.length">
                   <div
                     v-for="(item, index) in data?.social_networks"
                     :key="index"
@@ -168,58 +169,13 @@
                 </p>
               </div>
               <div className="galleryTwo">
-                <div>
-                  <Swiper
-                    :height="300"
-                    :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                    :slides-per-view="1"
-                    :loop="true"
-                    :effect="'creative'"
-                    :autoplay="{
-                      delay: 2000,
-                      disableOnInteraction: true,
-                    }"
-                    :creative-effect="{
-                      prev: {
-                        shadow: false,
-                        translate: ['-20%', 0, -1],
-                      },
-                      next: {
-                        translate: ['100%', 0, 0],
-                      },
-                    }"
-                  >
-                    <SwiperSlide v-for="(slide, idx) in images" :key="idx">
-                      <img :src="slide" className="feature_img" />
-                      <div className="subContent">
-                        <div className="imgNumber d-flex">
-                          <img :src="Videoalbum" alt=" MultipleImg" />
+                <SwiperComponent :images="images"/>
 
-                          <span>{{ idx + 1 }}/{{ images.length }}</span>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
-
-                <p className="subContentDesc">
-                  video Title Goes here until it runs out of space.
-                </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 p-lg-0">
-              <div className="galleryThree">
-                <div className="subContent">
-                  <div className="imgNumber d-flex">
-                    <img :src="MultipleImg" alt=" MultipleImg" />
-
-                    <span>1/10</span>
-                  </div>
-                </div>
-
-                <p className="subContentDesc">
-                  Title Goes here until it runs out of space.
-                </p>
+              <div className="galleryFive">
+               <SwiperComponent :images="images" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6">
@@ -235,17 +191,8 @@
                 </p>
               </div>
               <div className="galleryFive">
-                <div className="subContent">
-                  <div className="imgNumber d-flex">
-                    <img :src="MultipleImg" alt=" MultipleImg" />
+                <SwiperComponent :images="images"/>
 
-                    <span>1/10</span>
-                  </div>
-                </div>
-
-                <p className="subContentDesc">
-                  Title Goes here until it runs out of space.
-                </p>
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 p-lg-0">
@@ -261,42 +208,8 @@
                 </p>
               </div>
               <div className="gallerySeven">
-                <div>
-                  <Swiper
-                    :height="300"
-                    :modules="[SwiperAutoplay, SwiperEffectCreative]"
-                    :slides-per-view="1"
-                    :loop="true"
-                    :effect="'creative'"
-                    :autoplay="{
-                      delay: 4000,
-                      disableOnInteraction: true,
-                    }"
-                    :creative-effect="{
-                      prev: {
-                        shadow: false,
-                        translate: ['-20%', 0, -1],
-                      },
-                      next: {
-                        translate: ['100%', 0, 0],
-                      },
-                    }"
-                  >
-                    <SwiperSlide v-for="(slide, idx) in images" :key="idx">
-                      <img :src="slide" className="feature_img" />
-                      <div className="subContent">
-                        <div className="imgNumber d-flex">
-                          <img :src="Videoalbum" alt=" MultipleImg" />
-                          <span>{{ idx + 1 }}/{{ images.length }}</span>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                </div>
+                <SwiperComponent :images="images"/>
 
-                <p className="subContentDesc">
-                  Title Goes here until it runs out of space.
-                </p>
               </div>
               <div className="galleryEight">
                 <div className="subContent">
@@ -463,23 +376,25 @@ import Clock from "../assets/images/clock.png";
 import Timezone from "../assets/images/timezone.svg";
 import Travel from "../assets/images/travel.png";
 import Passport from "../assets/images/passport.svg";
-
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
 import CustomButton from "./CustomButton.vue";
+
 const { data } = storeToRefs(useStore());
-let videos = ref([]);
+let imageGallery = ref([]);
+
 const images = [
-  "https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68",
-  "https://fastly.picsum.photos/id/11/2500/1667.jpg?hmac=xxjFJtAPgshYkysU_aqx2sZir-kIOjNR9vx0te7GycQ",
-  "https://fastly.picsum.photos/id/13/2500/1667.jpg?hmac=SoX9UoHhN8HyklRA4A3vcCWJMVtiBXUg0W4ljWTor7s",
-  "https://fastly.picsum.photos/id/14/2500/1667.jpg?hmac=ssQyTcZRRumHXVbQAVlXTx-MGBxm6NHWD3SryQ48G-o",
+  "https://fastly.picsum.photos/id/6/5000/3333.jpg?hmac=pq9FRpg2xkAQ7J9JTrBtyFcp9-qvlu8ycAi7bUHlL7I",
+  "https://fastly.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0",
+  "https://fastly.picsum.photos/id/23/3887/4899.jpg?hmac=2fo1Y0AgEkeL2juaEBqKPbnEKm_5Mp0M2nuaVERE6eE",
+  "https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI",
 ];
+
 watchEffect(() => {
-  const images = data.value?.content?.filter(
+  const imgGallery = data.value?.content?.filter(
     (el) => el.content_type === "image_gallery"
   );
-  videos.value = images?.flatMap((el) => el.image_kit_ids);
+  imageGallery.value = imgGallery?.flatMap((el) => el.image_kit_ids);
 });
 
 const biz_button_options = data?.biz_button_options;

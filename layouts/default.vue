@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Header v-if="route.path === '/'"/>
+    <Header/>
     <slot />
-    <Footer v-if="route.path === '/'"/>
+    <Footer/>
   </div>
 </template>
 <script setup>
-const route = useRoute();
+
 </script>
