@@ -26,8 +26,33 @@
       </div>
     </div>
   </div>
-  <div className="text-center" v-if="route.path === '/home'">
-    Header will be placed here for new page
+  
+  <div class="Home-header" v-if="route.path === '/home'">
+    <div class="container-fluid">
+     
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-between">
+          <div class="logo">
+              <img src="../assets/images/Home-Logo.png" alt="">
+          </div>
+          <div class="header-icons d-flex gap-3 align-items-center">
+            <div class="notification-icon">
+              <img src="../assets/images/bookmark.png" alt="">
+
+            </div>
+           <div class="notification-icon">
+            <img src="../assets/images/notification.png" alt="" >
+            <span>5</span>
+           </div>
+           <div class="notification-icon"> 
+            <img src="../assets/images/message.png" alt="" >
+            <span>9+</span>
+
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script setup>
