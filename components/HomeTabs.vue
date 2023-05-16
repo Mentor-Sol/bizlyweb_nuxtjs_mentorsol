@@ -46,34 +46,8 @@
         </button>
       </li>
     </ul>
-    <div class="tab-content" id="myTabContentHome">
-      <div
-        class="tab-pane fade show active"
-        id="contact"
-        role="tabpanel"
-        aria-labelledby="contact-tab"
-      >
-        <div className="TabsWrapper">
-          <h1>hello</h1>
-        </div>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="content"
-        role="tabpanel"
-        aria-labelledby="content-tab"
-      >
-     <h2>hi</h2>
-      </div>
-      <div
-        class="tab-pane fade"
-        id="services"
-        role="tabpanel"
-        aria-labelledby="services-tab"
-      >
-       <h1>heloooo</h1>
-      </div>
-    </div>
+  
   </template>
+  
   
 
