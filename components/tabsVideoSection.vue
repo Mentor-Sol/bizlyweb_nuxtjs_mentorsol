@@ -4,7 +4,7 @@
         <div class="inner-header-tabs d-flex justify-content-between">
             <div class="header-tabs-name d-flex align-items-center gap-1">
                 <div>
-                    <img src="../assets/images/image album.png" alt="">
+                    <img :src="ImageAlbum" alt="">
 
                 </div>
                 <div class="d-flex align-items-center gap-3">
@@ -14,13 +14,13 @@
                 </div>
             </div>
             <div class="header-tabs-icons d-flex gap-4 align-items-center">
-                <img src="../assets/images/bookmark-tabs.png" alt="">
-                <img src="../assets/images/Menu_tabs.png" alt="">
+                <img :src="bookmarket" alt="">
+                <img :src="MenuTab" alt="">
             </div>
         </div>
         <div class="Tabs-title  d-flex align-items-center gap-3">
             <div>
-                <img src="../assets/images/title-img.png" alt="">
+                <img :src="TitleImage" alt="">
             </div>
             <div class="Tabs-title-name">
                 <h5>Meghan Smith <span>(She/Her)</span></h5>
@@ -42,11 +42,11 @@
         </div>
         <div class="inner-footer-tabs d-flex justify-content-around">
             <div class="footer-messages d-flex align-items-center gap-2">
-                <img src="../assets/images/message-tabs.png" alt="">
+                <img :src="Messagetabs" alt="">
                 <p>bizMessage</p>
             </div>
             <div class="footer-share d-flex align-items-center gap-2">
-                <img src="../assets/images/share-tabs.png" alt="">
+                <img :src="ShareTabImage" alt="">
                 <p>Share</p>
             </div>
         </div>
@@ -54,7 +54,12 @@
 </template>
 <script setup>
 import ThumbnailVideo from './VideoThumbnail.vue';
-
+import ShareTabImage from "../assets/images/share-tabs.png"
+import Messagetabs from "../assets/images/message-tabs.png"
+import TitleImage from "../assets/images/title-img.png"
+import ImageAlbum from "../assets/images/image album.png"
+import bookmarket from "../assets/images/bookmark-tabs.png"
+import MenuTab from "../assets/images/Menu_tabs.png"
 
 
 </script>

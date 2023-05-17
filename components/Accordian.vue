@@ -2,23 +2,12 @@
   <div class="accordion" :id="id">
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingOne">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseOne"
-          aria-expanded="false"
-          aria-controls="collapseOne"
-        >
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+          aria-expanded="false" aria-controls="collapseOne">
           Title of Service
         </button>
       </h2>
-      <div
-        id="collapseOne"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingOne"
-        :data-bs-parent="`#${id}`"
-      >
+      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" :data-bs-parent="`#${id}`">
         <div class="accordion-body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -32,23 +21,12 @@
     </div>
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingTwo">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapseTwo"
-          aria-expanded="false"
-          aria-controls="collapseTwo"
-        >
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+          aria-expanded="false" aria-controls="collapseTwo">
           Title of Service
         </button>
       </h2>
-      <div
-        id="collapseTwo"
-        class="accordion-collapse collapse"
-        aria-labelledby="headingTwo"
-        :data-bs-parent="`#${id}`"
-      >
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" :data-bs-parent="`#${id}`">
         <div class="accordion-body">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
