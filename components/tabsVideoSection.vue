@@ -4,12 +4,12 @@
         <div class="inner-header-tabs d-flex justify-content-between">
             <div class="header-tabs-name d-flex align-items-center gap-1">
                 <div>
-                    <img :src="ImageAlbum" alt="">
+                    <img :src="BlackImgVideo" alt="">
 
                 </div>
                 <div class="d-flex align-items-center gap-3">
                     <p>10</p>
-                    <p>Image Gallery Name</p>
+                    <p>Video Playlist Name</p>
                     <span>5d</span>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <span>Writer</span>
                     <span>Director</span>
                 </div>
-                <p>Camera Operator <span>at</span> Paramount Pictures</p>
+                <p>CEO <span>at</span> Biz Technologies</p>
             </div>
 
         </div>
@@ -54,12 +54,12 @@
 </template>
 <script setup>
 import ThumbnailVideo from './VideoThumbnail.vue';
-import ShareTabImage from "../assets/images/share-tabs.png"
-import Messagetabs from "../assets/images/message-tabs.png"
-import TitleImage from "../assets/images/title-img.png"
-import ImageAlbum from "../assets/images/image album.png"
-import bookmarket from "../assets/images/bookmark-tabs.png"
-import MenuTab from "../assets/images/Menu_tabs.png"
+import ShareTabImage from "~/assets/images/share-tabs.png"
+import Messagetabs from "~/assets/images/message-tabs.png"
+import TitleImage from "~/assets/images/title-img.png"
+import BlackImgVideo from "~/assets/images/videoblackimg.png"
+import bookmarket from "~/assets/images/bookmark-tabs.png"
+import MenuTab from "~/assets/images/Menu_tabs.png"
 
 
 </script>
