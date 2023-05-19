@@ -30,7 +30,7 @@
 </template>
 <script setup>
 
-import MultipleImg from "../assets/images/multipleImg.svg";
+import MultipleImg from "~/assets/images/multipleImg.svg";
 
 const props=defineProps({
     images: Array

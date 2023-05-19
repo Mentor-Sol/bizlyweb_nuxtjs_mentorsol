@@ -353,29 +353,29 @@
 </template>
 
 <script setup>
-import Twitter from "../assets/images/Twitter.svg";
-import Instagram from "../assets/images/instagram.svg";
-import Google from "../assets/images/Google.svg";
-import LinkedIn from "../assets/images/Twitter.svg";
-import Facebook from "../assets/images/facebook.svg";
-import Phone from "../assets/images/phone.svg";
-import Email from "../assets/images/email.svg";
-import MultipleImg from "../assets/images/multipleImg.svg";
+import Twitter from "~/assets/images/Twitter.svg";
+import Instagram from "~/assets/images/instagram.svg";
+import Google from "~/assets/images/Google.svg";
+import LinkedIn from "~/assets/images/Twitter.svg";
+import Facebook from "~/assets/images/facebook.svg";
+import Phone from "~/assets/images/phone.svg";
+import Email from "~/assets/images/email.svg";
+import MultipleImg from "~/assets/images/multipleImg.svg";
 
-import LinkIcon from "../assets/images/Link.svg";
-import locationIcon from "../assets/images/location1.svg";
-import Contact from "../assets/images/contact.svg";
-import Content from "../assets/images/content.svg";
-import Services from "../assets/images/services.svg";
-import Videoalbum from "../assets/images/videoalbum.svg";
-import layoutFluid from "../assets/images/layout-fluid.svg";
-import LinkGallery from "../assets/images/Linkgallery.svg";
-import Gallery from "../assets/images/gallery.svg";
-import Video from "../assets/images/video.svg";
-import Clock from "../assets/images/clock.png";
-import Timezone from "../assets/images/timezone.svg";
-import Travel from "../assets/images/travel.png";
-import Passport from "../assets/images/passport.svg";
+import LinkIcon from "~/assets/images/Link.svg";
+import locationIcon from "~/assets/images/location1.svg";
+import Contact from "~/assets/images/contact.svg";
+import Content from "~/assets/images/content.svg";
+import Services from "~/assets/images/services.svg";
+import Videoalbum from "~/assets/images/videoalbum.svg";
+import layoutFluid from "~/assets/images/layout-fluid.svg";
+import LinkGallery from "~/assets/images/Linkgallery.svg";
+import Gallery from "~/assets/images/gallery.svg";
+import Video from "~/assets/images/video.svg";
+import Clock from "~/assets/images/clock.png";
+import Timezone from "~/assets/images/timezone.svg";
+import Travel from "~/assets/images/travel.png";
+import Passport from "~/assets/images/passport.svg";
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
 import CustomButton from "./CustomButton.vue";

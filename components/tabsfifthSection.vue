@@ -1,16 +1,15 @@
 
-
 <template>
     <div class="inner-tabs-wrapper">
         <div class="inner-header-tabs d-flex justify-content-between">
             <div class="header-tabs-name d-flex align-items-center gap-1">
                 <div>
-                    <img :src="ImageAlbum" alt="">
+                    <img :src="BlackImgVideo" alt="">
 
                 </div>
                 <div class="d-flex align-items-center gap-3">
                     <p>10</p>
-                    <p>Image Gallery Name</p>
+                    <p>Video Playlist Name</p>
                     <span>5d</span>
                 </div>
             </div>
@@ -30,7 +29,7 @@
                     <span>Writer</span>
                     <span>Director</span>
                 </div>
-                <p>Camera Operator <span>at</span> Paramount Pictures</p>
+                <p>CEO <span>at</span> Biz Technologies</p>
             </div>
 
         </div>
@@ -39,7 +38,7 @@
                     href="#">see more</a></p>
         </div>
         <div class="main-thums-Slider">
-            <Thumbsgallery />
+            <FifthVideoThumbanil/>
         </div>
         <div class="inner-footer-tabs d-flex justify-content-around">
             <div class="footer-messages d-flex align-items-center gap-2">
@@ -54,11 +53,14 @@
     </div>
 </template>
 <script setup>
-import Thumbsgallery from './Thumbsgallery.vue';
+import ThumbnailVideo from './VideoThumbnail.vue';
 import ShareTabImage from "~/assets/images/share-tabs.png"
 import Messagetabs from "~/assets/images/message-tabs.png"
 import TitleImage from "~/assets/images/title-img.png"
-import ImageAlbum from "~/assets/images/image album.png"
+import BlackImgVideo from "~/assets/images/Playlist.png"
 import bookmarket from "~/assets/images/bookmark-tabs.png"
 import MenuTab from "~/assets/images/Menu_tabs.png"
+import FifthVideoThumbanil from './FifthVideoThumbanil.vue';
+
+
 </script>

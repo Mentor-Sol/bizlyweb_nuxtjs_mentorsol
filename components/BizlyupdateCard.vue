@@ -2,7 +2,7 @@
 <div class="bizly-card d-flex flex-column justify-content-end">
     <div class="d-flex align-items-center gap-2 inner-bizly-card">
         <div>
-            <img src="../assets/images/video-icon.png" alt="">
+        <img :src= "VideoIcon" alt="Self " />
         </div>
        <div class="d-flex  align-items-center gap-3">
         <p>Video</p> 
@@ -15,3 +15,10 @@
     </div>
 </div>
 </template>
+<script setup>
+import VideoIcon from "~/assets/images/video-icon.png"
+
+
+
+
+</script>

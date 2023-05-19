@@ -34,7 +34,7 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { useStore } from "../store";
-import MultipleImg from "../assets/images/multipleImg.svg";
+import MultipleImg from "~/assets/images/multipleImg.svg";
 
 const { data } = storeToRefs(useStore());
 let filtered = ref([]);

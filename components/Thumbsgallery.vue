@@ -16,18 +16,19 @@
           <div class="d-flex justify-content-between slider-inner-icons">
             <div class="d-flex align-items-center gap-3">
                 <div class="img-box">
-                    <img src="../assets/images/user-slider.png" alt="">
+                  <img :src="UserSlider" alt="">
+              
 
                 </div>
                 <div class="img-box">
-                    <img src="../assets/images/Tag-slider.png" alt="">
-
+                  <img :src="TagSlider" alt="">
+                   
                 </div>
             </div>
             <div>
                 <div class="img-box">
-                    <img src="../assets/images/Image-icon-slider.png" alt="">
-
+                  <img :src="ImageIconSlider" alt="">
+                  
                 </div>
             </div>
           </div>
@@ -38,18 +39,19 @@
           <div class="d-flex justify-content-between slider-inner-icons">
             <div class="d-flex align-items-center gap-3">
                 <div class="img-box">
-                    <img src="../assets/images/user-slider.png" alt="">
+                  <img :src="UserSlider" alt="">
+              
 
                 </div>
                 <div class="img-box">
-                    <img src="../assets/images/Tag-slider.png" alt="">
-
+                  <img :src="TagSlider" alt="">
+                   
                 </div>
             </div>
             <div>
                 <div class="img-box">
-                    <img src="../assets/images/Image-icon-slider.png" alt="">
-
+                  <img :src="ImageIconSlider" alt="">
+                  
                 </div>
             </div>
           </div></swiper-slide
@@ -59,18 +61,19 @@
           <div class="d-flex justify-content-between slider-inner-icons">
             <div class="d-flex align-items-center gap-3">
                 <div class="img-box">
-                    <img src="../assets/images/user-slider.png" alt="">
+                  <img :src="UserSlider" alt="">
+              
 
                 </div>
                 <div class="img-box">
-                    <img src="../assets/images/Tag-slider.png" alt="">
-
+                  <img :src="TagSlider" alt="">
+                   
                 </div>
             </div>
             <div>
                 <div class="img-box">
-                    <img src="../assets/images/Image-icon-slider.png" alt="">
-
+                  <img :src="ImageIconSlider" alt="">
+                  
                 </div>
             </div>
           </div>
@@ -82,18 +85,19 @@
           <div class="d-flex justify-content-between slider-inner-icons">
             <div class="d-flex align-items-center gap-3">
                 <div class="img-box">
-                    <img src="../assets/images/user-slider.png" alt="">
+                  <img :src="UserSlider" alt="">
+              
 
                 </div>
                 <div class="img-box">
-                    <img src="../assets/images/Tag-slider.png" alt="">
-
+                  <img :src="TagSlider" alt="">
+                   
                 </div>
             </div>
             <div>
                 <div class="img-box">
-                    <img src="../assets/images/Image-icon-slider.png" alt="">
-
+                  <img :src="ImageIconSlider" alt="">
+                  
                 </div>
             </div>
           </div>
@@ -159,5 +163,14 @@
       };
     }
   }
+  </script>
+  <script setup>
+  import Thumbsgallery from './Thumbsgallery.vue';
+  import UserSlider from "~/assets/images/user-slider.png"
+  import TagSlider from "~/assets/images/Tag-slider.png"
+  import ImageIconSlider  from "~/assets/images/Image-icon-slider.png"
+  import ImageAlbum from "~/assets/images/image album.png"
+  import bookmarket from "~/assets/images/bookmark-tabs.png"
+  import MenuTab from "~/assets/images/Menu_tabs.png"
   </script>
   
