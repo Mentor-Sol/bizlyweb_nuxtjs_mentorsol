@@ -40,7 +40,7 @@
               <img src="../assets/images/bookmark.png" alt="">
 
             </div>
-           <div class="notification-icon">
+           <div class="notification-icon"  @click="toggleNotificationComponent">
             <img src="../assets/images/notification.png" alt="" >
             <span>5</span>
            </div>
@@ -49,6 +49,10 @@
             <span>9+</span>
 
            </div>
+        
+    <NotificationComponent v-if="showNotificationComponent" />
+
+ 
           </div>
         </div>
       </div>
@@ -58,10 +62,26 @@
 <script setup>
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
-
+import NotificationComponent from '../components/NotificationDetail.vue'
 const { data } = storeToRefs(useStore());
 const myValue = ref('');
 const route = useRoute();
 
 
 </script>
+<script>
+export default {
+  components: {
+    NotificationComponent
+  },
+  data() {
+    return {
+      showNotificationComponent: false
+    }
+  },
+  methods: {
+    toggleNotificationComponent() {
+      this.showNotificationComponent = !this.showNotificationComponent
+    }
+  }
+}</script>
