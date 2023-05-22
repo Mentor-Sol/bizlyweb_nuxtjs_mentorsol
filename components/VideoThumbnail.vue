@@ -2,53 +2,60 @@
   <div class="video-container">
     <div class="video">
       <div class="thumbnail-overlay" @click="playVideo(videos[0])">
-        <video :src="videos[0].videoUrl" :poster="videos[0].thumbnailUrl" alt="Video Thumbnail" class="thumbnail-image">
-        </video>
+        <video
+          :src="videos[0].videoUrl"
+          :poster="videos[0].thumbnailUrl"
+          alt="Video Thumbnail"
+          class="thumbnail-image"
+        ></video>
         <div class="play-button">
           <i class="fas fa-play"></i>
         </div>
       </div>
-     
+
       <div class="d-flex justify-content-between slider-inner-icons">
         <div class="d-flex align-items-center gap-3">
           <div class="img-box">
-            <img :src="UserSlider" alt="">
-
-
+            <img :src="UserSlider" alt="" />
           </div>
           <div class="img-box">
-            <img :src="TagSlider" alt="">
-
+            <img :src="TagSlider" alt="" />
           </div>
         </div>
         <div>
           <div class="img-box-value d-flex align-items-center gap-2">
-            <img :src="VideoAlbum" alt="">
+            <img :src="VideoAlbum" alt="" />
             <p>5</p>
-
           </div>
         </div>
       </div>
     </div>
 
     <div class="thumbnails">
-      <div v-for="video in videos.slice(1)" :key="video.id" class="thumbnail-container">
+      <div
+        v-for="video in videos.slice(1)"
+        :key="video.id"
+        class="thumbnail-container"
+      >
         <div class="thumbnail-overlay" @click="playVideo(video)">
-          <video :src="video.videoUrl" controls :poster="video.thumbnailUrl" alt="Video Thumbnail"
-            class="thumbnail-image">
-          </video>
-
+          <video
+            :src="video.videoUrl"
+            controls
+            :poster="video.thumbnailUrl"
+            alt="Video Thumbnail"
+            class="thumbnail-image"
+          ></video>
         </div>
         <div class="video-description">
           <div class="inner-video-description">
-
             <div class="video-timing">
               <p>02:10</p>
             </div>
             <div class="video-description">
-              <p >Lorem ipsum dolor sit amet, adipiscing elit. Etiam eu con...</p>
+              <p>
+                Lorem ipsum dolor sit amet, adipiscing elit. Etiam eu con...
+              </p>
             </div>
-           
           </div>
         </div>
       </div>
@@ -58,47 +65,48 @@
 
 <script>
 export default {
-  name: 'VideoPage',
+  name: "VideoPage",
   data() {
     return {
       videos: [
         {
           id: 1,
-          videoUrl: 'https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4',
-          thumbnailUrl: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-          title: 'Video 1',
-          description: 'Description for Video 1'
+          videoUrl:
+            "https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4",
+          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          title: "Video 1",
+          description: "Description for Video 1",
         },
         {
           id: 2,
-          videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_2',
-          thumbnailUrl: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-          title: 'Video 2',
-          description: 'Description for Video 2'
+          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
+          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          title: "Video 2",
+          description: "Description for Video 2",
         },
         {
           id: 3,
-          videoUrl: 'https://www.youtube.com/embed/VIDEO_ID_3',
-          thumbnailUrl: 'https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg',
-          title: 'Video 3',
-          description: 'Description for Video 3'
+          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          title: "Video 3",
+          description: "Description for Video 3",
         },
         // Add more video objects as needed
-      ]
+      ],
     };
   },
 
   methods: {
     playVideo(video) {
       // Handle video playback
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
 .video-container {
- height: 100%;
+  height: 100%;
 }
 
 .video {
@@ -112,7 +120,6 @@ export default {
   width: 100%;
   height: 100%;
   cursor: pointer;
-
 }
 
 .thumbnail-image {
@@ -159,8 +166,6 @@ export default {
   margin-bottom: 5px;
 }
 
-
-
 .thumbnails {
   display: flex;
   position: absolute;
@@ -176,41 +181,38 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-
 }
 
-.inner-video-description .video-timing p{
+.inner-video-description .video-timing p {
   width: 46px;
   height: 24px;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(2px);
   border-radius: 13px;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 4px 8px;
   float: right;
 }
-.inner-video-description{
+.inner-video-description {
   height: 100%;
   width: 100%;
 }
 
-.inner-video-description .video-description p{
-  font-family: 'Roboto';
+.inner-video-description .video-description p {
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding-top: 57px;
   margin-bottom: 0;
-
 }
-
 
 /* Note: backdrop-filter has minimal browser support */
 
@@ -219,8 +221,6 @@ export default {
   height: 140px;
   filter: drop-shadow(0px -1px 15px rgba(0, 0, 0, 0.55));
   position: relative;
-
-
 }
 
 .thumbnail-image {
@@ -244,10 +244,7 @@ export default {
 }
 </style>
 <script setup>
-
-import UserSlider from "~/assets/images/user-slider.png"
-import TagSlider from "~/assets/images/Tag-slider.png"
-import VideoAlbum from "~/assets/images/videoalbum.png"
-import VideoImageGallery from "~/assets/imagesVideoImageGallery.png"
-
+import UserSlider from "~/assets/images/user-slider.png";
+import TagSlider from "~/assets/images/Tag-slider.png";
+import VideoAlbum from "~/assets/images/videoalbum.png";
 </script>
