@@ -69,8 +69,15 @@
             <div className="col-lg-6 tabsInner">
               <div className="socialIcon">
                 <p>Socials</p>
-                <span className="text-light" v-if="!data?.social_networks?.length">No Social networks added yet</span >
-                <div className="d-flex Icons" v-if="data?.social_networks?.length">
+                <span
+                  className="text-light"
+                  v-if="!data?.social_networks?.length"
+                  >No Social networks added yet</span
+                >
+                <div
+                  className="d-flex Icons"
+                  v-if="data?.social_networks?.length"
+                >
                   <div
                     v-for="(item, index) in data?.social_networks"
                     :key="index"
@@ -169,13 +176,12 @@
                 </p>
               </div>
               <div className="galleryTwo">
-                <SwiperComponent :images="images"/>
-
+                <SwiperComponent :images="images" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 p-lg-0">
               <div className="galleryFive">
-               <SwiperComponent :images="images" />
+                <SwiperComponent :images="images" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6">
@@ -191,8 +197,7 @@
                 </p>
               </div>
               <div className="galleryFive">
-                <SwiperComponent :images="images"/>
-
+                <SwiperComponent :images="images" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-6 p-lg-0">
@@ -208,8 +213,7 @@
                 </p>
               </div>
               <div className="gallerySeven">
-                <SwiperComponent :images="images"/>
-
+                <SwiperComponent :images="images" />
               </div>
               <div className="galleryEight">
                 <div className="subContent">
@@ -367,11 +371,9 @@ import locationIcon from "~/assets/images/location1.svg";
 import Contact from "~/assets/images/contact.svg";
 import Content from "~/assets/images/content.svg";
 import Services from "~/assets/images/services.svg";
-import Videoalbum from "~/assets/images/videoalbum.svg";
 import layoutFluid from "~/assets/images/layout-fluid.svg";
 import LinkGallery from "~/assets/images/Linkgallery.svg";
 import Gallery from "~/assets/images/gallery.svg";
-import Video from "~/assets/images/video.svg";
 import Clock from "~/assets/images/clock.png";
 import Timezone from "~/assets/images/timezone.svg";
 import Travel from "~/assets/images/travel.png";
