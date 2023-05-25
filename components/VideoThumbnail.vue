@@ -63,47 +63,41 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "VideoPage",
-  data() {
-    return {
-      videos: [
-        {
-          id: 1,
-          videoUrl:
-            "https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 1",
-          description: "Description for Video 1",
-        },
-        {
-          id: 2,
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 2",
-          description: "Description for Video 2",
-        },
-        {
-          id: 3,
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 3",
-          description: "Description for Video 3",
-        },
-        // Add more video objects as needed
-      ],
-    };
+<script setup>
+import UserSlider from "~/assets/images/user-slider.png";
+import TagSlider from "~/assets/images/Tag-slider.png";
+import VideoAlbum from "~/assets/images/videoalbum.png";
+const videos = [
+  {
+    id: 1,
+    videoUrl:
+      "https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 1",
+    description: "Description for Video 1",
+  },
+  {
+    id: 2,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 2",
+    description: "Description for Video 2",
+  },
+  {
+    id: 3,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 3",
   },
 
-  methods: {
-    playVideo(video) {
-      // Handle video playback
-    },
-  },
+  // Add more video objects as needed
+];
+const playVideo = (video) => {
+  // Handle video playback
+  console.log(video);
 };
 </script>
-
 <style scoped>
 .video-container {
   height: 100%;
@@ -243,8 +237,3 @@ export default {
   }
 }
 </style>
-<script setup>
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/videoalbum.png";
-</script>

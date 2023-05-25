@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { Line } from 'vue-chartjs';
+import { Line } from "vue-chartjs";
 
 export default {
   extends: Line,
@@ -20,7 +20,7 @@ export default {
     },
   },
   mounted() {
-    this.renderChart(this.chartData, this.chartOptions);
+    // this.renderChart(this.chartData, this.chartOptions);
   },
 };
 </script>

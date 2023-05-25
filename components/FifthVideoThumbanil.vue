@@ -62,50 +62,42 @@
 </template>
 
 <script>
-export default {
-  name: "VideoPage",
-  data() {
-    return {
-      videos: [
-        {
-          id: 1,
-          videoUrl:
-            "https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 1",
-          description: "Description for Video 1",
-        },
-        {
-          id: 2,
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 2",
-          description: "Description for Video 2",
-        },
-        {
-          id: 3,
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 3",
-          description: "Description for Video 3",
-        },
-        {
-          id: 4,
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
-          thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-          title: "Video 3",
-          description: "Description for Video 4",
-        },
-        // Add more video objects as needed
-      ],
-    };
+const videos = [
+  {
+    id: 1,
+    videoUrl:
+      "https://kwot-music.s3.amazonaws.com/63971029624be6a835fe782a/fan-club/hrm954EnyISAnNwW4F7ELL2eZQ2pHT.mp4",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 1",
+    description: "Description for Video 1",
   },
+  {
+    id: 2,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 2",
+    description: "Description for Video 2",
+  },
+  {
+    id: 3,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 3",
+  },
+  {
+    id: 4,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 4",
+  },
+  // Add more video objects as needed
+];
 
-  methods: {
-    playVideo(video) {
-      // Handle video playback
-    },
-  },
+const playVideo = (video) => {
+  // Handle video playback
+  console.log(video);
 };
 </script>
 

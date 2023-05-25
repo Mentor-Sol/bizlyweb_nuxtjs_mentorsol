@@ -11,11 +11,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header w-100 d-flex flex-row-reverse">
-          <img
-            :src="CloseIcon"
-            data-bs-dismiss="modal"
-            alt="Self "
-          />
+          <img :src="CloseIcon" data-bs-dismiss="modal" alt="Self " />
         </div>
         <div class="modal-body p-0 BizzAppBody">
           <div className="BizzAppModal">
@@ -47,5 +43,6 @@ onMounted(() => {
 function _show() {
   thisModalObj.show();
 }
+
 defineExpose({ show: _show });
 </script>
