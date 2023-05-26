@@ -1,12 +1,15 @@
 <template>
   <div class="video-container">
     <div class="video">
-      <div class="thumbnail-overlay" @click="playVideo(videos[0])">
+      <div class="thumbnail-overlay">
         <video
-          :src="videos[0].videoUrl"
-          :poster="videos[0].thumbnailUrl"
+          :src="selectedVideo?.videoUrl"
+          :poster="selectedVideo?.thumbnailUrl"
           alt="Video Thumbnail"
+          controls
           class="thumbnail-image"
+          ref="videoRef"
+          autoplay
         ></video>
         <div class="play-button">
           <i class="fas fa-play"></i>
@@ -25,7 +28,7 @@
         <div>
           <div class="img-box-value d-flex align-items-center gap-2">
             <img :src="VideoAlbum" alt="" />
-            <p>5</p>
+            <p>{{ videos?.length }}</p>
           </div>
         </div>
       </div>
@@ -33,15 +36,15 @@
 
     <div class="thumbnails">
       <div
-        v-for="video in videos.slice(1)"
-        :key="video.id"
+        v-for="video in videos"
+        :key="video?.id"
         class="thumbnail-container"
+        @click="playVideo(video)"
       >
-        <div class="thumbnail-overlay" @click="playVideo(video)">
+        <div class="thumbnail-overlay">
           <video
-            :src="video.videoUrl"
-            controls
-            :poster="video.thumbnailUrl"
+            :src="video?.videoUrl"
+            :poster="video?.thumbnailUrl"
             alt="Video Thumbnail"
             class="thumbnail-image"
           ></video>
@@ -78,24 +81,22 @@ const videos = [
   },
   {
     id: 2,
-    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_2",
+    videoUrl:
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
     title: "Video 2",
     description: "Description for Video 2",
   },
-  {
-    id: 3,
-    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
-    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    title: "Video 3",
-    description: "Description for Video 3",
-  },
 
   // Add more video objects as needed
 ];
+const selectedVideo = useState(() => videos?.[0]);
+const videoRef = useState(undefined);
+
 const playVideo = (video) => {
   // Handle video playback
-  console.log(video);
+  selectedVideo.value = video;
+  videoRef.value.play();
 };
 </script>
 <style scoped>
