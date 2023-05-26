@@ -33,13 +33,17 @@
               </div>
               <div class="d-flex gap-2 inner-title-values">
                 <a href="#" @click="clicked">Manage Connections</a>
-                <a href="#">Edit <span>bizCard</span></a>
+                <a href="#" @click="showModal = true">Edit <span>bizCard</span></a>
+              <Modal :showModal="showModal"></Modal>
+
               </div>
+
             </div>
             <div class="inner-banner-icons d-flex gap-3 align-items-start">
               <img :src="BannerEyeIcon" alt="Ambassador" />
               <img :src="BannerDownloadIcon" alt="Ambassador" />
             </div>
+           
           </div>
         </div>
       </div>
@@ -52,6 +56,20 @@ import BannerEyeIcon from "~/assets/images/banner-eye-icon.png";
 import BannerDownloadIcon from "~/assets/images/banner-download-icon.png";
 import BannerUserImg from "~/assets/images/banner-user-img.png";
 import BannerNotificationIcon from "~/assets/images/banner-notification-icon.png";
+
+</script>
+<script>
+import Modal from '~/components/Modal.vue';
+export default {
+  components: {
+    Modal,
+  },
+  data() {
+    return {
+      showModal: false,
+    };
+  },
+};
 </script>
 <style lang="scss" scoped>
 $color_1: #ffffff;
@@ -64,6 +82,7 @@ $font-family_2: "Ubuntu";
   background-size: cover;
   padding: 80px 100px;
 }
+
 .inner-banner-title {
   .inner-title-name {
     h1 {
@@ -74,15 +93,18 @@ $font-family_2: "Ubuntu";
       line-height: 84px;
       color: $color_1;
     }
+
     a {
       padding: 6px 24px !important;
     }
   }
+
   a {
     span {
       font-family: $font-family_2;
       font-style: italic;
     }
+
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid #ffffff;
     font-family: $font-family_1;
@@ -96,8 +118,10 @@ $font-family_2: "Ubuntu";
     border-radius: 30px;
     padding: 12px 28px;
   }
+
   .inner-banner-values {
     text-align: center;
+
     h5 {
       font-family: $font-family_1;
       font-style: normal;
@@ -107,9 +131,11 @@ $font-family_2: "Ubuntu";
       color: $color_1;
       margin-bottom: 0;
     }
+
     img {
       margin-bottom: 5px;
     }
+
     p {
       font-family: $font-family_1;
       font-style: normal;
