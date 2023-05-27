@@ -38,6 +38,7 @@ const data = [
   },
   { name: "Tyler Maxwell" },
   { name: "Tyler Maxwell" },
+  { name: "Tyler Maxwell" },
 ];
 
 </script>

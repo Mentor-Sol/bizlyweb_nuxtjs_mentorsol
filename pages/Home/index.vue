@@ -35,7 +35,10 @@
                 </div>
 
             </div>
-            <div class="row">
+            <div class="row BizlyRow">
+                <div class="col-lg-6">
+                    <BizlyupdateCard />
+                </div>
                 <div class="col-lg-6">
                     <BizlyupdateCard />
                 </div>
@@ -91,6 +94,7 @@
 import BizlyupdateCard from '../../components/BizlyupdateCard.vue';
 import GetinTouch from '../../components/GetinTouch.vue';
 import HomeTabs from '../../components/HomeTabs.vue';
+import InsipiredCard from '../../components/InsipiredCard.vue';
 import TabSevnthSection from '../../components/TabSevnthSection.vue';
 import TabsEightSection from '../../components/TabsEightSection.vue';
 import TabsNightSection from '../../components/TabsNightSection.vue';

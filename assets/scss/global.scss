@@ -1557,6 +1557,14 @@ div#myTabContent {
     .inner-cards {
       padding: 0 16px;
       justify-content: space-between;
+      overflow-x: auto;
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 16px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
 
     .inner-insipired-card {
@@ -1614,7 +1622,14 @@ div#myTabContent {
         }
       }
     }
-
+.BizlyRow{
+  overflow-x: auto;
+  width: 100%;
+  flex-wrap: nowrap;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
     .bizly-card {
       background-image: url(../images/second-card-bg.png);
       background-position: center;
@@ -2193,6 +2208,10 @@ text-decoration: none;
 
   .swiper-wrapper {
     position: relative;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .slider-inner-icons {
       position: absolute;

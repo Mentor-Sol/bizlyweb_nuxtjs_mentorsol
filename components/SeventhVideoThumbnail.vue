@@ -164,6 +164,9 @@ const playVideo = (video) => {
   bottom: 95px;
   left: 16px;
   gap: 8px;
+  
+  
+  
 }
 
 .video-description {

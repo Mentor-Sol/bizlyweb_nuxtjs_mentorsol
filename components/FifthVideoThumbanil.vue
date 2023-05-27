@@ -211,7 +211,6 @@ const playVideo = (video) => {
   background: #000000;
   padding: 5px;
 }
-
 /* Note: backdrop-filter has minimal browser support */
 
 .thumbnail-container {
