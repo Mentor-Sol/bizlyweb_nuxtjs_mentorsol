@@ -1,6 +1,6 @@
 @import "bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@500&display=swap");
 
 * {
   padding: 0;
@@ -1231,7 +1231,8 @@ div#myTabContent {
 
   .BannerWrapper {
     .bannerImg {
-      img {}
+      img {
+      }
     }
 
     .bannerInner {
@@ -1422,15 +1423,18 @@ div#myTabContent {
   }
 }
 
-
 // Home Section
 
 // Home Header
 .Home-header {
   padding: 13px 100px;
   height: 57px;
-  background: linear-gradient(180deg, rgba(0, 31, 83, 0.9) 0%, rgba(0, 15, 50, 0.9) 100%);
-  border-bottom: 1px solid #546B91;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 31, 83, 0.9) 0%,
+    rgba(0, 15, 50, 0.9) 100%
+  );
+  border-bottom: 1px solid #546b91;
 
   .logo {
     img {
@@ -1447,13 +1451,13 @@ div#myTabContent {
       }
 
       span {
-        background: #FF3B30;
-        font-family: 'Roboto';
+        background: #ff3b30;
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 600;
         font-size: 10px;
         line-height: 10px;
-        color: #FFFFFF;
+        color: #ffffff;
         position: absolute;
         top: -2px;
         right: -6px;
@@ -1471,15 +1475,11 @@ div#myTabContent {
       }
     }
   }
-
-
 }
 
 // main-banner-section
 
-
 .Home-banner {
-
   background-color: #000000;
 
   .container {
@@ -1508,7 +1508,7 @@ div#myTabContent {
         margin: auto;
 
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 32px;
@@ -1516,17 +1516,15 @@ div#myTabContent {
           display: flex;
           align-items: center;
           text-align: center;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-bottom: 0;
-
         }
       }
-
     }
 
     .bizlyupdate {
       p {
-        font-family: 'Ubuntu' !important;
+        font-family: "Ubuntu" !important;
       }
     }
 
@@ -1534,22 +1532,22 @@ div#myTabContent {
       padding: 20px 0 5px 0;
 
       p {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 28px;
-        color: #FAFAFA;
+        color: #fafafa;
         margin-bottom: 0;
       }
 
       a {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
         line-height: 20px;
-        color: #2998FF;
+        color: #2998ff;
         text-decoration: none;
       }
     }
@@ -1560,7 +1558,6 @@ div#myTabContent {
     }
 
     .inner-insipired-card {
-      background-image: url(../images/card-img.png);
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -1579,37 +1576,35 @@ div#myTabContent {
       }
 
       h5 {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 28px;
-        color: #FFFFFF;
+        color: #ffffff;
         margin-bottom: 5px;
-
       }
 
       p {
-        font-family: 'Roboto';
+        font-family: "Roboto";
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;
-        color: #D9D9D9;
+        color: #d9d9d9;
         margin-bottom: 5px;
-
       }
 
       .home-location {
         margin-bottom: 20px;
 
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 20px;
-          color: #D9D9D9;
+          color: #d9d9d9;
           margin-bottom: 0;
         }
       }
@@ -1626,14 +1621,13 @@ div#myTabContent {
       height: 200px;
 
       .inner-bizly-card {
-
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 20px;
-          color: #BFBFBF;
+          color: #bfbfbf;
           margin-bottom: 0;
           position: relative;
 
@@ -1645,7 +1639,7 @@ div#myTabContent {
             top: 8px;
             right: -9px;
             border-radius: 50%;
-            background-color: #BFBFBF;
+            background-color: #bfbfbf;
           }
 
           &:last-child {
@@ -1654,18 +1648,16 @@ div#myTabContent {
             }
           }
         }
-
-
       }
 
       .bizly-card-desc {
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 500;
           font-size: 15px;
           line-height: 20px;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-bottom: 0;
         }
       }
@@ -1683,24 +1675,22 @@ div#myTabContent {
 
       .inner-getintouch {
         padding: 12px 15px;
-        background: #546B91;
+        background: #546b91;
         border-radius: 25px;
         cursor: pointer;
 
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 20px;
 
-          color: #FFFFFF;
+          color: #ffffff;
           margin-bottom: 0;
           white-space: nowrap;
         }
       }
-
-
     }
 
     .home-tabs {
@@ -1712,11 +1702,10 @@ div#myTabContent {
       margin: 0 !important;
       padding: 0px 0px 0px !important;
 
-
       .nav-link {
         width: 170px;
         border: none;
-        color: #BFBFBF;
+        color: #bfbfbf;
         background-color: transparent;
 
         img {
@@ -1725,12 +1714,12 @@ div#myTabContent {
         }
 
         p {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 20px;
-          color: #BFBFBF;
+          color: #bfbfbf;
           margin-bottom: 0px;
         }
       }
@@ -1745,21 +1734,20 @@ div#myTabContent {
         }
 
         P {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 500;
           font-size: 16px;
           line-height: 20px;
-          color: #FAFAFA;
+          color: #fafafa;
           margin-bottom: 0;
         }
       }
     }
-
   }
 
   .inner-container {
-    background: linear-gradient(179.97deg, #000510 0.02%, #000F32 99.65%);
+    background: linear-gradient(179.97deg, #000510 0.02%, #000f32 99.65%);
     padding: 24px 16px 0;
   }
 }
@@ -1774,27 +1762,22 @@ div#myTabContent {
     #myTabContentHome {
       background-color: transparent;
 
-
-
       .TabsWrapper {
         padding: 0;
         border: none;
-        background: #FFFFFF;
+        background: #ffffff;
 
         .inner-tabs-wrapper {
-          background: #FFFFFF;
+          background: #ffffff;
           box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
           border-radius: 16px;
 
           .inner-header-tabs {
             padding: 15px;
-            border-bottom: 1px solid #CDD5E1;
-
-
+            border-bottom: 1px solid #cdd5e1;
 
             .header-tabs-name {
               .header-tabs-name-dot {
-
                 position: relative;
 
                 &::after {
@@ -1802,17 +1785,15 @@ div#myTabContent {
                   position: absolute;
                   height: 3px;
                   width: 3px;
-                  background-color: #8C8C8C;
+                  background-color: #8c8c8c;
                   border-radius: 50%;
                   top: 11px;
                   right: -11px;
                 }
-
               }
 
-
               p {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 500;
                 font-size: 14px;
@@ -1826,7 +1807,7 @@ div#myTabContent {
                   position: absolute;
                   height: 3px;
                   width: 3px;
-                  background-color: #8C8C8C;
+                  background-color: #8c8c8c;
                   border-radius: 50%;
                   top: 8px;
                   right: -11px;
@@ -1834,13 +1815,12 @@ div#myTabContent {
               }
 
               span {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 20px;
-                color: #8C8C8C;
-
+                color: #8c8c8c;
               }
             }
           }
@@ -1850,7 +1830,7 @@ div#myTabContent {
 
             .Tabs-title-name {
               h5 {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 500;
                 font-size: 16px;
@@ -1859,20 +1839,18 @@ div#myTabContent {
                 margin-bottom: 5px;
 
                 span {
-                  font-family: 'Roboto';
+                  font-family: "Roboto";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 12px;
                   line-height: 16px;
-                  color: #8C8C8C;
-
+                  color: #8c8c8c;
                 }
-
               }
 
               .Tabs-feilds {
                 span {
-                  font-family: 'Roboto';
+                  font-family: "Roboto";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14px;
@@ -1887,18 +1865,15 @@ div#myTabContent {
                     height: 3px;
                     width: 3px;
                     background-color: #595959;
-                    ;
                     border-radius: 50%;
                     top: 8px;
                     right: -11px;
                   }
-
                 }
               }
 
-
               p {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 700;
                 font-size: 14px;
@@ -1906,15 +1881,13 @@ div#myTabContent {
                 color: #595959;
                 margin-bottom: 5px;
 
-
                 span {
-                  font-family: 'Roboto';
+                  font-family: "Roboto";
                   font-style: normal;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 20px;
                   color: #595959;
-
                 }
               }
             }
@@ -1924,7 +1897,7 @@ div#myTabContent {
             padding: 10px 15px;
 
             p {
-              font-family: 'Roboto';
+              font-family: "Roboto";
               font-style: normal;
               font-weight: 400;
               font-size: 14px;
@@ -1933,16 +1906,15 @@ div#myTabContent {
               margin-bottom: 0;
 
               a {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 20px;
-                color: #3578F8;
+                color: #3578f8;
                 text-decoration: none;
               }
             }
-
           }
 
           .inner-footer-tabs {
@@ -1950,28 +1922,25 @@ div#myTabContent {
 
             .footer-messages {
               p {
-                font-family: 'Ubuntu';
+                font-family: "Ubuntu";
                 font-style: italic;
                 font-weight: 700;
                 font-size: 14px;
                 line-height: 20px;
                 color: #595959;
                 margin-bottom: 0;
-
-
               }
             }
 
             .footer-share {
               p {
-                font-family: 'Roboto';
+                font-family: "Roboto";
                 font-style: normal;
                 font-weight: 500;
                 font-size: 14px;
                 line-height: 20px;
                 color: #595959;
                 margin-bottom: 0;
-
               }
             }
           }
@@ -1979,7 +1948,6 @@ div#myTabContent {
       }
     }
   }
-
 }
 
 // Thumbs SLider
@@ -2005,35 +1973,29 @@ div#myTabContent {
       }
     }
   }
-
- 
 }
 .inner-description-wrapper {
   background: #262626;
-  border-top: 1px solid #CDD5E1;
+  border-top: 1px solid #cdd5e1;
   padding: 12px;
- 
 
   span {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
     line-height: 16px;
-    color: #CDD5E1;
-
+    color: #cdd5e1;
   }
 
   p {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     margin-bottom: -4px;
-    color: #FFFFFF;
-   
-
+    color: #ffffff;
   }
 }
 .video-container {
@@ -2046,7 +2008,6 @@ div#myTabContent {
       left: 0px;
       padding: 16px;
       width: 100%;
-
 
       .img-box {
         width: 24px;
@@ -2072,14 +2033,13 @@ div#myTabContent {
         padding: 4px 8px;
 
         P {
-          font-family: 'Roboto';
+          font-family: "Roboto";
           font-style: normal;
           font-weight: 400;
           font-size: 12px;
           line-height: 16px;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-bottom: 0;
-
         }
       }
     }
@@ -2101,89 +2061,82 @@ div#myTabContent {
   padding: 4px 8px;
 
   P {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-bottom: 0;
-
   }
 }
-.collection-thums-slider{
-  .inner-img-collection{
+.collection-thums-slider {
+  .inner-img-collection {
     height: 410px;
     width: 100%;
   }
-  
 }
 
-.inner-Collection-wrapper{
+.inner-Collection-wrapper {
   position: absolute;
   bottom: 0;
   padding: 15px;
- width: 100%;
-  .collection-images{
+  width: 100%;
+  .collection-images {
     overflow: auto;
     width: 100%;
     &::-webkit-scrollbar {
       display: none;
     }
   }
-h5{
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 28px;
-color: #FFFFFF;
+  h5 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #ffffff;
+  }
+  p {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #bfbfbf;
+    a {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #3578f8;
+      text-decoration: none;
+    }
+  }
 }
-p{
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #BFBFBF;
-a{
- 
-
-font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: #3578F8;
-text-decoration: none;
-}
-}
-}
-.inner-text-wrapper{
+.inner-text-wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   padding: 15px;
-  .text-inner-collection{
- 
-    p{
-      font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #BFBFBF;
-    a{
-     
-    
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #3578F8;
-    text-decoration: none;
-    }
+  .text-inner-collection {
+    p {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #bfbfbf;
+      a {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #3578f8;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -2209,9 +2162,6 @@ text-decoration: none;
         backdrop-filter: blur(2px);
         padding: 5px;
       }
-
-
-
     }
   }
 
@@ -2241,8 +2191,6 @@ text-decoration: none;
       display: block;
       width: 100%;
       height: 100%;
-
-
     }
   }
 
@@ -2250,7 +2198,8 @@ text-decoration: none;
     height: 420px;
     width: 100%;
 
-    .slider-inner-icons {}
+    .slider-inner-icons {
+    }
   }
 
   .mySwiper {
@@ -2273,5 +2222,4 @@ text-decoration: none;
       opacity: 1;
     }
   }
-
 }

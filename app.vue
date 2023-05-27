@@ -10,9 +10,15 @@
 <script setup>
 import { useStore } from "@/store/";
 
-const { retrieveDataFromAPI } = useStore();
+const {
+  retrieveDataFromAPI,
+  retrieveActivityFeedData,
+  retrieveInspirationData,
+} = useStore();
 
 onMounted(() => {
   retrieveDataFromAPI();
+  retrieveActivityFeedData();
+  retrieveInspirationData();
 });
 </script>
