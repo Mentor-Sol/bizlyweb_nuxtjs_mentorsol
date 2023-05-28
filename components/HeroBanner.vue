@@ -11,7 +11,8 @@
                 </div>
                 <div class="d-flex gap-2 align-items-center inner-title-name">
                   <h1>Alex King</h1>
-                  <a href="#"><span>bizPro</span></a>
+                  <a href="#"  @click="showModal = true"><span>bizPro</span></a>
+                  <AboutModal :showModal="showModal"></AboutModal>
                 </div>
               </div>
               <div class="d-flex gap-5 align-items-center mb-4">
@@ -34,7 +35,7 @@
               <div class="d-flex gap-2 inner-title-values">
                 <a href="#" @click="clicked">Manage Connections</a>
                 <a href="#" @click="showModal = true">Edit <span>bizCard</span></a>
-              <Modal :showModal="showModal"></Modal>
+               <Modal :showModal="showModal"></Modal>
 
               </div>
 
@@ -60,10 +61,12 @@ import BannerNotificationIcon from "~/assets/images/banner-notification-icon.png
 </script>
 <script>
 import Modal from '~/components/Modal.vue';
+import AboutModal from "~/components/AboutModal.vue";
 export default {
   components: {
     Modal,
-  },
+    AboutModal
+},
   data() {
     return {
       showModal: false,

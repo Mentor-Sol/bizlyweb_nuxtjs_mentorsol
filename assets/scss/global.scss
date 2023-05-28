@@ -2209,6 +2209,7 @@ text-decoration: none;
   .swiper-wrapper {
     position: relative;
     overflow: auto;
+    width: auto !important;
     &::-webkit-scrollbar {
       display: none;
     }
