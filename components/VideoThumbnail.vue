@@ -87,6 +87,27 @@ const videos = [
     title: "Video 2",
     description: "Description for Video 2",
   },
+  {
+    id: 3,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 3",
+  },
+  {
+    id: 4,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 3",
+  },
+  {
+    id: 5,
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID_3",
+    thumbnailUrl: "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    title: "Video 3",
+    description: "Description for Video 3",
+  },
 
   // Add more video objects as needed
 ];
@@ -99,9 +120,13 @@ const playVideo = (video) => {
   videoRef.value.play();
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .video-container {
   height: 100%;
+  overflow: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .video {
