@@ -29,13 +29,36 @@ export const useStore = defineStore({
           { headers }
         );
         this.feedData = response.data.data.map((item) => {
-          const { owner, content_type, image_kit_id, post_content } = item;
+          const {
+            owner,
+            content_type,
+            image_kit_id,
+            post_content,
+            description,
+            title,
+          } = item;
           const data = {
             ...owner,
-            ...(content_type === "image" && { image_type_value: image_kit_id }),
-            ...(content_type === "text" && { text_type_value: post_content }),
-            ...(content_type === "link" && { link_type_value: image_kit_id }),
-            ...(content_type === "video" && { video_type_value: image_kit_id }),
+            ...(content_type === "image" && {
+              image_type_value: image_kit_id,
+              description,
+              title,
+            }),
+            ...(content_type === "text" && {
+              text_type_value: post_content,
+              description,
+              title,
+            }),
+            ...(content_type === "link" && {
+              link_type_value: image_kit_id,
+              description,
+              title,
+            }),
+            ...(content_type === "video" && {
+              video_type_value: image_kit_id,
+              description,
+              title,
+            }),
           };
           return data;
         });
