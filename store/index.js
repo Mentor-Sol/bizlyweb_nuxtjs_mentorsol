@@ -28,6 +28,7 @@ export const useStore = defineStore({
           "https://demo-api.bizly.net/api/activity-feed/",
           { headers }
         );
+        console.log(response.data.data.map((el) => el?.content_type));
         this.feedData = response.data.data.map((item) => {
           const {
             owner,
