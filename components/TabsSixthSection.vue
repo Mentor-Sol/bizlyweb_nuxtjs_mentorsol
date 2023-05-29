@@ -18,7 +18,7 @@
       </div>
       <div class="Tabs-title d-flex align-items-center gap-3">
         <div>
-          <img :src="ManTitleImage" alt="" />
+          <img :src="feed?.image" alt="" class="profile-img" />
         </div>
         <div class="Tabs-title-name">
           <h5>{{ feed?.first_name }} <span>(He/Him)</span></h5>
@@ -36,7 +36,11 @@
         </p>
       </div>
       <div class="main-thums-Slider main-thums-Slider-second">
-        <video :src="feed?.video_type_value" controls></video>
+        <video
+          :src="feed?.video_type_value"
+          controls
+          :poster="feed?.thumbnail_image_kit_id"
+        ></video>
         <div class="d-flex justify-content-between slider-inner-icons">
           <div class="d-flex align-items-center gap-3">
             <div class="img-box">
@@ -88,5 +92,10 @@ const { feedData } = storeToRefs(useStore());
 video {
   width: 100%;
   height: 100%;
+}
+.profile-img {
+  width: 60px;
+  border-radius: 50%;
+  height: 60px;
 }
 </style>

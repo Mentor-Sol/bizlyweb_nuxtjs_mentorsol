@@ -4,7 +4,7 @@
       <div class="inner-header-tabs d-flex justify-content-between">
         <div class="header-tabs-name d-flex align-items-center gap-3">
           <div class="header-tabs-name-dot">
-            <img :src="BlackVideoIcon" alt="" />
+            <img :src="BlackImageAlbum" alt="" />
           </div>
           <div class="d-flex align-items-center gap-3">
             <p>{{ feed?.title || "Image name" }}</p>
@@ -17,15 +17,16 @@
         </div>
       </div>
       <div class="Tabs-title d-flex align-items-center gap-3">
-        <img :src="ManTitleImage" alt="" />
+        <img :src="feed?.image" alt="" class="profile-img" />
         <div class="Tabs-title-name">
           <h5>{{ feed?.first_name }} <span>(He/Him)</span></h5>
-          <div class="d-flex align-items-center gap-3 Tabs-feilds">
-            <span>Producer</span>
-            <span>Writer</span>
-            <span>Director</span>
+          <div
+            class="d-flex align-items-center gap-3 Tabs-feilds"
+            v-for="(role, index) in feed?.roles"
+            :key="index"
+          >
+            <span>{{ role }}</span>
           </div>
-          <p>Camera Operator <span>at</span> Paramount Pictures</p>
         </div>
       </div>
       <div class="tabs-desc">
@@ -43,18 +44,12 @@
             <div class="img-box">
               <img :src="TagSlider" alt="" />
             </div>
+            <div>
+              <div class="img-box">
+                <img :src="ImageIconSlider" alt="" />
+              </div>
+            </div>
           </div>
-          <!-- <div class="d-flex gap-2">
-            <div class="img-box">
-              <img :src="VolumeIcon" alt="" />
-            </div>
-            <div
-              class="img-box-value video-img-box d-flex align-items-center gap-2"
-            >
-              <img :src="whiteVideoIcon" alt="" />
-              <p>02:34</p>
-            </div>
-          </div> -->
         </div>
       </div>
       <div class="inner-footer-tabs d-flex justify-content-around">
@@ -71,24 +66,27 @@
   </div>
 </template>
 <script setup>
-import fourthSectionImg from "~//assets/images/fourth-section-img.png";
 import ShareTabImage from "~//assets/images/share-tabs.png";
 import Messagetabs from "~//assets/images/message-tabs.png";
-import ManTitleImage from "~//assets/images/manImage.png";
 import BlackVideoIcon from "~/assets/images/videoblackicon.png";
 import bookmarket from "~//assets/images/bookmark-tabs.png";
 import MenuTab from "~//assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png";
 import TagSlider from "~/assets/images/Tag-slider.png";
-import whiteVideoIcon from "~/assets/images/whiteVideoIcon.png";
-import VolumeIcon from "~/assets/images/volumeicon.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
+import BlackImageAlbum from "~/assets/images/BlackImgIcon.png";
+import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
+
 const { feedData } = storeToRefs(useStore());
 </script>
 <style>
 .feed_img {
   width: 100%;
   height: 100%;
+}
+.profile-img {
+  width: 60px;
+  border-radius: 50%;
 }
 </style>

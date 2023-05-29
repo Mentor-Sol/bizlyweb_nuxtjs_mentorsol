@@ -9,7 +9,11 @@
 }
 
 // Header Section
-
+.more_less_btn {
+  background: none !important;
+  border: unset !important;
+  color: blue !important;
+}
 .mainHeader {
   background: #141414;
   height: 56px;
@@ -1617,14 +1621,14 @@ div#myTabContent {
         }
       }
     }
-.BizlyRow{
-  overflow-x: auto;
-  width: 100%;
-  flex-wrap: nowrap;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
+    .BizlyRow {
+      overflow-x: auto;
+      width: 100%;
+      flex-wrap: nowrap;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
     .bizly-card {
       background-image: url(../images/second-card-bg.png);
       background-position: center;
@@ -1910,7 +1914,7 @@ div#myTabContent {
 
           .tabs-desc {
             padding: 10px 15px;
-
+            align-items: center;
             p {
               font-family: "Roboto";
               font-style: normal;
@@ -2142,7 +2146,6 @@ div#myTabContent {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
-      color: #bfbfbf;
       a {
         font-family: "Roboto";
         font-style: normal;

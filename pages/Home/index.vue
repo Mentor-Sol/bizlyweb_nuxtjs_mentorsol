@@ -68,7 +68,7 @@
         >
           <div className="TabsWrapper">
             <TabsFirstSection class="mb-3" />
-            <TabsSecondSection class="mb-3" />
+            <!-- <TabsSecondSection class="mb-3" /> -->
             <TabsVideoSection class="mb-3" />
             <TabsFourthSection class="mb-3" />
             <TabsfifthSection class="mb-3" />

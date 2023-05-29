@@ -6,7 +6,6 @@
       :slides-per-view="1"
       :loop="true"
       :effect="'creative'"
-    
       :creative-effect="{
         prev: {
           shadow: false,
@@ -60,7 +59,7 @@ watchEffect(() => {
 
 .feature .feature_img {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 .swiper-wrapper {
   min-width: 100vh;

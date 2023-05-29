@@ -1,142 +1,126 @@
 <template>
-  <swiper
-    :style="{
-      '--swiper-navigation-color': '#fff',
-      '--swiper-pagination-color': '#fff',
-    }"
-    :spaceBetween="10"
-    :navigation="true"
-    :thumbs="{ swiper: thumbsSwiper }"
-    :modules="modules"
-    class="mySwiper2"
-  >
-    <swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-      <div class="d-flex justify-content-between slider-inner-icons">
-        <div class="d-flex align-items-center gap-3">
-          <div class="img-box">
-            <img :src="UserSlider" alt="" />
-          </div>
-          <div class="img-box">
-            <img :src="TagSlider" alt="" />
-          </div>
-        </div>
-        <div>
-          <div class="img-box">
-            <img :src="ImageIconSlider" alt="" />
-          </div>
-        </div>
-      </div> </swiper-slide
-    ><swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-      <div class="d-flex justify-content-between slider-inner-icons">
-        <div class="d-flex align-items-center gap-3">
-          <div class="img-box">
-            <img :src="UserSlider" alt="" />
-          </div>
-          <div class="img-box">
-            <img :src="TagSlider" alt="" />
-          </div>
-        </div>
-        <div>
-          <div class="img-box">
-            <img :src="ImageIconSlider" alt="" />
-          </div>
-        </div></div></swiper-slide
-    ><swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      <div class="d-flex justify-content-between slider-inner-icons">
-        <div class="d-flex align-items-center gap-3">
-          <div class="img-box">
-            <img :src="UserSlider" alt="" />
-          </div>
-          <div class="img-box">
-            <img :src="TagSlider" alt="" />
-          </div>
-        </div>
-        <div>
-          <div class="img-box">
-            <img :src="ImageIconSlider" alt="" />
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-      <div class="d-flex justify-content-between slider-inner-icons">
-        <div class="d-flex align-items-center gap-3">
-          <div class="img-box">
-            <img :src="UserSlider" alt="" />
-          </div>
-          <div class="img-box">
-            <img :src="TagSlider" alt="" />
-          </div>
-        </div>
-        <div>
-          <div class="img-box">
-            <img :src="ImageIconSlider" alt="" />
-          </div>
-        </div>
-      </div>
-    </swiper-slide>
-  </swiper>
-  <swiper
-    @swiper="setThumbsSwiper"
-    :spaceBetween="10"
-    :slidesPerView="4"
-    :freeMode="true"
-    :watchSlidesProgress="true"
-    :modules="modules"
-    class="mySwiper"
-  >
-    <swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-1.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-2.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img
-        src="https://swiperjs.com/demos/images/nature-3.jpg" /></swiper-slide
-    ><swiper-slide
-      ><img src="https://swiperjs.com/demos/images/nature-4.jpg"
-    /></swiper-slide>
-  </swiper>
+  <div>
+    <swiper
+      :navigation="true"
+      :thumbs="{ swiper: thumbsSwiper }"
+      :modules="modules"
+      :spaceBetween="10"
+      class="mySwiper2"
+    >
+      <swiper-slide v-for="(slide, index) in slides" :key="index"
+        ><img :src="slide"
+      /></swiper-slide>
+    </swiper>
+    <swiper
+      @swiper="setThumbsSwiper"
+      :spaceBetween="10"
+      :slidesPerView="4"
+      :freeMode="true"
+      :watchSlidesProgress="true"
+      :modules="modules"
+      class="mySwiper"
+    >
+      <swiper-slide v-for="(slide, index) in slides" :key="index"
+        ><img :src="slide"
+      /></swiper-slide>
+    </swiper>
+  </div>
 </template>
-<script>
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue";
 
-// Import Swiper styles
+<script setup>
+import { ref } from "vue";
 import "swiper/css";
-
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
-// import required modules
 import { FreeMode, Navigation, Thumbs } from "swiper";
+defineProps(["slides"]);
+const thumbsSwiper = ref(null);
 
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  setup() {
-    let thumbsSwiper = null;
-
-    const setThumbsSwiper = (swiper) => {
-      thumbsSwiper = swiper;
-    };
-
-    return {
-      modules: [FreeMode, Navigation, Thumbs],
-    };
-  },
+const setThumbsSwiper = (swiper) => {
+  thumbsSwiper.value = swiper;
 };
+
+const modules = [FreeMode, Navigation, Thumbs];
 </script>
-<script setup>
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
-</script>
+
+<style>
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.main-thums-Slider .swiper-wrapper {
+  position: relative;
+  overflow: unset !important;
+}
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-button-prev {
+  display: block !important;
+  color: black !important;
+}
+.swiper-button-next {
+  display: block !important;
+  color: black !important;
+}
+</style>

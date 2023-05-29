@@ -18,16 +18,18 @@
       </div>
       <div class="Tabs-title d-flex align-items-center gap-3">
         <div>
-          <img :src="ManTitleImage" alt="" />
+          <img :src="feed?.image" alt="" class="profile-img" />
         </div>
         <div class="Tabs-title-name">
           <h5>{{ feed?.title }} <span>(He/Him)</span></h5>
-          <div class="d-flex align-items-center gap-3 Tabs-feilds">
-            <span>Producer</span>
-            <span>Writer</span>
-            <span>Director</span>
+          <div
+            class="d-flex align-items-center gap-3 Tabs-feilds"
+            v-for="(role, index) in feed?.roles"
+            :key="index"
+          >
+            <span>{{ role }}</span>
           </div>
-          <p>CEO <span>at</span> Biz Technologies</p>
+          <!-- <p>CEO <span>at</span> Biz Technologies</p> -->
         </div>
       </div>
       <div class="tabs-desc">
@@ -39,7 +41,11 @@
         class="main-thums-Slider main-thums-Slider-second collection-thums-slider"
       >
         <div>
-          <img :src="SecondSectionImg" alt="" class="inner-img-collection" />
+          <img
+            :src="feed?.image || SecondSectionImg"
+            alt=""
+            class="inner-img-collection"
+          />
           <div class="inner-text-wrapper">
             <div class="collection-images text-inner-collection">
               <p>
@@ -81,7 +87,6 @@
 import SecondSectionImg from "~//assets/images/tenthbgimg.png";
 import ShareTabImage from "~//assets/images/share-tabs.png";
 import Messagetabs from "~//assets/images/message-tabs.png";
-import ManTitleImage from "~//assets/images/manImage.png";
 import BlackImgVideo from "~/assets/images/textblack.png";
 import bookmarket from "~//assets/images/bookmark-tabs.png";
 import MenuTab from "~//assets/images/Menu_tabs.png";
@@ -92,3 +97,9 @@ import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 const { feedData } = storeToRefs(useStore());
 </script>
+<style>
+.profile-img {
+  width: 60px;
+  border-radius: 50%;
+}
+</style>

@@ -28,15 +28,16 @@ export const useStore = defineStore({
           "https://demo-api.bizly.net/api/activity-feed/",
           { headers }
         );
-        console.log(response.data.data.map((el) => el?.content_type));
         this.feedData = response.data.data.map((item) => {
           const {
             owner,
             content_type,
             image_kit_id,
+            image_kit_ids,
             post_content,
             description,
             title,
+            thumbnail_image_kit_id,
           } = item;
           const data = {
             ...owner,
@@ -44,21 +45,31 @@ export const useStore = defineStore({
               image_type_value: image_kit_id,
               description,
               title,
+              thumbnail_image_kit_id,
             }),
             ...(content_type === "text" && {
               text_type_value: post_content,
               description,
               title,
+              thumbnail_image_kit_id,
             }),
             ...(content_type === "link" && {
               link_type_value: image_kit_id,
               description,
               title,
+              thumbnail_image_kit_id,
             }),
             ...(content_type === "video" && {
               video_type_value: image_kit_id,
               description,
               title,
+              thumbnail_image_kit_id,
+            }),
+            ...(content_type === "image_gallery" && {
+              image_gallery_type_value: image_kit_ids,
+              description,
+              title,
+              thumbnail_image_kit_id,
             }),
           };
           return data;

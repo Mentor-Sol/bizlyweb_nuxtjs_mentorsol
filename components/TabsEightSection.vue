@@ -18,30 +18,54 @@
       </div>
       <div class="Tabs-title d-flex align-items-center gap-3">
         <div>
-          <img :src="TitleImage" alt="" />
+          <img :src="feed?.image" alt="" class="profile-img" />
         </div>
         <div class="Tabs-title-name">
           <h5>{{ feed?.first_name }} <span>(She/Her)</span></h5>
-          <div class="d-flex align-items-center gap-3 Tabs-feilds">
-            <span>Producer</span>
-            <span>Writer</span>
-            <span>Director</span>
+          <div
+            class="d-flex align-items-center gap-3 Tabs-feilds"
+            v-for="(role, index) in feed?.roles"
+            :key="index"
+          >
+            <span>{{ role }}</span>
           </div>
-          <p>CEO <span>at</span> Biz Technologies</p>
+          <!-- <p>CEO <span>at</span> Biz Technologies</p> -->
         </div>
       </div>
-      <div class="tabs-desc">
-        <p>
+      <div class="tabs-desc d-flex">
+        <p v-if="feed?.description.length < maxlenght || more">
           {{ feed?.description }}
         </p>
+        <p v-if="!more && feed?.description.lenth < maxlenght">
+          {{ feed?.description.toString().slice(0, maxlenght) + "...." }}
+        </p>
+
+        <button
+          @click="seeMore(feed?.description)"
+          v-if="!more && feed?.description.lenth > maxlenght"
+          class="more_less_btn"
+        >
+          see more
+        </button>
+        <button
+          @click="seeLess(feed?.description)"
+          v-if="more"
+          class="more_less_btn"
+        >
+          see less
+        </button>
       </div>
       <div class="main-thums-Slider main-thums-Slider-second">
         <div>
           <img :src="SecondSectionImg" alt="" />
           <div class="inner-description-wrapper">
-            <span>{{ feed?.link_type_value }}</span>
+            <a :href="feed.link_type_value" target="_blank">{{
+              feed?.link_type_value
+            }}</a>
             <p>{{ feed?.title }}</p>
-            <span>{{ feed?.description }}</span>
+            <span>{{
+              feed?.description.toString().slice(0, 10) + "...."
+            }}</span>
           </div>
         </div>
         <div class="d-flex justify-content-between slider-inner-icons">
@@ -84,8 +108,23 @@ import MenuTab from "~//assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png";
 import TagSlider from "~/assets/images/Tag-slider.png";
 import VideoAlbum from "~/assets/images/Link-white.png";
-import TitleImage from "~/assets/images/title-img.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 const { feedData } = storeToRefs(useStore());
+const maxlenght = useState(() => 20);
+const more = useState(() => false);
+const seeMore = (text) => {
+  maxlenght.value = text.length;
+  more.value = true;
+};
+const seeLess = (text) => {
+  maxlenght.value = 3;
+  more.value = false;
+};
 </script>
+<style>
+.profile-img {
+  width: 60px;
+  border-radius: 50%;
+}
+</style>
