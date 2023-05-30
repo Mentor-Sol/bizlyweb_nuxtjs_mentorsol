@@ -16,13 +16,20 @@
         },
       }"
     >
-      <SwiperSlide v-for="(slide, idx) in filtered" :key="idx">
+      <SwiperSlide
+        v-for="(slide, idx) in dataBizCard?.owner?.background_images"
+        :key="idx"
+      >
         <img :src="slide" className="feature_img" />
         <div className="count ">
           <p>FEATURED</p>
           <div className="inner d-flex ">
             <img :src="MultipleImg" alt=" MultipleImg" />
-            <span>{{ idx + 1 }}/{{ filtered.length }}</span>
+            <span
+              >{{ idx + 1 }}/{{
+                dataBizCard?.owner?.background_images?.length
+              }}</span
+            >
           </div>
         </div>
       </SwiperSlide>
@@ -35,15 +42,7 @@ import { storeToRefs } from "pinia";
 import { useStore } from "../store";
 import MultipleImg from "~/assets/images/multipleImg.svg";
 
-const { data } = storeToRefs(useStore());
-let filtered = ref([]);
-
-watchEffect(() => {
-  const images = data.value?.content?.filter(
-    (el) => el.content_type === "image"
-  );
-  filtered.value = images?.map((el) => el.image_kit_id);
-});
+const { dataBizCard } = storeToRefs(useStore());
 </script>
 <style>
 .feature .swiper-slide {

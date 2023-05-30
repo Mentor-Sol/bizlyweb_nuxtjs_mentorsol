@@ -7,9 +7,9 @@
             <img :src="ImageAlbum" alt="" />
           </div>
           <div class="d-flex align-items-center gap-3">
-            <p>10</p>
-            <p>Image Gallery Name</p>
-            <span>5d</span>
+            <p>{{ feed?.image_gallery_type_value?.length }}</p>
+            <p>{{ feed?.title || "Image Gallery Name" }}</p>
+            <span>{{ usePostCreationTime(feed?.created_on) }}</span>
           </div>
         </div>
         <div class="header-tabs-icons d-flex gap-4 align-items-center">
@@ -24,7 +24,9 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span>(She/Her)</span>
+            <span
+              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            </span>
           </h5>
           <div
             class="d-flex align-items-center gap-3 Tabs-feilds"

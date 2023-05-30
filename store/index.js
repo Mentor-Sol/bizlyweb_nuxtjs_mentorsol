@@ -8,6 +8,7 @@ export const useStore = defineStore({
       data: [],
       feedData: [],
       inspirationData: [],
+      dataBizCard: {},
     };
   },
   actions: {
@@ -17,6 +18,8 @@ export const useStore = defineStore({
       this.data = response.data.data;
     },
     async retrieveActivityFeedData() {
+      const { $api } = useNuxtApp();
+
       const token = "957f3a8389335b74ca9b5676c525b2f3eb738b59";
       const headers = {
         Authorization: `Token ${token}`,
@@ -24,10 +27,7 @@ export const useStore = defineStore({
       };
 
       try {
-        const response = await axios.get(
-          "https://demo-api.bizly.net/api/activity-feed/",
-          { headers }
-        );
+        const response = await $api.get("/activity-feed/", { headers });
         this.feedData = response.data.data.map((item) => {
           const {
             owner,
@@ -38,6 +38,8 @@ export const useStore = defineStore({
             description,
             title,
             thumbnail_image_kit_id,
+            pronouns,
+            created_on,
           } = item;
           const data = {
             ...owner,
@@ -46,30 +48,40 @@ export const useStore = defineStore({
               description,
               title,
               thumbnail_image_kit_id,
+              pronouns,
+              created_on,
             }),
             ...(content_type === "text" && {
               text_type_value: post_content,
               description,
               title,
               thumbnail_image_kit_id,
+              pronouns,
+              created_on,
             }),
             ...(content_type === "link" && {
               link_type_value: image_kit_id,
               description,
               title,
               thumbnail_image_kit_id,
+              pronouns,
+              created_on,
             }),
             ...(content_type === "video" && {
               video_type_value: image_kit_id,
               description,
               title,
               thumbnail_image_kit_id,
+              pronouns,
+              created_on,
             }),
             ...(content_type === "image_gallery" && {
               image_gallery_type_value: image_kit_ids,
               description,
               title,
               thumbnail_image_kit_id,
+              pronouns,
+              created_on,
             }),
           };
           return data;
@@ -86,11 +98,21 @@ export const useStore = defineStore({
         Authorization: `Token ${token}`,
         "Content-Type": "application/json",
       };
-      const response = await $api.get(
-        "https://demo-api.bizly.net/api/network/inspiration",
-        { headers }
-      );
+      const response = await $api.get("/network/inspiration", { headers });
       this.inspirationData = response.data.data;
+    },
+    async retrieveBizCardById(id) {
+      const { $api } = useNuxtApp();
+      const token = "957f3a8389335b74ca9b5676c525b2f3eb738b59";
+      const headers = {
+        Authorization: `Token ${token}`,
+        "Content-Type": "application/json",
+      };
+      const response = await $api.get(`/internal/p/biz-cards/${id}/`, {
+        headers,
+      });
+      console.log(response.data.data);
+      this.dataBizCard = response.data.data;
     },
   },
   getters: {

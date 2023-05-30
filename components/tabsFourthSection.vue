@@ -8,7 +8,7 @@
           </div>
           <div class="d-flex align-items-center gap-3">
             <p>{{ feed?.title || "Image name" }}</p>
-            <span>5d</span>
+            <span>{{ usePostCreationTime(feed?.created_on) }}</span>
           </div>
         </div>
         <div class="header-tabs-icons d-flex gap-4 align-items-center">
@@ -19,7 +19,12 @@
       <div class="Tabs-title d-flex align-items-center gap-3">
         <img :src="feed?.image" alt="" class="profile-img" />
         <div class="Tabs-title-name">
-          <h5>{{ feed?.first_name }} <span>(He/Him)</span></h5>
+          <h5>
+            {{ feed?.first_name + " " + feed?.last_name }}
+            <span
+              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            </span>
+          </h5>
           <div
             class="d-flex align-items-center gap-3 Tabs-feilds"
             v-for="(role, index) in feed?.roles"
@@ -68,7 +73,6 @@
 <script setup>
 import ShareTabImage from "~//assets/images/share-tabs.png";
 import Messagetabs from "~//assets/images/message-tabs.png";
-import BlackVideoIcon from "~/assets/images/videoblackicon.png";
 import bookmarket from "~//assets/images/bookmark-tabs.png";
 import MenuTab from "~//assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png";
@@ -77,7 +81,7 @@ import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 import BlackImageAlbum from "~/assets/images/BlackImgIcon.png";
 import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
-
+import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 </script>
 <style>

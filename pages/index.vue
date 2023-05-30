@@ -1,26 +1,116 @@
 <template>
-  <div>
-    <Banner :data="data" />
-    <TabsData :data="data" />
-    <div className="downloadBizly">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="downloadBtn">
-              <CustomButton text="Download bizly" />
-              <div className="userName">
-                <p>Editor <span>.</span> Writer <span>.</span> Producer</p>
-              </div>
+  <div class="Home-banner">
+    <div class="container inner-container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="inner-banner">
+            <img src="../../assets/images/next-icon.png" alt="" />
+            <div class="banner-desc">
+              <p>Risk is the price you pay for opportunity.</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div
+            class="d-flex justify-content-between inspired-section align-items-baseline"
+          >
+            <p>Get Inspired</p>
+            <a href="#">Explore More</a>
+          </div>
+        </div>
+      </div>
+      <div class="row inner-cards">
+        <InsipiredCard />
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div
+            class="d-flex justify-content-between inspired-section bizlyupdate align-items-baseline"
+          >
+            <p>bizUpdates</p>
+            <a href="#">See All</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <BizlyupdateCard />
+        </div>
+        <div class="col-lg-6">
+          <BizlyupdateCard />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="inspired-section">
+            <p>Get in touch</p>
+          </div>
+          <div>
+            <GetinTouch />
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <HomeTabs />
+      </div>
+    </div>
+  </div>
+  <div class="tabs-main mt-3">
+    <div class="container p-0">
+      <div class="tab-content" id="myTabContentHome">
+        <div
+          class="tab-pane fade show active"
+          id="contact"
+          role="tabpanel"
+          aria-labelledby="contact-tab"
+        >
+          <div className="TabsWrapper">
+            <TabsFirstSection class="mb-3" />
+            <!-- <TabsSecondSection class="mb-3" /> -->
+            <TabsVideoSection class="mb-3" />
+            <TabsFourthSection class="mb-3" />
+            <TabsfifthSection class="mb-3" />
+            <TabsSixthSection class="mb-3" />
+            <TabSevnthSection class="mb-3" />
+            <TabsEightSection class="mb-3" />
+            <TabsNightSection class="mb-3" />
+            <TabstenthSection class="mb-3" />
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="content"
+          role="tabpanel"
+          aria-labelledby="content-tab"
+        >
+          <h2>hi</h2>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="services"
+          role="tabpanel"
+          aria-labelledby="services-tab"
+        >
+          <h1>heloooo</h1>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import { useStore } from "@/store/";
-import { storeToRefs } from "pinia";
-
-const { data } = storeToRefs(useStore());
+import BizlyupdateCard from "../components/BizlyupdateCard.vue";
+import GetinTouch from "../components/GetinTouch.vue";
+import HomeTabs from "../components/HomeTabs.vue";
+import TabSevnthSection from "../components/TabSevnthSection.vue";
+import TabsEightSection from "../components/TabsEightSection.vue";
+import TabsNightSection from "../components/TabsNightSection.vue";
+import TabsSixthSection from "../components/TabsSixthSection.vue";
+import TabstenthSection from "../components/TabstenthSection.vue";
+import TabsFirstSection from "../components/tabsFirstSection.vue";
+import TabsFourthSection from "../components/tabsFourthSection.vue";
+import TabsSecondSection from "../components/tabsSecondSection.vue";
+import TabsVideoSection from "../components/tabsVideoSection.vue";
+import TabsfifthSection from "../components/tabsfifthSection.vue";
 </script>

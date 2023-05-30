@@ -8,7 +8,7 @@
           </div>
           <div class="d-flex align-items-center gap-3">
             <p>{{ feed?.title }}</p>
-            <span>5d</span>
+            <span>{{ usePostCreationTime(feed?.created_on) }}</span>
           </div>
         </div>
         <div class="header-tabs-icons d-flex gap-4 align-items-center">
@@ -21,7 +21,12 @@
           <img :src="feed?.image" alt="" class="profile-img" />
         </div>
         <div class="Tabs-title-name">
-          <h5>{{ feed?.first_name }} <span>(She/Her)</span></h5>
+          <h5>
+            {{ feed?.first_name + " " + feed?.last_name }}
+            <span
+              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            </span>
+          </h5>
           <div
             class="d-flex align-items-center gap-3 Tabs-feilds"
             v-for="(role, index) in feed?.roles"
@@ -110,6 +115,7 @@ import TagSlider from "~/assets/images/Tag-slider.png";
 import VideoAlbum from "~/assets/images/Link-white.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
+import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 const maxlenght = useState(() => 20);
 const more = useState(() => false);
