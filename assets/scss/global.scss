@@ -1970,27 +1970,15 @@ div#myTabContent {
 }
 
 // Thumbs SLider
-.main-thums-Slider-second {
-  .slider-inner-icons {
+.img-box {
+  width: 24px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.45);
+  position: relative;
+  img{
     position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 16px;
-    width: 100%;
-
-    .img-box {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(2px);
-      padding: 5px;
-      position: relative;
-
-      img {
-        position: absolute;
-      }
-    }
+    top: 5px;
+    left: 5px;
   }
 }
 .inner-description-wrapper {

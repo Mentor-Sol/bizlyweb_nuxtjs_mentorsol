@@ -67,19 +67,10 @@
           aria-labelledby="contact-tab"
         >
           <div className="TabsWrapper">
-            <TabsFirstSection class="mb-3" />
-            <!-- <TabsSecondSection class="mb-3" /> -->
-            <TabsVideoSection class="mb-3" />
-            <TabsFourthSection class="mb-3" />
-            <TabsfifthSection class="mb-3" />
-            <TabsSixthSection class="mb-3" />
-            <TabSevnthSection class="mb-3" />
-            <TabsEightSection class="mb-3" />
-            <TabsNightSection class="mb-3" />
-            <TabstenthSection class="mb-3" />
+            <PostView />
           </div>
         </div>
-        <div
+        <!-- <div
           class="tab-pane fade"
           id="content"
           role="tabpanel"
@@ -94,7 +85,7 @@
           aria-labelledby="services-tab"
         >
           <h1>heloooo</h1>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -103,14 +94,5 @@
 import BizlyupdateCard from "../../components/BizlyupdateCard.vue";
 import GetinTouch from "../../components/GetinTouch.vue";
 import HomeTabs from "../../components/HomeTabs.vue";
-import TabSevnthSection from "../../components/TabSevnthSection.vue";
-import TabsEightSection from "../../components/TabsEightSection.vue";
-import TabsNightSection from "../../components/TabsNightSection.vue";
-import TabsSixthSection from "../../components/TabsSixthSection.vue";
-import TabstenthSection from "../../components/TabstenthSection.vue";
-import TabsFirstSection from "../../components/tabsFirstSection.vue";
-import TabsFourthSection from "../../components/tabsFourthSection.vue";
-import TabsSecondSection from "../../components/tabsSecondSection.vue";
-import TabsVideoSection from "../../components/tabsVideoSection.vue";
-import TabsfifthSection from "../../components/tabsfifthSection.vue";
+import PostView from "../../components/PostView.vue";
 </script>
