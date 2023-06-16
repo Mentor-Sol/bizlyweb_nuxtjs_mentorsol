@@ -2077,13 +2077,17 @@ div#myTabContent {
     margin-bottom: 0;
   }
 }
-.collection-thums-slider {
   .inner-img-collection {
-    height: 410px;
     width: 100%;
   }
+.no-data{
+  height: 410px;
+  width: 100%;
+  background: url("~/assets/images/NoDataImage.png"), rgba(0,0,0,0.1);
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
 }
-
 .inner-Collection-wrapper {
   position: absolute;
   bottom: 0;
@@ -2227,6 +2231,7 @@ div#myTabContent {
     .swiper-slide {
       height: 100px !important;
       width: 100px !important;
+      border-radius: 8px;
     }
 
     .swiper-slide-thumb-active {

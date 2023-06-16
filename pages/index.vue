@@ -58,6 +58,13 @@
       <div class="tab-content" id="myTabContentHome">
         <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <div className="TabsWrapper">
+            <!-- <TabSevnthSection /> -->
+            <!-- <TabsNightSection /> -->
+            <!-- <TabsSixthSection /> -->
+            <!-- <TabsFirstSection /> -->
+            <!-- <TabsSecondSection /> -->
+            <!-- <TabsVideoSection /> -->
+            <!-- <TabsfifthSection /> -->
             <PostView />
           </div>
         </div>
@@ -81,7 +88,6 @@ import TabsNightSection from "../components/TabsNightSection.vue";
 import TabsSixthSection from "../components/TabsSixthSection.vue";
 import TabstenthSection from "../components/TabstenthSection.vue";
 import TabsFirstSection from "../components/tabsFirstSection.vue";
-import TabsFourthSection from "../components/tabsFourthSection.vue";
 import TabsSecondSection from "../components/tabsSecondSection.vue";
 import TabsVideoSection from "../components/tabsVideoSection.vue";
 import TabsfifthSection from "../components/tabsfifthSection.vue";
