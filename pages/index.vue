@@ -68,12 +68,12 @@
             <PostView />
           </div>
         </div>
-        <!-- <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
+        <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
           <h2>hi</h2>
         </div>
         <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
           <h1>heloooo</h1>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>

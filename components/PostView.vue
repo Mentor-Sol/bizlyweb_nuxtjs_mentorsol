@@ -1,6 +1,6 @@
 <template>
-    <div v-for="(feed, index) in feedData" :key="index">
-        <template v-if="feed?.content_type == 'image' && feed.is_gallery == false">
+    <!-- <div v-for="(feed, index) in feedData" :key="index"> -->
+    <!-- <template v-if="feed?.content_type == 'image' && feed.is_gallery == false">
             <ImagePost :data="feed" class="mb-3" />
         </template>
         <template v-if="feed?.content_type == 'text' && feed.is_gallery == false">
@@ -11,14 +11,14 @@
         </template>
         <template v-if="feed?.content_type == 'image_gallery'">
             <ImageGalleryPost :data="feed" class="mb-3" />
-        </template>
-        <template v-if="feed?.content_type == 'link_gallery'">
-            <LinkGalleryPost :data="feed" class="mb-3" />
-        </template>
-        <template v-if="feed?.content_type == 'video'">
+        </template> -->
+    <!-- <template v-if="feed?.content_type == 'link_gallery'"> -->
+    <LinkGalleryPost class="mb-3" />
+    <!-- </template> -->
+    <!-- <template v-if="feed?.content_type == 'video'">
             <VideoPost :data="feed" class="mb-3" />
-        </template>
-    </div>
+        </template> -->
+    <!-- </div> -->
 </template>
 <script setup>
 import { useStore } from "../store";
@@ -28,7 +28,7 @@ import TextPost from "./Posts/TextPost.vue";
 import LinkPost from "./Posts/LinkPost.vue";
 import ImageGalleryPost from "./Posts/ImageGalleryPost.vue";
 import VideoPost from "./Posts/VideoPost.vue";
-import LinkGalleryPost from '~/assets/images/LinkGalleryPost.svg';
+import LinkGalleryPost from './Posts/LinkGalleryPost.vue';
 const { feedData } = storeToRefs(useStore());
 </script>
 <style lang="scss">

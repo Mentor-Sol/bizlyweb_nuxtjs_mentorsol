@@ -36,7 +36,11 @@
       </p>
     </div>
     <div class="img-div">
-      <img :src="data?.image_type_value" alt="" class="inner-img-collection" />
+      <div v-if="data?.thumbnail_image_kit_id">
+        <img :src="data?.thumbnail_image_kit_id" class="inner-img-collection" style="filter: blur(8px);" />
+      </div>
+      <div v-else class="no-data">
+      </div>
       <span class=" accessibility_bar mt-2">
         <div class="d-flex justify-content-between px-4">
           <span class="d-flex align-items-center gap-3">
