@@ -1,13 +1,13 @@
 <template>
-  <div class="inner-tabs-wrapper" v-if="feed?.video_type_value">
+  <div class="inner-tabs-wrapper">
     <div class="inner-header-tabs d-flex justify-content-between">
       <div class="header-tabs-name d-flex align-items-center gap-3">
         <div class="header-tabs-name-dot">
           <img :src="VideoIconBlack" alt="" />
         </div>
         <div class="d-flex align-items-center gap-3">
-          <p>{{ feed?.title }}</p>
-          <span>{{ usePostCreationTime(feed?.created_on) }}</span>
+          <p>{{ data?.title }}</p>
+          <span>{{ usePostCreationTime(data?.created_on) }}</span>
         </div>
       </div>
       <div class="header-tabs-icons d-flex gap-4 align-items-center">
@@ -17,53 +17,64 @@
     </div>
     <div class="Tabs-title d-flex align-items-center gap-3">
       <div>
-        <img :src="feed?.image" alt="" class="profile-img" />
+        <img :src="data?.owner.image" alt="" class="profile-img" />
       </div>
       <div class="Tabs-title-name">
         <h5>
-          {{ feed?.first_name + " " + feed?.last_name }}
-          <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+          {{ data?.owner.first_name + " " + data?.owner.last_name }}
+          <span>{{ feed?.owner.pronouns?.[0] ? "(" + feed?.owner.pronouns?.[0] + ")" : "" }}
           </span>
         </h5>
-        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
+        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.owner.roles" :key="index">
           <span>{{ role }}</span>
         </div>
-        <!-- <p>Camera Operator <span>at</span> Paramount Pictures</p> -->
       </div>
     </div>
     <div class="tabs-desc">
       <p>
-        {{ feed?.description }}
+        {{ data?.description }}
       </p>
     </div>
-    <div class="main-thums-Slider main-thums-Slider-second">
-      <template v-if="feed?.video_type_value.startsWith('https://www.youtube.com')">
+
+    <div class="img-div">
+      <template
+        v-if="data?.image_kit_id?.startsWith('https://www.youtube.com') || data?.image_kit_id?.startsWith('https://youtu.be') || data?.image_kit_id?.startsWith('https://youtube.com')">
         <vue-plyr>
           <div class="plyr__video-embed">
-            <iframe :src="feed?.video_type_value" allowfullscreen allowtransparency allow="autoplay"
-              :poster="feed?.thumbnail_image_kit_id"></iframe>
+            <iframe :src="data?.image_kit_id" allowfullscreen allowtransparency allow="autoplay"
+              :poster="data?.thumbnail_image_kit_id"></iframe>
           </div>
         </vue-plyr>
       </template>
-      <template v-if="!feed?.video_type_value.startsWith('https://www.youtube.com')">
-        <video :src="feed?.video_type_value" controls :poster="feed?.thumbnail_image_kit_id"></video>
+      <template v-if="data?.image_kit_id?.startsWith('https://vimeo')">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe
+            :src="`https://player.vimeo.com/video/${data?.image_kit_id?.replace('https://vimeo.com/', '')}?h=b8c796fff8&title=0&byline=0&portrait=0`"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
       </template>
-      <div class="d-flex justify-content-between slider-inner-icons">
-        <div class="d-flex align-items-center gap-3">
-          <div class="img-box">
-            <img :src="UserSlider" alt="" />
-          </div>
-          <div class="img-box">
-            <img :src="TagSlider" alt="" />
-          </div>
+      <!-- <template
+        v-if="!data?.image_kit_id?.startsWith('https://www.youtube.com') || !data?.image_kit_id?.startsWith('https://youtu.be') || !data?.image_kit_id?.startsWith('https://youtube.com') || !data?.image_kit_id?.startsWith('https://vimeo')">
+        <video :src="data?.image_kit_id" controls :poster="data?.thumbnail_image_kit_id"></video>
+      </template> -->
+      <span class="accessibility_bar mt-2">
+        <div class="d-flex justify-content-between px-4">
+          <span class="d-flex align-items-center gap-3">
+            <div class="img-box rounded-circle">
+              <img :src="UserSlider" alt="" />
+            </div>
+            <div class="img-box rounded-circle">
+              <img :src="TagSlider" alt="" />
+            </div>
+          </span>
+          <span style="justify-self: flex-end;">
+            <div class="img-box rounded-circle">
+              <img :src="VideoIcon" alt="" />
+            </div>
+          </span>
         </div>
-        <div>
-          <div class="img-box-value video-img-box d-flex align-items-center gap-2">
-            <img :src="VideoIcon" alt="" />
-            <p>02:34</p>
-          </div>
-        </div>
-      </div>
+      </span>
     </div>
     <div class="inner-footer-tabs d-flex justify-content-around">
       <div class="footer-messages d-flex align-items-center gap-2">
@@ -88,12 +99,56 @@ import TagSlider from "~/assets/images/Tag-slider.png";
 import VideoIconBlack from "~/assets/images/videoblackicon.png";
 import VideoIcon from "~/assets/images/video-icon.png";
 import { usePostCreationTime } from "../../composables/getPostCreatedTime";
-
+import { FeedResponse } from '../../models/feedResponse';
 defineProps({
-  data: Object
+  data: FeedResponse
 })
+  // var videoObj = {
+  //   id: 121,
+  //   is_bookmarked: false,
+  //   created_on: "2023-05-15T18:45:39.490567Z",
+  //   modified: "2023-05-15T18:45:39.490596Z",
+  //   owner: {
+  //     id: 112,
+  //     first_name: "chadi",
+  //     last_name: "ayari",
+  //     pronouns: [],
+  //     image: "https://storage.googleapis.com/demo-api.bizly.net/media/profiles/2023/05/18/04/02/bfc486b7-5dd.jpg",
+  //     background_images: [
+  //       "https://ik.imagekit.io/bizapp/images/image_picker_19DBD3F3-6999-41DC-842B-143B33F081D2-74133-00000C8831BEA582_UCpvXuBVp.jpg"
+  //     ],
+  //     roles: [
+  //       "Graphics Operator"
+  //     ],
+  //     location: "Tunis, PA",
+  //     occupation: null
+  //   },
+  //   biz_card: 52,
+  //   children: [],
+  //   invited_collaborators: [],
+  //   collaborators: [],
+  //   is_featured: false,
+  //   is_posted: true,
+  //   post_content: "",
+  //   status: "published",
+  //   is_gallery: false,
+  //   title: "YouTube video",
+  //   description: "yay",
+  //   content_type: "video",
+  //   external_type: null,
+  //   audio_file: null,
+  //   external_url: null,
+  //   image_kit_id: "https://vimeo.com/70591644",
+  //   thumbnail_image_kit_id: null,
+  //   image_kit_ids: [],
+  //   tags: [],
+  //   pronouns: [],
+  //   is_contact: false,
+  //   contact_id: null,
+  //   is_following: false
+  // }
 </script>
-<style>
+<style scoped>
 .img-div {
   position: relative;
 }

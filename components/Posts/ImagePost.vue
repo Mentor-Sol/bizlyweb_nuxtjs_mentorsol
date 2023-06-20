@@ -1,5 +1,5 @@
 <template>
-  <div class="inner-tabs-wrapper" v-if="data?.image_type_value">
+  <div class="inner-tabs-wrapper">
     <div class="inner-header-tabs d-flex justify-content-between">
       <div class="header-tabs-name d-flex align-items-center gap-3">
         <div class="header-tabs-name-dot">
@@ -17,15 +17,15 @@
     </div>
     <div class="Tabs-title d-flex align-items-center gap-3">
       <div class="profile-img">
-        <img :src="data?.image" alt="NOUser">
+        <img :src="data?.owner.image" alt="">
       </div>
       <div class="Tabs-title-name">
         <h5>
-          {{ data?.first_name + " " + data?.last_name }}
-          <span v-if="data.owner?.pronouns.length">{{ `(${data.owner.pronouns[0]})` }}
+          {{ data?.owner.first_name + " " + data?.owner.last_name }}
+          <span v-if="data?.owner.pronouns.length">{{ `(${data?.owner.pronouns[0]})` }}
           </span>
         </h5>
-        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in data?.roles" :key="index">
+        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in data?.owner.roles" :key="index">
           <span>{{ role }}</span>
         </div>
       </div>
@@ -36,8 +36,8 @@
       </p>
     </div>
     <div class="img-div">
-      <div v-if="data?.thumbnail_image_kit_id">
-        <img :src="data?.thumbnail_image_kit_id" class="inner-img-collection" style="filter: blur(8px);" />
+      <div v-if="data?.image_kit_id">
+        <img :src="data?.image_kit_id" class="inner-img-collection" />
       </div>
       <div v-else class="no-data">
       </div>
@@ -81,12 +81,13 @@ import bookmarket from "~/assets/images/bookmark-tabs.png";
 import MenuTab from "~/assets/images/Menu_tabs.png";
 import ImageIconSlider from "~/assets/images/Image-icon-slider.png"
 import BlackImgIcon from "~/assets/images/BlackImgIcon.png"
+import { FeedResponse } from '../../models/feedResponse';
 
 defineProps({
-  data: Object
+  data: FeedResponse
 })
 </script>
-<style>
+<style scoped>
 .img-div {
   position: relative;
 }

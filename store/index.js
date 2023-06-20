@@ -1,4 +1,3 @@
-import axios from "axios";
 import { defineStore } from "pinia";
 
 export const useStore = defineStore({
@@ -28,93 +27,95 @@ export const useStore = defineStore({
 
       try {
         const response = await $api.get("/activity-feed/", { headers });
-        console.log(response.data.data);
-        this.feedData = response.data.data.map((item) => {
-          const {
-            owner,
-            content_type,
-            image_kit_id,
-            image_kit_ids,
-            post_content,
-            description,
-            title,
-            thumbnail_image_kit_id,
-            pronouns,
-            created_on,
-            is_gallery,
-            children
-          } = item;
-          const data = {
-            ...owner,
-            ...(content_type === "image" && {
-              image_type_value: image_kit_id,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-            ...(content_type === "text" && {
-              text_type_value: post_content,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-            ...(content_type === "link" && {
-              link_type_value: image_kit_id,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-            ...(content_type === "video" && {
-              video_type_value: image_kit_id,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-            ...(content_type === "image_gallery" && {
-              image_gallery_type_value: image_kit_ids,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-            ...(content_type === "video_gallery" && {
-              image_gallery_type_value: image_kit_ids,
-              description,
-              title,
-              thumbnail_image_kit_id,
-              pronouns,
-              created_on,
-              is_gallery,
-              children,
-              content_type
-            }),
-          };
-          return data;
-        });
+        this.feedData = response.data.data;
+        // old Code
+        // .map((item) => {
+        //   const {
+        //     owner,
+        //     content_type,
+        //     image_kit_id,
+        //     image_kit_ids,
+        //     post_content,
+        //     description,
+        //     title,
+        //     thumbnail_image_kit_id,
+        //     pronouns,
+        //     created_on,
+        //     is_gallery,
+        //     children
+        //   } = item;
+        //   const data = {
+        //     ...owner,
+        //     ...(content_type === "image" && {
+        //       image_type_value: image_kit_id,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //     ...(content_type === "text" && {
+        //       text_type_value: post_content,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //     ...(content_type === "link" && {
+        //       link_type_value: image_kit_id,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //     ...(content_type === "video" && {
+        //       video_type_value: image_kit_id,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //     ...(content_type === "image_gallery" && {
+        //       image_gallery_type_value: image_kit_ids,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //     ...(content_type === "video_gallery" && {
+        //       image_gallery_type_value: image_kit_ids,
+        //       description,
+        //       title,
+        //       thumbnail_image_kit_id,
+        //       pronouns,
+        //       created_on,
+        //       is_gallery,
+        //       children,
+        //       content_type
+        //     }),
+        //   };
+        //   return data;
+        // });
+        //old code
       } catch (error) {
         console.error(error, " Error from store")
         // Handle error

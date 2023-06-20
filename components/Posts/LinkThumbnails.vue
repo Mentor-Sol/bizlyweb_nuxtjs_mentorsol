@@ -1,30 +1,35 @@
 <template>
-    <swiper-slide style="overflow: none;"><img :src="data?.thumbnail_image_kit_id" class="bg_img" /></swiper-slide>
-    <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :freeMode="true" :watchSlidesProgress="true" :modules="modules"
-        class="mySwiper">
-        <swiper-slide v-for="(slide, index) in links" :key="index">
-            <div class="link_div">
-                <div class="link_img" :style="'backgroup-image:url(' + slide?.image_kit_ids[0] + ')'"></div>
-                <div class="link_body">
-                    <h4 class="link_title">{{ slide?.title }}</h4>
-                    <p class="link_desc">{{ slide?.description }}</p>
+    <swiper-slide class="custom-swiper">
+        <img :src="data?.thumbnail_image_kit_id" class="bg_img" />
+        <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :freeMode="true" :slidesPerView="2" :watchSlidesProgress="true"
+            :modules="modules" class="mySwiper">
+            <swiper-slide class="current-slide" v-for="(slide, index) in links" :key="index"
+                @click="OpenLink(slide?.image_kit_id)">
+                <div class="link_div">
+                    <div class="link_img"><img :src="slide?.image_kit_ids[0]"></div>
+                    <div class="link_body">
+                        <h6 class="link_title">{{ slide?.title }}</h6>
+                        <small class="link_desc">{{ slide?.description }}</small>
+                    </div>
                 </div>
-            </div>
-            <!-- <p></p>
+                <!-- <p></p>
             <p></p> -->
-        </swiper-slide>
-    </swiper>
+            </swiper-slide>
+            <h1>test</h1>
+        </swiper>
+    </swiper-slide>
 </template>
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FeedResponse } from '../../models/feedResponse';
 defineProps({
-    links: Array,
-    data: Object
+    data: FeedResponse,
+    links: Array<FeedResponse>
 });
 const thumbsSwiper = ref(null);
 
@@ -33,12 +38,15 @@ const setThumbsSwiper = (swiper) => {
 };
 
 const modules = [FreeMode, Navigation, Thumbs];
-
+function OpenLink(link) {
+    console.log(link)
+    window.open(link, "_black")
+}
 </script>
 
-<style>
+<style scoped lang="scss">
 .bg_img {
-    height: 200px !important;
+    height: 400px !important;
 }
 
 .swiper {
@@ -46,16 +54,16 @@ const modules = [FreeMode, Navigation, Thumbs];
     height: 100%;
 }
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+.custom-swiper {
+    position: relative;
+}
 
-    /* Center slide text vertically */
+.swiper-slide.mySwiper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .swiper-slide img {
     display: block;
@@ -81,6 +89,7 @@ body {
     background-position: center;
 }
 
+
 .main-thums-Slider .swiper-wrapper {
     position: relative;
     overflow: unset !important;
@@ -91,36 +100,76 @@ body {
     width: 100%;
 }
 
+
 .mySwiper {
-    height: 20%;
+    height: 60%;
     box-sizing: border-box;
-    padding: 10px 0;
-}
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, black);
 
-.mySwiper .swiper-slide {
-    width: 25%;
-    height: 100%;
-    opacity: 0.4;
-}
+    .swiper-slide {
+        width: 40% !important;
+        opacity: 0.8;
+        cursor: pointer;
 
-.mySwiper .swiper-slide-thumb-active {
-    opacity: 1;
-}
+        &:hover {
+            opacity: 1;
+        }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+        .link_div {
+            width: 100%;
+            height: 100%;
+            background-color: #262626;
+            border-radius: 6px;
+            overflow: hidden;
 
-.swiper-button-prev {
-    display: block !important;
-    color: black !important;
-}
+            .link_img {
+                height: 70%;
+                width: 100%;
+                border-bottom: 1px solid #cdd5e1;
 
-.swiper-button-next {
-    display: block !important;
-    color: black !important;
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .link_body {
+                padding: 10px 5px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                .link_title {
+                    margin-bottom: 5px;
+                    color: #cdd5e1 !important;
+                }
+
+                .link_desc {
+                    color: white;
+                }
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-prev {
+            display: block !important;
+            color: black !important;
+        }
+
+        .swiper-button-next {
+            display: block !important;
+            color: black !important;
+        }
+    }
 }
 </style>

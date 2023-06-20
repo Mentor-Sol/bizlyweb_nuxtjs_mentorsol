@@ -1,10 +1,6 @@
 <template>
-  <div
-    class="inner-insipired-card"
-    v-for="(item, index) in inspirationData"
-    :key="index"
-    :style="`background-image: url(${item?.image || cardImage})`"
-  >
+  <div class="inner-insipired-card current-card" v-for="(item, index) in inspirationData" :key="index"
+    :style="`background-image: url(${item?.image || cardImage})`">
     <div @click="goTo(item?.biz_card_id)">
       <div class="d-flex justify-content-end">
         <img :src="ToggleIconCard" alt="Self " />
@@ -12,9 +8,7 @@
       <div>
         <h5>{{ item?.first_name + " " + item?.last_name }}</h5>
         <p>Photographer <span>.</span> Colodjuhuo</p>
-        <div
-          class="d-flex align-items-center gap-1 home-location justify-content-center"
-        >
+        <div class="d-flex align-items-center gap-1 home-location justify-content-center">
           <img :src="LocationIcon" alt="Self " />
 
           <p>{{ item?.location || "" }}</p>
@@ -43,3 +37,13 @@ const goTo = (id) => {
 };
 const { inspirationData } = storeToRefs(useStore());
 </script>
+<style lang="scss">
+.current-card {
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.2);
+    background-blend-mode: screen;
+  }
+}
+</style>

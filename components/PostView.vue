@@ -1,35 +1,35 @@
 <template>
-    <!-- <div v-for="(feed, index) in feedData" :key="index"> -->
-    <!-- <template v-if="feed?.content_type == 'image' && feed.is_gallery == false">
+    <div v-for="(feed, index) in feedData" :key="index">
+        <template v-if="feed?.content_type == 'image'">
             <ImagePost :data="feed" class="mb-3" />
         </template>
-        <template v-if="feed?.content_type == 'text' && feed.is_gallery == false">
+        <template v-if="feed?.content_type == 'text'">
             <TextPost :data="feed" class="mb-3" />
         </template>
-        <template v-if="feed?.content_type == 'link' && feed.is_gallery == false">
+        <template v-if="feed?.content_type == 'link'">
             <LinkPost :data="feed" class="mb-3" />
         </template>
         <template v-if="feed?.content_type == 'image_gallery'">
             <ImageGalleryPost :data="feed" class="mb-3" />
-        </template> -->
-    <!-- <template v-if="feed?.content_type == 'link_gallery'"> -->
-    <LinkGalleryPost class="mb-3" />
-    <!-- </template> -->
-    <!-- <template v-if="feed?.content_type == 'video'">
+        </template>
+        <template v-if="feed?.content_type == 'link_gallery'">
+            <LinkGalleryPost class="mb-3" />
+        </template>
+        <template v-if="feed?.content_type == 'video'">
             <VideoPost :data="feed" class="mb-3" />
-        </template> -->
-    <!-- </div> -->
+        </template>
+    </div>
 </template>
 <script setup>
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
+const { feedData } = storeToRefs(useStore());
 import ImagePost from "./Posts/ImagePost.vue";
 import TextPost from "./Posts/TextPost.vue";
 import LinkPost from "./Posts/LinkPost.vue";
 import ImageGalleryPost from "./Posts/ImageGalleryPost.vue";
 import VideoPost from "./Posts/VideoPost.vue";
 import LinkGalleryPost from './Posts/LinkGalleryPost.vue';
-const { feedData } = storeToRefs(useStore());
 </script>
 <style lang="scss">
 .profile-img {

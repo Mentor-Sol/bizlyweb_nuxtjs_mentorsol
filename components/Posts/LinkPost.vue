@@ -1,5 +1,5 @@
 <template>
-  <div class="inner-tabs-wrapper" v-if="data?.link_type_value">
+  <div class="inner-tabs-wrapper">
     <div class="inner-header-tabs d-flex justify-content-between">
       <div class="header-tabs-name d-flex align-items-center gap-3">
         <div class="header-tabs-name-dot">
@@ -17,15 +17,15 @@
     </div>
     <div class="Tabs-title d-flex align-items-center gap-3">
       <div>
-        <img :src="data?.image" alt="" class="profile-img" />
+        <img :src="data?.owner.image" alt="" class="profile-img" />
       </div>
       <div class="Tabs-title-name">
         <h5>
-          {{ data?.first_name + " " + data?.last_name }}
-          <span>{{ data?.pronouns?.[0] ? "(" + data?.pronouns?.[0] + ")" : "" }}
+          {{ data?.owner.first_name + " " + data?.owner.last_name }}
+          <span>{{ data?.owner.pronouns?.[0] ? "(" + data?.owner.pronouns?.[0] + ")" : "" }}
           </span>
         </h5>
-        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in data?.roles" :key="index">
+        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in data?.owner.roles" :key="index">
           <span>{{ role }}</span>
         </div>
       </div>
@@ -46,15 +46,15 @@
         see less
       </button>
     </div>
-    <div class="img-div">
+    <div class="img-div link_view" @click="OpenUrl(data.image_kit_id)">
       <div v-if="data?.thumbnail_image_kit_id">
-        <img :src="data?.thumbnail_image_kit_id" class="inner-img-collection" style="filter: blur(8px);" />
+        <img :src="data?.thumbnail_image_kit_id" class="inner-img-collection" />
       </div>
       <div v-else class="no-data">
       </div>
       <div class="inner-description-wrapper">
-        <a :href="data.link_type_value" target="_blank">{{
-          data?.link_type_value
+        <a :href="data.image_kit_id" target="_blank">{{
+          data?.image_kit_id
         }}</a>
         <p>{{ data?.title }}</p>
         <span>{{
@@ -102,9 +102,10 @@ import MenuTab from "~/assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png";
 import TagSlider from "~/assets/images/Tag-slider.png";
 import LinkWhite from "~/assets/images/Link-white.png";
+import { FeedResponse } from '../../models/feedResponse';
 
 defineProps({
-  data: Object
+  data: FeedResponse
 })
 
 const maxlenght = useState(() => 20);
@@ -117,8 +118,11 @@ const seeLess = (text) => {
   maxlenght.value = 3;
   more.value = false;
 };
+const OpenUrl = (url) => {
+  window.open(url, "_blank")
+}
 </script>
-<style>
+<style scoped lang="scss">
 .img-div {
   position: relative;
 }
@@ -128,6 +132,14 @@ const seeLess = (text) => {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.link_view {
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 }
 </style>
   

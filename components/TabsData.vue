@@ -1,58 +1,29 @@
 <template>
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link active"
-        id="contact-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#contact"
-        type="button"
-        role="tab"
-        aria-controls="contact"
-        aria-selected="true"
-      >
+      <button class="nav-link active" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button"
+        role="tab" aria-controls="contact" aria-selected="true">
         <img :src="Contact" alt=" Contact" />
         <p>Contact</p>
       </button>
     </li>
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="content-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#content"
-        type="button"
-        role="tab"
-        aria-controls="content"
-        aria-selected="false"
-      >
+      <button class="nav-link" id="content-tab" data-bs-toggle="tab" data-bs-target="#content" type="button" role="tab"
+        aria-controls="content" aria-selected="false">
         <img :src="Content" alt="Content" />
         <p>Content</p>
       </button>
     </li>
     <li class="nav-item" role="presentation">
-      <button
-        class="nav-link"
-        id="services-tab"
-        data-bs-toggle="tab"
-        data-bs-target="#services"
-        type="button"
-        role="tab"
-        aria-controls="services"
-        aria-selected="false"
-      >
+      <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab"
+        aria-controls="services" aria-selected="false">
         <img :src="Services" alt="Services" />
         <p>Services</p>
       </button>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <div
-      class="tab-pane fade show active"
-      id="contact"
-      role="tabpanel"
-      aria-labelledby="contact-tab"
-    >
+    <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
       <div className="TabsWrapper">
         <div className="container">
           <div className="row ">
@@ -69,44 +40,21 @@
             <div className="col-lg-6 tabsInner">
               <div className="socialIcon">
                 <p>Socials</p>
-                <span
-                  className="text-light"
-                  v-if="!data?.social_networks?.length"
-                  >No Social networks added yet</span
-                >
-                <div
-                  className="d-flex Icons"
-                  v-if="data?.social_networks?.length"
-                >
-                  <div
-                    v-for="(item, index) in data?.social_networks"
-                    :key="index"
-                  >
+                <span className="text-light" v-if="!data?.social_networks?.length">No Social networks added yet</span>
+                <div className="d-flex Icons" v-if="data?.social_networks?.length">
+                  <div v-for="(item, index) in data?.social_networks" :key="index">
                     <a v-if="item.enabled" :href="item.url" target="_blank">
-                      <img
-                        v-if="item.enabled"
-                        :src="socialNetworks[item.network]"
-                        :alt="item.network"
-                      />
+                      <img v-if="item.enabled" :src="socialNetworks[item.network]" :alt="item.network" />
                     </a>
                   </div>
                 </div>
               </div>
               <div className="userInfo">
                 <p>Meghan Magin</p>
-                <div
-                  v-for="(item, index) in data?.contact_information"
-                  :key="index"
-                >
-                  <div
-                    v-if="item.enabled"
-                    className="d-flex align-items-center info"
-                  >
+                <div v-for="(item, index) in data?.contact_information" :key="index">
+                  <div v-if="item.enabled" className="d-flex align-items-center info">
                     <div className="infoIcon">
-                      <img
-                        :src="ContactIcons[item?.contact_type]"
-                        :alt="item?.contact_type"
-                      />
+                      <img :src="ContactIcons[item?.contact_type]" :alt="item?.contact_type" />
                     </div>
 
                     <p>{{ item?.information }}</p>
@@ -134,12 +82,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="tab-pane fade"
-      id="content"
-      role="tabpanel"
-      aria-labelledby="content-tab"
-    >
+    <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
       <div className="contentWrapper bg-black">
         <div className="container-fluid">
           <div className="row">
@@ -231,12 +174,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="tab-pane fade"
-      id="services"
-      role="tabpanel"
-      aria-labelledby="services-tab"
-    >
+    <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
       <div className="ServicesWrapper bg-black">
         <div className="container">
           <div className="row">
@@ -252,10 +190,7 @@
                 </div>
                 <div className="d-flex">
                   <div className="w-50">
-                    <div
-                      v-if="data?.available_to_work"
-                      className="d-flex align-items-center info"
-                    >
+                    <div v-if="data?.available_to_work" className="d-flex align-items-center info">
                       <div className="infoIcon">
                         <img :src="Clock" alt="Clock " />
                       </div>
@@ -290,10 +225,7 @@
                 <div className="locationWrapper mb-3">
                   <span>Locations</span>
                   <div className="location">
-                    <p
-                      v-for="(item, index) in data?.services_locations"
-                      :key="index"
-                    >
+                    <p v-for="(item, index) in data?.services_locations" :key="index">
                       {{ item }}
                     </p>
                   </div>
@@ -301,10 +233,7 @@
                 <div className="locationWrapper  mb-3">
                   <span>Opportunity Interests</span>
                   <div className="location">
-                    <p
-                      v-for="(item, index) in data?.opportunity_settings"
-                      :key="index"
-                    >
+                    <p v-for="(item, index) in data?.opportunity_settings" :key="index">
                       {{ item }}
                     </p>
                   </div>
@@ -312,10 +241,7 @@
                 <div className="locationWrapper">
                   <span>Workplace</span>
                   <div className="location">
-                    <p
-                      v-for="(item, index) in data?.workplace_settings"
-                      :key="index"
-                    >
+                    <p v-for="(item, index) in data?.workplace_settings" :key="index">
                       {{ item }}
                     </p>
                   </div>
@@ -335,10 +261,7 @@
                 </div>
                 <div className="locationWrapper">
                   <div className="location">
-                    <p
-                      v-for="(item, index) in data?.professional_skills"
-                      :key="index"
-                    >
+                    <p v-for="(item, index) in data?.professional_skills" :key="index">
                       {{ item }}
                     </p>
                   </div>
@@ -420,7 +343,7 @@ const socialNetworks = {
 };
 </script>
 
-<style>
+<style scoped>
 .swiper-slide {
   display: flex;
   justify-content: center;

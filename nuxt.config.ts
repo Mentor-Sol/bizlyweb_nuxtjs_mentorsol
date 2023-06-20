@@ -14,6 +14,10 @@ export default defineNuxtConfig({
           type: "text/javascript",
           body: true,
         },
+        {
+          src: "https://player.vimeo.com/api/player.js",
+          type: "text/javascript"
+        }
       ],
     },
   },

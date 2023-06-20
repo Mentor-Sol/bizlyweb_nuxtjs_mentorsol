@@ -82,14 +82,15 @@
 import BizlyupdateCard from "../components/BizlyupdateCard.vue";
 import GetinTouch from "../components/GetinTouch.vue";
 import HomeTabs from "../components/HomeTabs.vue";
-import TabSevnthSection from "../components/TabSevnthSection.vue";
-import TabsEightSection from "../components/TabsEightSection.vue";
-import TabsNightSection from "../components/TabsNightSection.vue";
-import TabsSixthSection from "../components/TabsSixthSection.vue";
-import TabstenthSection from "../components/TabstenthSection.vue";
-import TabsFirstSection from "../components/tabsFirstSection.vue";
-import TabsSecondSection from "../components/tabsSecondSection.vue";
-import TabsVideoSection from "../components/tabsVideoSection.vue";
-import TabsfifthSection from "../components/tabsfifthSection.vue";
+import InsipiredCard from "../components/InsipiredCard.vue";
+// import TabSevnthSection from "../components/TabSevnthSection.vue";
+// import TabsEightSection from "../components/TabsEightSection.vue";
+// import TabsNightSection from "../components/TabsNightSection.vue";
+// import TabsSixthSection from "../components/TabsSixthSection.vue";
+// import TabstenthSection from "../components/TabstenthSection.vue";
+// import TabsFirstSection from "../components/tabsFirstSection.vue";
+// import TabsSecondSection from "../components/tabsSecondSection.vue";
+// import TabsVideoSection from "../components/tabsVideoSection.vue";
+// import TabsfifthSection from "../components/tabsfifthSection.vue";
 import PostView from '../components/PostView.vue';
 </script>

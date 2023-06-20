@@ -1,12 +1,7 @@
 <template>
   <div className="feature">
-    <Swiper
-      :height="700"
-      :modules="[SwiperAutoplay, SwiperEffectCreative]"
-      :slides-per-view="1"
-      :loop="true"
-      :effect="'creative'"
-      :creative-effect="{
+    <Swiper :height="700" :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
+      :effect="'creative'" :creative-effect="{
         prev: {
           shadow: false,
           translate: ['-20%', 0, -1],
@@ -14,22 +9,16 @@
         next: {
           translate: ['100%', 0, 0],
         },
-      }"
-    >
-      <SwiperSlide
-        v-for="(slide, idx) in dataBizCard?.owner?.background_images"
-        :key="idx"
-      >
+      }">
+      <SwiperSlide v-for="(slide, idx) in dataBizCard?.owner?.background_images" :key="idx">
         <img :src="slide" className="feature_img" />
         <div className="count ">
           <p>FEATURED</p>
           <div className="inner d-flex ">
             <img :src="MultipleImg" alt=" MultipleImg" />
-            <span
-              >{{ idx + 1 }}/{{
-                dataBizCard?.owner?.background_images?.length
-              }}</span
-            >
+            <span>{{ idx + 1 }}/{{
+              dataBizCard?.owner?.background_images?.length
+            }}</span>
           </div>
         </div>
       </SwiperSlide>
@@ -44,7 +33,7 @@ import MultipleImg from "~/assets/images/multipleImg.svg";
 
 const { dataBizCard } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 .feature .swiper-slide {
   display: flex;
   justify-content: center;
@@ -60,6 +49,7 @@ const { dataBizCard } = storeToRefs(useStore());
   width: 100%;
   height: 100%;
 }
+
 .swiper-wrapper {
   min-width: 100vh;
   width: 100vh;

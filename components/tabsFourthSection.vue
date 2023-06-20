@@ -21,15 +21,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
         </div>
@@ -84,11 +79,12 @@ import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 .feed_img {
   width: 100%;
   height: 100%;
 }
+
 .profile-img {
   width: 60px;
   border-radius: 50%;

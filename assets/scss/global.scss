@@ -1974,12 +1974,9 @@ div#myTabContent {
   width: 24px;
   height: 24px;
   background: rgba(0, 0, 0, 0.45);
-  position: relative;
-  img{
-    position: absolute;
-    top: 5px;
-    left: 5px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .inner-description-wrapper {
   background: #262626;
@@ -2087,6 +2084,14 @@ div#myTabContent {
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
+}
+.text-bg{
+  height: 410px;
+  width: 100%;
+  background: url("~/assets/images/tenthbgimg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .inner-Collection-wrapper {
   position: absolute;
