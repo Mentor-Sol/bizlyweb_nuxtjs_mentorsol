@@ -81,7 +81,7 @@ import bookmarket from "~/assets/images/bookmark-tabs.png";
 import MenuTab from "~/assets/images/Menu_tabs.png";
 import ImageIconSlider from "~/assets/images/Image-icon-slider.png"
 import BlackImgIcon from "~/assets/images/BlackImgIcon.png"
-import { FeedResponse } from '../../models/feedResponse';
+import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({
   data: FeedResponse

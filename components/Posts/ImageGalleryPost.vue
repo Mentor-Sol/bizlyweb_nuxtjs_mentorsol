@@ -80,7 +80,7 @@ import MenuTab from "~/assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png"
 import TagSlider from "~/assets/images/Tag-slider.png"
 import ImageIconSlider from "~/assets/images/Image-icon-slider.png"
-import { FeedResponse } from "../../models/feedResponse";
+import { FeedResponse } from "../../models/FeedResponse/feedResponse";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";

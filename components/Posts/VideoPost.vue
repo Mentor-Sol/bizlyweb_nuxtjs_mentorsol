@@ -99,7 +99,7 @@ import TagSlider from "~/assets/images/Tag-slider.png";
 import VideoIconBlack from "~/assets/images/videoblackicon.png";
 import VideoIcon from "~/assets/images/video-icon.png";
 import { usePostCreationTime } from "../../composables/getPostCreatedTime";
-import { FeedResponse } from '../../models/feedResponse';
+import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 defineProps({
   data: FeedResponse
 })

@@ -14,6 +14,7 @@
   border: unset !important;
   color: blue !important;
 }
+
 .mainHeader {
   background: #141414;
   height: 56px;
@@ -110,142 +111,142 @@
   background: #fff;
 }
 
-.BannerWrapper {
-  position: relative;
-  overflow: hidden;
+// .BannerWrapper {
+//   position: relative;
+//   overflow: hidden;
 
-  .bannerImg {
-    position: absolute;
-    right: 0;
-    left: 0;
+//   .bannerImg {
+//     position: absolute;
+//     right: 0;
+//     left: 0;
 
-    img {
-      height: 826px;
-      width: 100%;
-      object-fit: cover;
-    }
-  }
+//     img {
+//       height: 826px;
+//       width: 100%;
+//       object-fit: cover;
+//     }
+//   }
 
-  .bannerInner {
-    z-index: 1;
-    position: relative;
-    padding: 100px 0px 100px 10px;
+//   .bannerInner {
+//     z-index: 1;
+//     position: relative;
+//     padding: 100px 0px 100px 10px;
 
-    .userName {
-      h3 {
-        font-weight: 700;
-        font-size: 72px;
-        line-height: 84px;
-        color: #ffffff;
-        max-width: 300px;
-        margin-bottom: 5px;
-      }
+//     .userName {
+//       h3 {
+//         font-weight: 700;
+//         font-size: 72px;
+//         line-height: 84px;
+//         color: #ffffff;
+//         max-width: 300px;
+//         margin-bottom: 5px;
+//       }
 
-      p {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #ffffff;
-        margin-bottom: 10px;
-      }
+//       p {
+//         font-weight: 400;
+//         font-size: 16px;
+//         line-height: 24px;
+//         color: #ffffff;
+//         margin-bottom: 10px;
+//       }
 
-      .socialWork {
-        margin-bottom: 10px;
+//       .socialWork {
+//         margin-bottom: 10px;
 
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #bfbfbf;
-          margin-bottom: 0;
-          position: relative;
+//         p {
+//           font-weight: 400;
+//           font-size: 16px;
+//           line-height: 24px;
+//           color: #bfbfbf;
+//           margin-bottom: 0;
+//           position: relative;
 
-          &::after {
-            content: "";
-            position: absolute;
-            height: 12px;
-            width: 2px;
-            background-color: #bfbfbf;
-            top: 5px;
-            right: -14px;
-          }
+//           &::after {
+//             content: "";
+//             position: absolute;
+//             height: 12px;
+//             width: 2px;
+//             background-color: #bfbfbf;
+//             top: 5px;
+//             right: -14px;
+//           }
 
-          &:last-child {
-            &::after {
-              background-color: transparent;
-            }
-          }
-        }
-      }
+//           &:last-child {
+//             &::after {
+//               background-color: transparent;
+//             }
+//           }
+//         }
+//       }
 
-      .SelfEmployed {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: #ffffff;
-        margin-bottom: 15px;
+//       .SelfEmployed {
+//         font-weight: 500;
+//         font-size: 16px;
+//         line-height: 24px;
+//         color: #ffffff;
+//         margin-bottom: 15px;
 
-        p {
-          margin-bottom: 0;
-        }
-      }
+//         p {
+//           margin-bottom: 0;
+//         }
+//       }
 
-      .bannerDesc {
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #bfbfbf;
-          max-width: 400px;
-        }
-      }
+//       .bannerDesc {
+//         p {
+//           font-weight: 400;
+//           font-size: 16px;
+//           line-height: 24px;
+//           color: #bfbfbf;
+//           max-width: 400px;
+//         }
+//       }
 
-      .messageIcon {
-        margin-top: 20px;
-        gap: 30px;
-        margin-bottom: 30px;
-      }
+//       .messageIcon {
+//         margin-top: 20px;
+//         gap: 30px;
+//         margin-bottom: 30px;
+//       }
 
-      .CustomButton {
-        margin-bottom: 10px;
+//       .CustomButton {
+//         margin-bottom: 10px;
 
-        button {
-          font-weight: 600;
-          font-size: 14px;
-          color: #141414;
-          padding: 12px 82px;
-          line-height: 24px;
-          background: #ffffff;
-          border-radius: 25px;
-          border: none !important;
-        }
-      }
+//         button {
+//           font-weight: 600;
+//           font-size: 14px;
+//           color: #141414;
+//           padding: 12px 82px;
+//           line-height: 24px;
+//           background: #ffffff;
+//           border-radius: 25px;
+//           border: none !important;
+//         }
+//       }
 
-      .tags {
-        display: flex;
-        column-gap: 5px;
-        row-gap: 5px;
-        flex-wrap: wrap;
-        width: 100%;
-        max-width: 816px;
-        margin-top: 30px;
+//       .tags {
+//         display: flex;
+//         column-gap: 5px;
+//         row-gap: 5px;
+//         flex-wrap: wrap;
+//         width: 100%;
+//         max-width: 816px;
+//         margin-top: 30px;
 
-        p {
-          font-weight: 400;
-          font-size: 12px;
-          margin-bottom: 0;
-          line-height: 10px;
-          color: #ffffff;
-          background: rgba(0, 0, 0, 0.45);
-          border: 1px solid #ffffff;
-          backdrop-filter: blur(2px);
-          border-radius: 30px;
-          padding: 10px;
-        }
-      }
-    }
-  }
-}
+//         p {
+//           font-weight: 400;
+//           font-size: 12px;
+//           margin-bottom: 0;
+//           line-height: 10px;
+//           color: #ffffff;
+//           background: rgba(0, 0, 0, 0.45);
+//           border: 1px solid #ffffff;
+//           backdrop-filter: blur(2px);
+//           border-radius: 30px;
+//           padding: 10px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 div#myTabContent {
   background: black;
@@ -288,7 +289,6 @@ div#myTabContent {
       }
 
       .Icons {
-        gap: 38px;
         margin-top: 20px;
       }
     }
@@ -1235,8 +1235,7 @@ div#myTabContent {
 
   .BannerWrapper {
     .bannerImg {
-      img {
-      }
+      img {}
     }
 
     .bannerInner {
@@ -1300,23 +1299,6 @@ div#myTabContent {
     }
   }
 
-  .TabsWrapper {
-    .tabsInner {
-      .socialIcon {
-        p {
-          font-size: 16px;
-        }
-      }
-
-      .userInfo {
-        P {
-          &:nth-child(1) {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-  }
 
   .downloadBizly {
     .CustomButton {
@@ -1433,11 +1415,9 @@ div#myTabContent {
 .Home-header {
   padding: 13px 100px;
   height: 57px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 31, 83, 0.9) 0%,
-    rgba(0, 15, 50, 0.9) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 31, 83, 0.9) 0%,
+      rgba(0, 15, 50, 0.9) 100%);
   border-bottom: 1px solid #546b91;
 
   .logo {
@@ -1564,6 +1544,7 @@ div#myTabContent {
       display: flex;
       flex-wrap: nowrap;
       gap: 16px;
+
       &::-webkit-scrollbar {
         display: none;
       }
@@ -1578,10 +1559,23 @@ div#myTabContent {
       border-radius: 5px;
       padding: 15px 10px;
       height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
+      position: relative;
+
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        position: absolute;
+        right: 3%;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover img {
+          filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.75))
+        }
+      }
 
       img {
         cursor: pointer;
@@ -1621,14 +1615,17 @@ div#myTabContent {
         }
       }
     }
+
     .BizlyRow {
       overflow-x: auto;
       width: 100%;
       flex-wrap: nowrap;
+
       &::-webkit-scrollbar {
         display: none;
       }
     }
+
     .bizly-card {
       background-image: url(../images/second-card-bg.png);
       background-position: center;
@@ -1915,6 +1912,7 @@ div#myTabContent {
           .tabs-desc {
             padding: 10px 15px;
             align-items: center;
+
             p {
               font-family: "Roboto";
               font-style: normal;
@@ -1978,6 +1976,7 @@ div#myTabContent {
   justify-content: center;
   align-items: center;
 }
+
 .inner-description-wrapper {
   background: #262626;
   border-top: 1px solid #cdd5e1;
@@ -2002,6 +2001,7 @@ div#myTabContent {
     color: #ffffff;
   }
 }
+
 .video-container {
   position: relative;
 
@@ -2074,18 +2074,21 @@ div#myTabContent {
     margin-bottom: 0;
   }
 }
-  .inner-img-collection {
-    width: 100%;
-  }
-.no-data{
+
+.inner-img-collection {
+  width: 100%;
+}
+
+.no-data {
   height: 410px;
   width: 100%;
-  background: url("~/assets/images/NoDataImage.png"), rgba(0,0,0,0.1);
+  background: url("~/assets/images/NoDataImage.png"), rgba(0, 0, 0, 0.1);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
 }
-.text-bg{
+
+.text-bg {
   height: 410px;
   width: 100%;
   background: url("~/assets/images/tenthbgimg.png");
@@ -2093,18 +2096,22 @@ div#myTabContent {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .inner-Collection-wrapper {
   position: absolute;
   bottom: 0;
   padding: 15px;
   width: 100%;
+
   .collection-images {
     overflow: auto;
     width: 100%;
+
     &::-webkit-scrollbar {
       display: none;
     }
   }
+
   h5 {
     font-family: "Roboto";
     font-style: normal;
@@ -2113,6 +2120,7 @@ div#myTabContent {
     line-height: 28px;
     color: #ffffff;
   }
+
   p {
     font-family: "Roboto";
     font-style: normal;
@@ -2120,6 +2128,7 @@ div#myTabContent {
     font-size: 14px;
     line-height: 20px;
     color: #bfbfbf;
+
     a {
       font-family: "Roboto";
       font-style: normal;
@@ -2131,11 +2140,13 @@ div#myTabContent {
     }
   }
 }
+
 .inner-text-wrapper {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   padding: 15px;
+
   .text-inner-collection {
     p {
       font-family: "Roboto";
@@ -2143,6 +2154,7 @@ div#myTabContent {
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
+
       a {
         font-family: "Roboto";
         font-style: normal;
@@ -2155,6 +2167,7 @@ div#myTabContent {
     }
   }
 }
+
 .main-thums-Slider {
   height: 420px;
   position: relative;
@@ -2163,6 +2176,7 @@ div#myTabContent {
     position: relative;
     overflow: auto;
     width: auto !important;
+
     &::-webkit-scrollbar {
       display: none;
     }
@@ -2218,8 +2232,7 @@ div#myTabContent {
     height: 420px;
     width: 100%;
 
-    .slider-inner-icons {
-    }
+    .slider-inner-icons {}
   }
 
   .mySwiper {

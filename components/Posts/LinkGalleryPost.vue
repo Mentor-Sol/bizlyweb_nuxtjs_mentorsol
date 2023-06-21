@@ -57,7 +57,7 @@ import BlackImgVideo from "~/assets/images/Link.png";
 import bookmarket from "~/assets/images/bookmark-tabs.png";
 import MenuTab from "~/assets/images/Menu_tabs.png";
 import LinkThumbnails from "./LinkThumbnails.vue";
-import { FeedResponse } from '../../models/feedResponse';
+import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({
   data: FeedResponse

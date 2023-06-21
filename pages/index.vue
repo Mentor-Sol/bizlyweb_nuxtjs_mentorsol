@@ -58,14 +58,14 @@
       <div class="tab-content" id="myTabContentHome">
         <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <div className="TabsWrapper">
-            <!-- <TabSevnthSection /> -->
-            <!-- <TabsNightSection /> -->
-            <!-- <TabsSixthSection /> -->
+            <!-- <TabSevnthSection />
+            <TabsNightSection />
+            <TabsSixthSection /> -->
             <!-- <TabsFirstSection /> -->
             <!-- <TabsSecondSection /> -->
-            <!-- <TabsVideoSection /> -->
-            <!-- <TabsfifthSection /> -->
-            <PostView />
+            <!-- <TabsVideoSection />
+            <TabsfifthSection /> -->
+            <!-- <PostView /> -->
           </div>
         </div>
         <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">

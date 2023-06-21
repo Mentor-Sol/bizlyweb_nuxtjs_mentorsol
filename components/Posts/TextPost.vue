@@ -85,7 +85,7 @@ import MenuTab from "~/assets/images/Menu_tabs.png";
 import UserSlider from "~/assets/images/user-slider.png";
 import TagSlider from "~/assets/images/Tag-slider.png";
 import TextWhite from "~/assets/images/textwhite.png";
-import { FeedResponse } from '../../models/feedResponse';
+import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({
   data: FeedResponse

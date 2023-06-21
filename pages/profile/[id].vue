@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navigation :data="dataBizCard" />
     <Banner :data="dataBizCard" />
     <TabsData :data="dataBizCard" />
     <div className="downloadBizly">
@@ -21,8 +22,11 @@
 <script setup>
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
+import Banner from "../../components/Profile/Banner.vue"
+import TabsData from "../../components/Profile/TabsData.vue";
+import Navigation from '../../components/Profile/Navigation.vue';
 const route = useRoute();
-const { data, dataBizCard } = storeToRefs(useStore());
+const { dataBizCard } = storeToRefs(useStore());
 const { retrieveBizCardById } = useStore();
 onMounted(() => {
   retrieveBizCardById(route.params.id);

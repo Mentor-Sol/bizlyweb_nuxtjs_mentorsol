@@ -12,8 +12,6 @@
                         <small class="link_desc">{{ slide?.description }}</small>
                     </div>
                 </div>
-                <!-- <p></p>
-            <p></p> -->
             </swiper-slide>
             <h1>test</h1>
         </swiper>
@@ -26,7 +24,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper";
-import { FeedResponse } from '../../models/feedResponse';
+import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 defineProps({
     data: FeedResponse,
     links: Array<FeedResponse>
