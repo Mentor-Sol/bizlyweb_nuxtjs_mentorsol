@@ -4,12 +4,12 @@
         <div class="TabsWrapper">
             <div class="container">
                 <div class="row ">
-                    <div class="col-lg-6">
-                        <p class="tabsHead" role="button" @click="scheduleMeeting">
+                    <div class="col-lg-6" v-if="data?.biz_button_options?.schedule_meeting">
+                        <p class="tabsHead" role="button" @click="scheduleMeeting(data?.biz_button_options.meeting_url)">
                             Schedule a Meeting
                         </p>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" v-if="data?.biz_button_options?.check_availability">
                         <p class="tabsHead" role="button">Check Availability</p>
                     </div>
                 </div>
@@ -18,24 +18,40 @@
                         <div class="socialIcon">
                             <p>Socials</p>
                             <div class="d-flex Icons" v-if="data?.social_networks?.length">
-                                <span v-for="(item, index) in data?.social_networks" :key="index">
-                                    <a v-if="item.enabled" :href="item.url" target="_blank">
-                                        <img :src="socialNetworks[item.network]" :alt="item.network" />
-                                    </a>
-                                </span>
+                                <template v-for="(item, index) in data?.social_networks" :key="index">
+                                    <span v-if="item?.enabled && item?.network != 'unknown'">
+                                        <a target=" _blank" :href="item?.url">
+                                            <img :src="socialNetworks[item.network.toLowerCase()]" :alt="item.network" />
+                                        </a>
+                                    </span>
+                                </template>
                             </div>
                             <span class="text-light" v-if="!data?.social_networks?.length">No Social networks added
                                 yet</span>
 
                         </div>
                         <div class="userInfo">
-                            <p>{{ data?.owner?.first_name + " " + data?.owner?.last_name }}</p>
+                            <p class="text-capitalize">{{ data?.owner?.first_name + " " + data?.owner?.last_name }}</p>
                             <div v-for="(item, index) in data?.contact_information" :key="index">
                                 <div v-if="item.enabled" class="d-flex align-items-center info">
                                     <div class="infoIcon">
                                         <img :src="ContactIcons[item?.contact_type]" :alt="item?.contact_type" />
                                     </div>
-                                    <p>{{ item?.information }}</p>
+                                    <template v-if="item.contact_type.toLowerCase() == 'phone'">
+                                        <a class="text-decoration-none" :href="'tel:+' + item.information">
+                                            <p>{{ item?.information }}</p>
+                                        </a>
+                                    </template>
+                                    <template v-if="item.contact_type.toLowerCase() == 'mail'">
+                                        <a class="text-decoration-none" :href="'mailto:+' + item.information">
+                                            <p>{{ item?.information }}</p>
+                                        </a>
+                                    </template>
+                                    <template v-if="item.contact_type.toLowerCase() == 'link'">
+                                        <a class="text-decoration-none" :href="item.information" target="_blank">
+                                            <p>{{ item?.information }}</p>
+                                        </a>
+                                    </template>
                                 </div>
                             </div>
                         </div>
@@ -47,8 +63,9 @@
                                     <img :src="LocationIcon" height="12" width="12" alt="location" />
                                 </div>
                                 <div>
-                                    <p>{{ data?.owner?.first_name + " " + data?.owner?.last_name }}</p>
-                                    <span>{{ data?.owner.location }}</span>
+                                    <p class="text-capitalize">{{ data?.owner?.first_name + " " + data?.owner?.last_name }}
+                                    </p>
+                                    <span>{{ data?.owner?.location }}</span>
                                 </div>
                             </div>
                             <div class="tabMap">
@@ -63,19 +80,33 @@
 </template>
 <script setup>
 import { FullBizCard } from '../../../models/ProfileData/FullBizCard';
-
-import Twitter from "~/assets/images/Twitter.svg";
-import Instagram from "~/assets/images/instagram.svg";
-import Google from "~/assets/images/Google.svg";
-import LinkedIn from "~/assets/images/Twitter.svg";
-import Facebook from "~/assets/images/facebook.svg";
-import GoogleMaps from "../../GoogleMaps.vue"
+import GoogleMaps from "../GoogleMaps.vue"
+import LocationIcon from "~/assets/images/location.svg";
 import Phone from "~/assets/images/phone.svg";
 import Email from "~/assets/images/mail.png";
 import LinkIcon from "~/assets/images/Link.svg";
+import Twitter from "~/assets/images/twitter.svg";
+import Instagram from "~/assets/images/instagram.svg";
+import Google from "~/assets/images/google.svg";
+import Facebook from "~/assets/images/facebook.svg";
 import TikTok from "~/assets/images/tiktok.svg";
-import LocationIcon from "~/assets/images/location.svg";
-
+import Dribbble from "~/assets/images/dribbble.svg";
+import VK from "~/assets/images/vk.svg";
+import SnapChat from "~/assets/images/snapchat.svg"
+import Youtube from "~/assets/images/youtube.svg"
+import Discord from "~/assets/images/discord.svg"
+import Tumblr from "~/assets/images/tumblr.svg"
+import Telegram from "~/assets/images/telegram.svg"
+import Twitch from "~/assets/images/twitch.svg"
+import Skype from "~/assets/images/skype.svg"
+import Spotify from "~/assets/images/spotify.svg"
+import Figma from "~/assets/images/figma.svg"
+import Apple from "~/assets/images/apple.svg"
+import Pinterest from "~/assets/images/pinterest.svg"
+import Vimeo from "~/assets/images/vimeo.svg"
+import Linkedin from "~/assets/images/linkedin.svg"
+import Behance from "~/assets/images/behance.svg"
+import Github from "~/assets/images/github.svg"
 defineProps({
     data: FullBizCard
 })
@@ -92,14 +123,29 @@ const socialNetworks = {
     twitter: Twitter,
     google: Google,
     instagram: Instagram,
-    linkedin: LinkedIn,
     tiktok: TikTok,
+    dribbble: Dribbble,
+    vk: VK,
+    spanchat: SnapChat,
+    youtube: Youtube,
+    discord: Discord,
+    tumblr: Tumblr,
+    telegram: Telegram,
+    twitch: Twitch,
+    skype: Skype,
+    spotify: Spotify,
+    figma: Figma,
+    apple: Apple,
+    pinterest: Pinterest,
+    vimeo: Vimeo,
+    linkedin: Linkedin,
+    behance: Behance,
+    github: Github
 };
-// console.log(data)
 // const biz_button_options = data;
-// const scheduleMeeting = () => {
-//     window.open(data);
-// };
+const scheduleMeeting = (string) => {
+    window.open(string, "_blank");
+};
 
 </script>
 <style scoped lang="scss">

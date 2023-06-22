@@ -23,9 +23,9 @@
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
-    <ContactTab :data="data" />
-    <ContentTab :data="data" />
-    <ServicesTab :data="data" />
+    <ContactTab :data="dataBizCard" />
+    <ContentTab :data="dataBizCard" />
+    <ServicesTab :data="dataBizCard" />
   </div>
 </template>
 
@@ -38,7 +38,7 @@ import { storeToRefs } from "pinia";
 import ContactTab from "./Tabs/ContactTab.vue"
 import ContentTab from "./Tabs/ContentTab.vue"
 import ServicesTab from "./Tabs/ServicesTab.vue"
-const { data } = storeToRefs(useStore());
+const { dataBizCard } = storeToRefs(useStore());
 
 </script>
 

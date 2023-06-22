@@ -10,7 +10,7 @@
             <div className="downloadBtn">
               <CustomButton text="Download bizly" />
               <div className="userName">
-                <p>Editor <span>.</span> Writer <span>.</span> Producer</p>
+                <p>Terms and Conditions<span> . </span>Privacy Policy<span> . </span>Report Page</p>
               </div>
             </div>
           </div>
@@ -26,8 +26,8 @@ import Banner from "../../components/Profile/Banner.vue"
 import TabsData from "../../components/Profile/TabsData.vue";
 import Navigation from '../../components/Profile/Navigation.vue';
 const route = useRoute();
-const { dataBizCard } = storeToRefs(useStore());
 const { retrieveBizCardById } = useStore();
+const { dataBizCard } = storeToRefs(useStore());
 onMounted(() => {
   retrieveBizCardById(route.params.id);
 });

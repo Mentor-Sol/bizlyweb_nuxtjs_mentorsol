@@ -1,9 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: false },
   app: {
     head: {
-      title: "Mentorsol",
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      title: "Bizly",
+      link: [{ rel: "icon", type: "image/x-icon", href: "assets/images/bizly-notification-icon.png" }],
       script: [
         {
           src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",

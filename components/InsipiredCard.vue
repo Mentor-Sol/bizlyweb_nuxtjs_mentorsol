@@ -33,32 +33,16 @@ import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 const route = useRouter();
 const goTo = (id) => {
-  console.log(id);
   route.push({ path: `/profile/${id}` });
 };
 const { inspirationData } = storeToRefs(useStore());
 </script>
 <style lang="scss">
 .userinfo {
-  display: none;
   position: absolute;
   bottom: 2%;
   text-align: center;
-  width: 100%
-}
-
-.current-card {
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &:hover {
-    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.4);
-
-    .userinfo {
-      display: block;
-    }
-  }
+  width: 100%;
+  z-index: 1;
 }
 </style>

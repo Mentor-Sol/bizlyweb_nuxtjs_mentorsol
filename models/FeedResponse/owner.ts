@@ -1,4 +1,4 @@
-import { Occupation } from "./company copy"
+import { Occupation } from "./Occupation"
 
 export class Owner {
     id: number;

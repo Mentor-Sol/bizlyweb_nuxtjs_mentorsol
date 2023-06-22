@@ -142,7 +142,6 @@ export const useStore = defineStore({
       const response = await $api.get(`/internal/p/biz-cards/${id}/`, {
         headers,
       });
-      console.log(response.data.data);
       this.dataBizCard = response.data.data;
     },
   },

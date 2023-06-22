@@ -66,10 +66,10 @@ defineProps({
 
     .contact-section {
         input {
-            color: #8c8c8c;
-            border: 2px solid #8c8c8c;
+            color: #595959;
+            border: 2px solid #595959;
             border-radius: 30px;
-            padding: 0px 10px;
+            padding: 0px 20px;
             background-color: transparent;
             height: 50px;
             outline: none;
