@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div v-if="!loading">
     <ClientOnly>
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
     </ClientOnly>
+  </div>
+  <div v-else>
+    Loading....
   </div>
 </template>
 <script setup>
@@ -14,6 +17,7 @@ const {
   retrieveDataFromAPI,
   retrieveActivityFeedData,
   retrieveInspirationData,
+  loading
 } = useStore();
 
 onMounted(() => {

@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <Header />
-    <slot />
-    <Footer />
-  </div>
+  <NuxtLoadingIndicator />
+  <Header />
+  <slot />
+  <Footer />
 </template>
 <script setup>
 import Header from '../components/Header.vue';

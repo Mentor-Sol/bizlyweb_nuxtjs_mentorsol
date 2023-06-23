@@ -1,19 +1,11 @@
 <template>
-  <div
-    className="mainHeader d-flex align-items-center"
-    v-if="route.path === '/profile'"
-  >
+  <div className="mainHeader d-flex align-items-center" v-if="route.path === '/profile'">
     <div className="container  ">
       <div className="row align-items-center">
         <div className="col-xl-4 col-lg-8 col-md-6 col-sm-6">
           <div className="headerWrapper d-flex gap-2 align-items-center">
             <div className="headerInner">
-              <img
-                :src="data?.owner?.image"
-                alt="userIcon"
-                width="30"
-                height="30"
-              />
+              <img :src="data?.owner?.image" alt="userIcon" width="30" height="30" />
             </div>
             <div className="userName">
               <h3>

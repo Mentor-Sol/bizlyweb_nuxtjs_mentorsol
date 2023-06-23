@@ -8,15 +8,19 @@ export const useStore = defineStore({
       feedData: [],
       inspirationData: [],
       dataBizCard: {},
+      loading: false
     };
   },
   actions: {
     async retrieveDataFromAPI() {
+      this.loading = true
       const { $api } = useNuxtApp();
       const response = await $api.get("p/biz-cards/lemonadestand/?format=json");
       this.data = response.data.data;
+      this.loading = false
     },
     async retrieveActivityFeedData() {
+      this.loading = true
       const { $api } = useNuxtApp();
 
       const token = "957f3a8389335b74ca9b5676c525b2f3eb738b59";
@@ -116,6 +120,7 @@ export const useStore = defineStore({
         //   return data;
         // });
         //old code
+        this.loading = false
       } catch (error) {
         console.error(error, " Error from store")
         // Handle error
@@ -123,6 +128,7 @@ export const useStore = defineStore({
     },
 
     async retrieveInspirationData() {
+      this.loading = true;
       const { $api } = useNuxtApp();
       const token = "957f3a8389335b74ca9b5676c525b2f3eb738b59";
       const headers = {
@@ -131,8 +137,10 @@ export const useStore = defineStore({
       };
       const response = await $api.get("/network/inspiration", { headers });
       this.inspirationData = response.data.data;
+      this.loading = false;
     },
     async retrieveBizCardById(id) {
+      this.loading = true;
       const { $api } = useNuxtApp();
       const token = "957f3a8389335b74ca9b5676c525b2f3eb738b59";
       const headers = {
@@ -143,6 +151,7 @@ export const useStore = defineStore({
         headers,
       });
       this.dataBizCard = response.data.data;
+      this.loading = false;
     },
   },
   getters: {

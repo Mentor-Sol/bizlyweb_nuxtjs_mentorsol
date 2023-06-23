@@ -65,7 +65,7 @@
             <!-- <TabsSecondSection /> -->
             <!-- <TabsVideoSection />
             <TabsfifthSection /> -->
-            <!-- <PostView /> -->
+            <PostView />
           </div>
         </div>
         <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
@@ -94,3 +94,4 @@ import InsipiredCard from "../components/InsipiredCard.vue";
 // import TabsfifthSection from "../components/tabsfifthSection.vue";
 import PostView from '../components/PostView.vue';
 </script>
+<style scoped></style>

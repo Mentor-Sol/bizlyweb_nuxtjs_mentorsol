@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
+
   app: {
     head: {
       title: "Bizly",
@@ -33,4 +34,5 @@ export default defineNuxtConfig({
   css: ["@/assets/scss/global.scss"],
   modules: ["@pinia/nuxt", "nuxt-swiper"],
   plugins: [{ src: "~/plugins/vue-plyr", mode: "client" }],
+  logLevel: "silent",
 });

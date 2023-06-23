@@ -14,30 +14,30 @@
         <p>Content</p>
       </button>
     </li>
-    <li class="nav-item" role="presentation">
+    <!-- <li class="nav-item" role="presentation">
       <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab"
         aria-controls="services" aria-selected="false">
         <img :src="Services" alt="Services" />
         <p>Services</p>
       </button>
-    </li>
+    </li> -->
   </ul>
   <div class="tab-content" id="myTabContent">
     <ContactTab :data="dataBizCard" />
     <ContentTab :data="dataBizCard" />
-    <ServicesTab :data="dataBizCard" />
+    <!-- <ServicesTab :data="dataBizCard" /> -->
   </div>
 </template>
 
 <script setup>
 import Contact from "~/assets/images/contact.svg";
 import Content from "~/assets/images/content.svg";
-import Services from "~/assets/images/services.svg";
+// import Services from "~/assets/images/services.svg";
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
 import ContactTab from "./Tabs/ContactTab.vue"
 import ContentTab from "./Tabs/ContentTab.vue"
-import ServicesTab from "./Tabs/ServicesTab.vue"
+// import ServicesTab from "./Tabs/ServicesTab.vue"
 const { dataBizCard } = storeToRefs(useStore());
 
 </script>

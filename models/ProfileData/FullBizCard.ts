@@ -6,13 +6,14 @@ import { BizButtonOptions } from "./BizButtonOptions";
 import { Button } from './Button';
 import { Location } from './Location';
 import { Service } from "./Service";
+import { FeedResponse } from "../FeedResponse/feedResponse";
 
 export class FullBizCard {
     id: number;
     owner: Owner;
     services: Array<Service>;
     experience: Experience;
-    content: [];
+    content: [FeedResponse];
     is_contact: boolean;
     contact_id: string;
     is_following: boolean;

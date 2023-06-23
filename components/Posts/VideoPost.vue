@@ -54,10 +54,7 @@
           </iframe>
         </div>
       </template>
-      <!-- <template
-        v-if="!data?.image_kit_id?.startsWith('https://www.youtube.com') || !data?.image_kit_id?.startsWith('https://youtu.be') || !data?.image_kit_id?.startsWith('https://youtube.com') || !data?.image_kit_id?.startsWith('https://vimeo')">
-        <video :src="data?.image_kit_id" controls :poster="data?.thumbnail_image_kit_id"></video>
-      </template> -->
+
       <span class="accessibility_bar mt-2">
         <div class="d-flex justify-content-between px-4">
           <span class="d-flex align-items-center gap-3">
