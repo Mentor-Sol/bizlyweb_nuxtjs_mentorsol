@@ -111,143 +111,6 @@
   background: #fff;
 }
 
-// .BannerWrapper {
-//   position: relative;
-//   overflow: hidden;
-
-//   .bannerImg {
-//     position: absolute;
-//     right: 0;
-//     left: 0;
-
-//     img {
-//       height: 826px;
-//       width: 100%;
-//       object-fit: cover;
-//     }
-//   }
-
-//   .bannerInner {
-//     z-index: 1;
-//     position: relative;
-//     padding: 100px 0px 100px 10px;
-
-//     .userName {
-//       h3 {
-//         font-weight: 700;
-//         font-size: 72px;
-//         line-height: 84px;
-//         color: #ffffff;
-//         max-width: 300px;
-//         margin-bottom: 5px;
-//       }
-
-//       p {
-//         font-weight: 400;
-//         font-size: 16px;
-//         line-height: 24px;
-//         color: #ffffff;
-//         margin-bottom: 10px;
-//       }
-
-//       .socialWork {
-//         margin-bottom: 10px;
-
-//         p {
-//           font-weight: 400;
-//           font-size: 16px;
-//           line-height: 24px;
-//           color: #bfbfbf;
-//           margin-bottom: 0;
-//           position: relative;
-
-//           &::after {
-//             content: "";
-//             position: absolute;
-//             height: 12px;
-//             width: 2px;
-//             background-color: #bfbfbf;
-//             top: 5px;
-//             right: -14px;
-//           }
-
-//           &:last-child {
-//             &::after {
-//               background-color: transparent;
-//             }
-//           }
-//         }
-//       }
-
-//       .SelfEmployed {
-//         font-weight: 500;
-//         font-size: 16px;
-//         line-height: 24px;
-//         color: #ffffff;
-//         margin-bottom: 15px;
-
-//         p {
-//           margin-bottom: 0;
-//         }
-//       }
-
-//       .bannerDesc {
-//         p {
-//           font-weight: 400;
-//           font-size: 16px;
-//           line-height: 24px;
-//           color: #bfbfbf;
-//           max-width: 400px;
-//         }
-//       }
-
-//       .messageIcon {
-//         margin-top: 20px;
-//         gap: 30px;
-//         margin-bottom: 30px;
-//       }
-
-//       .CustomButton {
-//         margin-bottom: 10px;
-
-//         button {
-//           font-weight: 600;
-//           font-size: 14px;
-//           color: #141414;
-//           padding: 12px 82px;
-//           line-height: 24px;
-//           background: #ffffff;
-//           border-radius: 25px;
-//           border: none !important;
-//         }
-//       }
-
-//       .tags {
-//         display: flex;
-//         column-gap: 5px;
-//         row-gap: 5px;
-//         flex-wrap: wrap;
-//         width: 100%;
-//         max-width: 816px;
-//         margin-top: 30px;
-
-//         p {
-//           font-weight: 400;
-//           font-size: 12px;
-//           margin-bottom: 0;
-//           line-height: 10px;
-//           color: #ffffff;
-//           background: rgba(0, 0, 0, 0.45);
-//           border: 1px solid #ffffff;
-//           backdrop-filter: blur(2px);
-//           border-radius: 30px;
-//           padding: 10px;
-//         }
-//       }
-//     }
-//   }
-// }
-
 div#myTabContent {
   background: black;
 }
@@ -847,9 +710,6 @@ div#myTabContent {
   }
 
   .BannerWrapper {
-    .bannerImg {
-      img {}
-    }
 
     .bannerInner {
       padding: 50px;
@@ -1125,30 +985,6 @@ div#myTabContent {
       }
     }
 
-    .inspired-section {
-      padding: 20px 0 5px 0;
-
-      p {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 28px;
-        color: #fafafa;
-        margin-bottom: 0;
-      }
-
-      a {
-        font-family: "Roboto";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 20px;
-        color: #2998ff;
-        text-decoration: none;
-      }
-    }
-
     .inner-cards {
       padding: 0 16px;
       justify-content: space-between;
@@ -1156,7 +992,6 @@ div#myTabContent {
       width: 100%;
       display: flex;
       flex-wrap: nowrap;
-      gap: 16px;
 
       &::-webkit-scrollbar {
         display: none;
@@ -1167,13 +1002,14 @@ div#myTabContent {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      width: 31%;
-      filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.75));
+      width: 38%;
       border-radius: 5px;
       padding: 15px 10px;
-      height: 300px;
+      height: 360px;
       position: relative;
       cursor: pointer;
+      margin-right: 16px;
+      overflow: hidden;
 
       &:after {
         content: '';
@@ -1226,7 +1062,7 @@ div#myTabContent {
       }
 
       .home-location {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         p {
           font-family: "Roboto";
@@ -1247,89 +1083,6 @@ div#myTabContent {
 
       &::-webkit-scrollbar {
         display: none;
-      }
-    }
-
-    .bizly-card {
-      background-image: url(../images/second-card-bg.png);
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.75));
-      border-radius: 4px;
-      padding: 16px;
-      height: 200px;
-
-      .inner-bizly-card {
-        p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-          color: #bfbfbf;
-          margin-bottom: 0;
-          position: relative;
-
-          &::after {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 3px;
-            top: 8px;
-            right: -9px;
-            border-radius: 50%;
-            background-color: #bfbfbf;
-          }
-
-          &:last-child {
-            &::after {
-              display: none;
-            }
-          }
-        }
-      }
-
-      .bizly-card-desc {
-        p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 20px;
-          color: #ffffff;
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    .getintouch {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      margin-bottom: 30px;
-      margin-top: 10px;
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      .inner-getintouch {
-        padding: 12px 15px;
-        background: #546b91;
-        border-radius: 25px;
-        cursor: pointer;
-
-        p {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 20px;
-
-          color: #ffffff;
-          margin-bottom: 0;
-          white-space: nowrap;
-        }
       }
     }
 
@@ -1795,6 +1548,7 @@ div#myTabContent {
 .main-thums-Slider {
   height: 420px;
   position: relative;
+  overflow: hidden;
 
   .swiper-wrapper {
     position: relative;
@@ -1855,8 +1609,6 @@ div#myTabContent {
   .mySwiper2 {
     height: 420px;
     width: 100%;
-
-    .slider-inner-icons {}
   }
 
   .mySwiper {

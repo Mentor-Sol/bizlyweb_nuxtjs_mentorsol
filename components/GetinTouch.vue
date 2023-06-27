@@ -1,32 +1,67 @@
 <template>
-    <div class="getintouch d-flex gap-2 align-items-center">
-       <div class="inner-getintouch d-flex align-items-center gap-2">
-        <img :src="HeadphoneIcon" alt="Self " />
-
-        <p>Contact Support</p>
-       </div>
-       <div class="inner-getintouch  d-flex align-items-center gap-2">
-        <img :src="UserIcon" alt="Self " />
-
-        <p>Join the Community</p>
-       </div>
-       <div class="inner-getintouch  d-flex align-items-center gap-2">
-        <img :src="WishIcon" alt="Self " />
-        <p>Feature Wish</p>
-       </div>
-       <div class="inner-getintouch  d-flex align-items-center gap-2">
-        <img :src= "AmbassadorIconOne" alt="Self " />
-
-        <p>Become an Ambassador</p>
-       </div>
+    <div class="intouch-container mb-3">
+        <button class="intouch-button">
+            <img :src="ContactIcon" alt="contact_support" />
+            Contact Support
+        </button>
+        <button class="intouch-button">
+            <img :src="CommunityIcon" alt="contact_support" />
+            Join the Community
+        </button>
+        <button class="intouch-button">
+            <img :src="WishIcon" alt="contact_support" />
+            Feature Wish
+        </button>
+        <button class="intouch-button">
+            <img :src="AmbassadorIconOne" alt="contact_support" />
+            Become an Ambassador
+        </button>
+        <button class="intouch-button">
+            <img :src="LogoIcon" alt="contact_support" />
+            Beyond the bizApp
+        </button>
     </div>
 </template>
 <script setup>
-import HeadphoneIcon from "~/assets/images/headphone.png"
-import UserIcon from "~/assets/images/users.png"
-import WishIcon from "~/assets/images/wish.png"
-import AmbassadorIconOne from "~/assets/images//ambassadorone.png"
+import ContactIcon from "~/assets/images/support1.svg"
+import CommunityIcon from "~/assets/images/community1.svg"
+import WishIcon from "~/assets/images/featurewish1.svg"
+import AmbassadorIconOne from "~/assets/images/ambassador1.svg"
+import LogoIcon from "~/assets/images/bizlyLogo.svg"
 
 
 
 </script>
+<style scoped lang="scss">
+.intouch-container {
+
+    justify-content: space-between;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .intouch-button {
+        background-color: #546b91;
+        padding: 12px 15px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        color: white;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-right: 10px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+</style>

@@ -8,7 +8,7 @@ export const useStore = defineStore({
       feedData: [],
       inspirationData: [],
       dataBizCard: {},
-      loading: false
+      loading: true
     };
   },
   actions: {
@@ -32,6 +32,7 @@ export const useStore = defineStore({
       try {
         const response = await $api.get("/activity-feed/", { headers });
         this.feedData = response.data.data;
+        this.loading = false
         // old Code
         // .map((item) => {
         //   const {
@@ -120,7 +121,6 @@ export const useStore = defineStore({
         //   return data;
         // });
         //old code
-        this.loading = false
       } catch (error) {
         console.error(error, " Error from store")
         // Handle error
