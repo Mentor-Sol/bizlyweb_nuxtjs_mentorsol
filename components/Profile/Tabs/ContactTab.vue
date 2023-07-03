@@ -17,7 +17,7 @@
                     <div class="col-lg-6 tabsInner">
                         <div class="socialIcon">
                             <p>Socials</p>
-                            <div class="d-flex Icons" v-if="data?.social_networks?.length">
+                            <div class="d-flex flex-wrap Icons" v-if="data?.social_networks?.length">
                                 <template v-for="(item, index) in data?.social_networks" :key="index">
                                     <span v-if="item?.enabled && item?.network != 'unknown'">
                                         <a target=" _blank" :href="item?.url">
@@ -107,6 +107,10 @@ import Vimeo from "~/assets/images/vimeo.svg"
 import Linkedin from "~/assets/images/linkedin.svg"
 import Behance from "~/assets/images/behance.svg"
 import Github from "~/assets/images/github.svg"
+import WhatsApp from "~/assets/images/whatsapp.svg"
+import Messenger from "~/assets/images/messenger.svg"
+import IMDB from "~/assets/images/imdb.svg"
+import Reddit from "~/assets/images/reddit.svg"
 defineProps({
     data: FullBizCard
 })
@@ -125,6 +129,7 @@ const socialNetworks = {
     instagram: Instagram,
     tiktok: TikTok,
     dribbble: Dribbble,
+    dribble: Dribbble,
     vk: VK,
     spanchat: SnapChat,
     youtube: Youtube,
@@ -140,7 +145,12 @@ const socialNetworks = {
     vimeo: Vimeo,
     linkedin: Linkedin,
     behance: Behance,
-    github: Github
+    github: Github,
+    whatsapp: WhatsApp,
+    messenger: Messenger,
+    imdb: IMDB,
+    snapchat: SnapChat,
+    reddit: Reddit
 };
 // const biz_button_options = data;
 const scheduleMeeting = (string) => {
@@ -151,9 +161,9 @@ const scheduleMeeting = (string) => {
 <style scoped lang="scss">
 .Icons {
     span {
-        height: 50px;
-        width: 50px;
-        margin-right: 5px;
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
 
         img {
             width: 100%;

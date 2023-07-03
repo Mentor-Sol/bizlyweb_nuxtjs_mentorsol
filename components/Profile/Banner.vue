@@ -17,8 +17,8 @@
                 {{ data?.owner?.first_name }} {{ data?.owner?.last_name }}
               </h3>
               <p>{{ data?.owner?.roles.join(" . ") }}</p>
-              <div className="socialWork d-flex gap-4">
-                <p v-for="(item, index) in data?.professional_skills" :key="{ index }">{{ item }}</p>
+              <div className="socialWork d-flex flex-wrap">
+                <p v-for="(item, index) in data?.professional_skills" :key="{ index }">{{ item }}<span></span></p>
               </div>
               <div>
                 <div className="d-flex gap-2 SelfEmployed">
@@ -131,21 +131,18 @@ function toUpperCaseFirstLetter(letter) {
           line-height: 24px;
           color: #bfbfbf;
           margin-bottom: 0;
-          position: relative;
 
-          &::after {
-            content: "";
-            position: absolute;
-            height: 12px;
-            width: 2px;
+          span {
+            height: 100%;
+            width: 1px;
+            display: inline-block;
             background-color: #bfbfbf;
-            top: 5px;
-            right: -14px;
+            margin: -5px 10px;
           }
 
-          &:last-child {
-            &::after {
-              background-color: transparent;
+          &:last-of-type {
+            span {
+              display: none;
             }
           }
         }
@@ -216,6 +213,20 @@ function toUpperCaseFirstLetter(letter) {
           padding: 10px;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .userName {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3,
+    p {
+      max-width: max-content !important;
     }
   }
 }

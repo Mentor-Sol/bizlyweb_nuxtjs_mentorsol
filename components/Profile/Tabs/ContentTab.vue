@@ -3,14 +3,14 @@
     <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
         <div className="contentWrapper bg-black">
             <div className="container-fluid">
-                <div className="py-2 d-flex justify-content-around w-100">
+                <div className="py-2 button-wrapper">
                     <button class="custom-btn">Custom Button 1</button>
                     <button class="custom-btn">Custom Button 1</button>
                     <button class="custom-btn">Custom Button 1</button>
                 </div>
                 <div className="row">
                     <template v-for="content in data?.content">
-                        <!-- <FeaturedTab :data="content" /> -->
+                        <!-- <FeaturedTab :data="content" v-if="content.is_featured" /> -->
                         <div v-if="!content.is_featured && content.content_type != 'video_gallery' && content.content_type != 'audio' && content.content_type != 'audio_gallery' && content.content_type != null && content.content_type != 'link_gallery'"
                             className="col-12 col-md-6 col-lg-6 overflow-hidden p-0 m-0 content-div"
                             @click="OpenUrl(content.content_type, content.image_kit_id)">
@@ -201,17 +201,29 @@ const OpenUrl = (content_type, url) => {
     border-bottom: 1px solid #8c8c8c;
     padding-bottom: 20px;
 
-    .custom-btn {
-        background: #262626;
-        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
-        border-radius: 25px;
-        font-size: 14px;
-        line-height: 20px;
-        color: #fff;
-        padding: 10px 16px;
-        display: inline-block;
-        width: 10% !important;
-        border: none !important;
+    .button-wrapper {
+        justify-content: space-between;
+        overflow-x: auto;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .custom-btn {
+            background: #262626;
+            box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+            border-radius: 25px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #fff;
+            padding: 10px 16px;
+            width: 200px !important;
+            border: none !important;
+            margin-right: 20px;
+        }
     }
 
     .content-div {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div className="mainFooter" v-if="route.path === '/'">
+    <div className="mainFooter">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-8 col-md-8 col-sm-8">

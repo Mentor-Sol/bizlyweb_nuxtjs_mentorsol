@@ -10,7 +10,8 @@
             <div class="notification-icon">
               <img src="../assets/images/bookmark1.svg" alt="" />
             </div>
-            <div class="notification-icon" @click="toggleNotificationComponent">
+            <div class="notification-icon">
+              <!-- @click="toggleNotificationComponent" -->
               <img src="../assets/images/bell1.svg" alt="" />
               <span>5</span>
             </div>

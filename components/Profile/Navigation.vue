@@ -5,11 +5,11 @@
                 <img :src="data?.owner?.image || NoProfilePic" alt="">
             </div>
             <div class="info">
-                <h6 class="mb-0"> {{ data?.owner?.first_name }} {{ data?.owner?.last_name }}</h6>
+                <h6 class="mb-0 text-transform-capitalize"> {{ data?.owner?.first_name }} {{ data?.owner?.last_name }}</h6>
                 <p class="mb-0">{{ data?.owner?.roles.join(" . ") }}</p>
             </div>
         </div>
-        <div class="contact-section">
+        <div class="contact-section d-none d-lg-block">
             <input type="email" placeholder="Email">
             <button>Join</button>
         </div>
@@ -24,13 +24,15 @@ defineProps({
 </script>
 <style scoped lang="scss">
 .profile-nav {
-    background-color: #141414;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.2);
     width: 100%;
-    height: 70px;
+    height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 10%;
+    z-index: 4;
 
     .info-section {
         display: flex;
@@ -38,8 +40,8 @@ defineProps({
         justify-content: center;
 
         .profile-pic {
-            height: 50px;
-            width: 50px;
+            height: 35px;
+            width: 35px;
             border-radius: 50px;
             background-color: #ffffff;
             margin-right: 10px;
@@ -54,10 +56,13 @@ defineProps({
 
         .info {
             h6 {
+                font-size: 14px;
+                font-weight: 400;
                 color: #ffffff;
             }
 
             p {
+                font-size: 13px;
                 color: #8c8c8c;
                 display: inline-block;
             }
@@ -66,18 +71,25 @@ defineProps({
 
     .contact-section {
         input {
-            color: #595959;
-            border: 2px solid #595959;
+            color: #ffffff;
+            border: 1px solid #ffffff;
             border-radius: 30px;
             padding: 0px 20px;
             background-color: transparent;
-            height: 50px;
+            height: 35px;
             outline: none;
-            width: 20rem;
+            width: 16rem;
             margin-right: 15px;
+            font-size: 1rem;
+            font-weight: 300;
 
             &:focus {
                 box-shadow: none;
+            }
+
+            &::placeholder {
+                color: #ffffff;
+                font-weight: 300;
             }
         }
 
@@ -86,7 +98,7 @@ defineProps({
             outline: none;
             border: none;
             border-radius: 30px;
-            height: 50px;
+            height: 35px;
             padding: 0px 30px;
             font-weight: bold;
         }

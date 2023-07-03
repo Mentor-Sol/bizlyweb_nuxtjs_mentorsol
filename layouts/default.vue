@@ -29,14 +29,13 @@ onUpdated(() => {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
 }
 
 .loading-bar {
   height: 2px;
-  /* width: 100%; */
   background-color: #3676dd;
   animation: moveLoader 2s ease-in-out infinite;
-  z-index: 1;
 }
 
 @keyframes moveLoader {

@@ -20,6 +20,9 @@ defineProps({
     background: #ffffff;
     border-radius: 25px;
     border: none !important;
+    min-width: 270px;
+    max-width: fit-content;
+
   }
 }
 </style>

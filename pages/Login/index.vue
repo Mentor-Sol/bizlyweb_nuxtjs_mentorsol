@@ -5,7 +5,7 @@
             <div class="logo">
                 <img :src="BizlyLogo" alt="Bizly_Logo">
             </div>
-            <h1 class="text-left align-self-start text-white mt-5 mb-3" style="font-weight: 600;">Sign In</h1>
+            <h1 class="text-left align-self-start text-white mt-5 mb-5" style="font-weight: 600;">Sign In</h1>
             <div class="form-group w-100 mb-3">
                 <input type="text" class="form-control" placeholder="Enter your email">
             </div>
@@ -16,11 +16,11 @@
                 </span>
                 <!-- <p class="text-white align-self-end">Forgot Password?</p> -->
             </div>
-            <button type="submit" class="btn btn-white bg-white w-100 py-2 submitBtn my-2">Sign In</button>
-            <div class="seperator-text w-100 d-flex justify-content-center align-items-center px-2">
+            <button type="submit" class="btn btn-white bg-white w-100 py-2 submitBtn my-2 mb-4">Sign In</button>
+            <div class="seperator-text w-100 d-flex justify-content-center align-items-center px-2 mb-4">
                 <div class="seperator"></div>
                 <p class="mx-1">
-                    OR
+                    or
                 </p>
                 <div class="seperator"></div>
             </div>
@@ -38,8 +38,6 @@
 </template>
 <script setup>
 import BizlyLogo from "~/assets/images/logo.svg"
-// import Eye from "~/assets/images/eye.png"
-// import ClosedEye from "~/assets/images/closed-eye.png"
 import Google from "~/assets/images/google.svg"
 import Facebook from "~/assets/images/facebook.svg"
 import LinkedIn from "~/assets/images/linkedin.svg"
@@ -134,10 +132,15 @@ onMounted(() => {
         .seperator-text {
             color: white;
 
+            // p {
+            //     width: 35ch;
+            // }
+
             .seperator {
                 height: 1px;
                 background-color: white;
-                width: 50%;
+                width: -webkit-fill-available;
+                // width: 50%;
             }
         }
 
@@ -155,6 +158,34 @@ onMounted(() => {
                     height: 60%;
                     width: 60%;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .login-form {
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .login-form {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .social-sign-in {
+        justify-content: space-between !important;
+
+        button {
+            height: 40px !important;
+            width: 40px !important;
+
+            img {
+                height: 40px;
+                width: 40px;
             }
         }
     }

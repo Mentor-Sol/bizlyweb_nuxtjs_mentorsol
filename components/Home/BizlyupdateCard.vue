@@ -30,6 +30,7 @@ import VideoIcon from "~/assets/images/video-icon.png";
   margin-right: 16px !important;
   position: relative;
 
+
   .inner-bizly-card {
 
     p {

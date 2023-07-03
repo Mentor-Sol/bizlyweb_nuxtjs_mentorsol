@@ -13,8 +13,8 @@
       </div>
       <div class="row m-0 p-0">
         <div class="col-lg-12 m-0 p-0">
-          <div class="d-flex justify-content-between inspired-section align-items-baseline">
-            <p style="font-size: 1.3rem; font-weight: 500">Get Inspired</p>
+          <div class="d-flex justify-content-between inspired-section align-items-center my-2">
+            <p style="font-size: 1.3rem; font-weight: 400;">Get Inspired</p>
             <a href="#">Explore More</a>
           </div>
         </div>
@@ -97,10 +97,10 @@
   </div>
 </template>
 <script setup>
-import BizlyupdateCard from "../components/BizlyupdateCard.vue";
-import GetinTouch from "../components/GetinTouch.vue";
-import HomeTabs from "../components/HomeTabs.vue";
-import InsipiredCard from "../components/InsipiredCard.vue";
+import BizlyupdateCard from "../components/Home/BizlyupdateCard.vue";
+import GetinTouch from "../components/Home/GetinTouch.vue";
+import HomeTabs from "../components/Home/HomeTabs.vue";
+import InsipiredCard from "../components/Home/InsipiredCard.vue";
 import ShareIcon from "~/assets/images/share2.svg";
 // import TabSevnthSection from "../components/TabSevnthSection.vue";
 // import TabsEightSection from "../components/TabsEightSection.vue";

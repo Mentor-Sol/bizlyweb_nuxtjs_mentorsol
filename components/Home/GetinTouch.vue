@@ -62,6 +62,10 @@ import LogoIcon from "~/assets/images/bizlyLogo.svg"
         &:last-of-type {
             margin-right: 0;
         }
+
+        img {
+            margin-right: 5px;
+        }
     }
 }
 </style>
