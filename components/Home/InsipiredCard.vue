@@ -72,7 +72,7 @@ const { inspirationData } = storeToRefs(useStore());
     outline: none;
     background-color: transparent;
     position: absolute;
-    right: 3%;
+    right: 6%;
 
     &:focus {
       outline: none;
@@ -117,8 +117,11 @@ const { inspirationData } = storeToRefs(useStore());
     right: 0;
 
     p.name-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: white;
       font-size: 1.125rem !important;
       font-weight: 500 !important;
+      text-transform: capitalize;
     }
 
     p.role_name {
@@ -126,11 +129,11 @@ const { inspirationData } = storeToRefs(useStore());
 
       span {
         display: inline-block;
-        height: 5px;
-        width: 5px;
+        height: 3px;
+        width: 3px;
         border-radius: 50%;
         margin: 2px 5px;
-        background-color: white;
+        background-color: #d9d9d9;
       }
 
       &:last-of-type {
@@ -153,6 +156,13 @@ const { inspirationData } = storeToRefs(useStore());
       color: #d9d9d9;
       margin-bottom: 0;
     }
+  }
+}
+
+@media screen and (max-width:426px) {
+  .inner-insipired-card {
+
+    width: 60%;
   }
 }
 </style>

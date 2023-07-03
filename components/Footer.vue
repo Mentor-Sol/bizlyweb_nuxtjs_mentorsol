@@ -3,7 +3,7 @@
     <div className="mainFooter">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-8 col-md-8 col-sm-8">
+          <div className="col-12 col-md-7 col-lg-8">
             <div className="footerInner">
               <h6>Section Title</h6>
               <p>
@@ -13,7 +13,7 @@
               </p>
             </div>
           </div>
-          <div className="col-lg-4 col-md-4 col-sm-4">
+          <div className="col-12 col-md-5 col-lg-4">
             <div className="footerButton">
               <button @click="showModal">Get the bizly app</button>
               <CustomModal ref="thisModal">

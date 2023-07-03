@@ -1,9 +1,9 @@
 <template>
-    <div className="col-lg-12 col-md-12 col-sm-12 feature">
-        <p>{{ data.content }}</p>
+    <div className="col-lg-12 col-md-12 col-sm-12 feature m-0 p-0">
+        <!-- <p>{{ data.content }}</p> -->
         <template v-if="data.content_type == 'image'">
             <img :src="data.image_kit_id" alt="Content_Image" class="content_image" />
-            <p class="content_desc">
+            <p class="content_desc" v-if="data.title.length > 0">
                 {{ data.title }}
             </p>
             <span class=" accessibility_bar mt-2">
@@ -16,7 +16,10 @@
                             <img :src="TagSlider" alt="" />
                         </div>
                     </span>
-                    <span style="justify-self: flex-end;">
+                    <span class="d-flex align-items-center gap-2    " style="justify-self: flex-end;">
+                        <span class="badge badge-pill rounded-4"
+                            style="background-color: #3c78ea; font-weight: light; font-size: 1rem;">
+                            Featured</span>
                         <div class="img-box rounded-circle">
                             <img :src="ImageIconSlider" alt="" />
                         </div>
@@ -151,7 +154,7 @@ const OpenUrl = (url) => {
     width: 100%;
     height: 500px;
     overflow: hidden;
-    border: 1px solid white;
+    position: relative;
 
     .img-box {
         width: 24px;

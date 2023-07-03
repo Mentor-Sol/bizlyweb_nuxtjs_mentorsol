@@ -2,15 +2,18 @@
 <template>
     <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
         <div className="contentWrapper bg-black">
+            <div className="py-2 button-wrapper">
+                <button class="custom-btn">Custom Button 1</button>
+                <button class="custom-btn">Custom Button 1</button>
+                <button class="custom-btn">Custom Button 1</button>
+                <button class="custom-btn">Custom Button 1</button>
+                <button class="custom-btn">Custom Button 1</button>
+            </div>
+
             <div className="container-fluid">
-                <div className="py-2 button-wrapper">
-                    <button class="custom-btn">Custom Button 1</button>
-                    <button class="custom-btn">Custom Button 1</button>
-                    <button class="custom-btn">Custom Button 1</button>
-                </div>
                 <div className="row">
                     <template v-for="content in data?.content">
-                        <!-- <FeaturedTab :data="content" v-if="content.is_featured" /> -->
+                        <FeaturedTab :data="content" v-if="content.is_featured" />
                         <div v-if="!content.is_featured && content.content_type != 'video_gallery' && content.content_type != 'audio' && content.content_type != 'audio_gallery' && content.content_type != null && content.content_type != 'link_gallery'"
                             className="col-12 col-md-6 col-lg-6 overflow-hidden p-0 m-0 content-div"
                             @click="OpenUrl(content.content_type, content.image_kit_id)">
@@ -198,15 +201,14 @@ const OpenUrl = (content_type, url) => {
 }
 
 .contentWrapper {
-    border-bottom: 1px solid #8c8c8c;
+    border-bottom: 1px solid #333333;
     padding-bottom: 20px;
 
     .button-wrapper {
         justify-content: space-between;
         overflow-x: auto;
         width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
+        white-space: nowrap;
 
         &::-webkit-scrollbar {
             display: none;
@@ -214,15 +216,15 @@ const OpenUrl = (content_type, url) => {
 
         .custom-btn {
             background: #262626;
-            box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+            // box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
             border-radius: 25px;
             font-size: 14px;
-            line-height: 20px;
             color: #fff;
             padding: 10px 16px;
-            width: 200px !important;
+            width: 30% !important;
             border: none !important;
             margin-right: 20px;
+            display: inline;
         }
     }
 

@@ -6,7 +6,7 @@
             </div>
             <div class="info">
                 <h6 class="mb-0 text-transform-capitalize"> {{ data?.owner?.first_name }} {{ data?.owner?.last_name }}</h6>
-                <p class="mb-0">{{ data?.owner?.roles.join(" . ") }}</p>
+                <p class="mb-0" v-for="role in data?.owner?.roles">{{ role }}<span></span></p>
             </div>
         </div>
         <div class="contact-section d-none d-lg-block">
@@ -57,14 +57,30 @@ defineProps({
         .info {
             h6 {
                 font-size: 14px;
-                font-weight: 400;
+                font-weight: 500;
                 color: #ffffff;
+                letter-spacing: 0.7px;
             }
 
             p {
                 font-size: 13px;
-                color: #8c8c8c;
+                color: #bfbfbf;
                 display: inline-block;
+
+                span {
+                    height: 3px;
+                    width: 3px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    background-color: #bfbfbf;
+                    margin: 2px 5px;
+                }
+
+                &:last-of-type {
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -101,6 +117,14 @@ defineProps({
             height: 35px;
             padding: 0px 30px;
             font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width:321px) {
+    .info {
+        p {
+            font-size: 11px !important;
         }
     }
 }

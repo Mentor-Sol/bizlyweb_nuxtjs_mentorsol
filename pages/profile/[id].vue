@@ -61,7 +61,7 @@ onMounted(() => {
     }
 
     a {
-      color: #838383;
+      color: #adaeb0;
       text-decoration: none;
       font-family: Roboto;
       font-size: 14px;
@@ -74,8 +74,8 @@ onMounted(() => {
         height: 3px;
         width: 3px;
         margin: 2px 10px;
-        background-color: #838383;
-        border: 1px solid #838383;
+        background-color: #adaeb0;
+        border: 1px solid #adaeb0;
         display: inline-block;
         border-radius: 50%;
       }

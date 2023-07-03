@@ -16,8 +16,11 @@
               <h3 class="text-transform">
                 {{ data?.owner?.first_name }} {{ data?.owner?.last_name }}
               </h3>
-              <p>{{ data?.owner?.roles.join(" . ") }}</p>
-              <div className="socialWork d-flex flex-wrap">
+              <div>
+
+                <p class="role" v-for="role in data?.owner?.roles">{{ role }}<span></span></p>
+              </div>
+              <div className="socialWork d-flex flex-wrap mb-3">
                 <p v-for="(item, index) in data?.professional_skills" :key="{ index }">{{ item }}<span></span></p>
               </div>
               <div>
@@ -31,7 +34,11 @@
                 </div>
               </div>
               <div className="bannerDesc">
-                <p>{{ data?.about }}</p>
+                <p>{{ data?.about }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel unde accusamus nisi
+                  dignissimos? Deleniti, saepe aliquid. Libero repellat, ad, nihil officiis eveniet debitis fuga hic
+                  veritatis quaerat tempora dolore, perferendis reiciendis incidunt quod? Quam a earum fugit, ipsam
+                  reprehenderit voluptatibus laboriosam hic, sapiente mollitia consequatur quasi assumenda. Cupiditate,
+                  placeat explicabo?</p>
               </div>
               <div className="d-flex messageIcon">
                 <img :src="MessageIcon" alt="Ambassador" />
@@ -108,22 +115,37 @@ function toUpperCaseFirstLetter(letter) {
       h3 {
         font-weight: 700;
         font-size: 72px;
-        line-height: 84px;
+        // line-height: 84px;
         color: #ffffff;
         max-width: 300px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
       }
 
       p {
         font-weight: 400;
         font-size: 16px;
-        line-height: 24px;
+        display: inline-block;
+        // line-height: 24px;
         color: #ffffff;
         margin-bottom: 10px;
+
+        span {
+          height: 4px;
+          width: 4px;
+          display: inline-block;
+          border-radius: 50%;
+          background-color: #ffffff;
+          margin: 4px 14px;
+        }
+
+        &:last-of-type {
+          span {
+            display: none;
+          }
+        }
       }
 
       .socialWork {
-        margin-bottom: 10px;
 
         p {
           font-weight: 400;
@@ -131,13 +153,14 @@ function toUpperCaseFirstLetter(letter) {
           line-height: 24px;
           color: #bfbfbf;
           margin-bottom: 0;
+          text-transform: capitalize;
 
           span {
-            height: 100%;
+            height: 72%;
             width: 1px;
             display: inline-block;
             background-color: #bfbfbf;
-            margin: -5px 10px;
+            margin: -3px 10px;
           }
 
           &:last-of-type {
@@ -166,7 +189,7 @@ function toUpperCaseFirstLetter(letter) {
           font-size: 16px;
           line-height: 24px;
           color: #bfbfbf;
-          max-width: 400px;
+          max-width: 55%;
         }
       }
 
@@ -224,9 +247,19 @@ function toUpperCaseFirstLetter(letter) {
     flex-direction: column;
     align-items: center;
 
+    h3 {
+      margin-top: 40px;
+      font-size: 40px !important;
+      line-height: 3rem in !important;
+    }
+
     h3,
     p {
       max-width: max-content !important;
+    }
+
+    p.role {
+      font-size: 13px !important;
     }
   }
 }

@@ -160,10 +160,12 @@ const scheduleMeeting = (string) => {
 </script>
 <style scoped lang="scss">
 .Icons {
+
     span {
         height: 40px;
         width: 40px;
         margin-right: 15px;
+        margin-bottom: 7px;
 
         img {
             width: 100%;

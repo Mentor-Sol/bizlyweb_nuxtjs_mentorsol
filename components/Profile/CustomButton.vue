@@ -22,6 +22,7 @@ defineProps({
     border: none !important;
     min-width: 270px;
     max-width: fit-content;
+    height: 45px;
 
   }
 }

@@ -1,20 +1,22 @@
 <template>
   <div class="Home-banner">
     <div class="container inner-container">
-      <div class="row m-0 p-0">
-        <div class="col-lg-12 m-0 p-0">
-          <div class="inner-banner">
-            <img :src="ShareIcon" alt="Share" />
-            <div class="banner-desc">
-              <p>Risk is the price you pay for opportunity.</p>
-            </div>
-          </div>
+      <div class="inner-banner">
+        <img :src="ShareIcon" alt="Share" />
+        <div class="banner-desc">
+          <p>Risk is the price you pay for opportunity.</p>
         </div>
       </div>
       <div class="row m-0 p-0">
         <div class="col-lg-12 m-0 p-0">
           <div class="d-flex justify-content-between inspired-section align-items-center my-2">
-            <p style="font-size: 1.3rem; font-weight: 400;">Get Inspired</p>
+            <p style="font-family: Roboto;
+font-size: 18px;
+font-weight: 300;
+line-height: 28px;
+letter-spacing: 0px;
+text-align: left;
+">Get Inspired</p>
             <a href="#">Explore More</a>
           </div>
         </div>
@@ -24,12 +26,12 @@
       </div>
       <div class="row p-0 m-0">
         <div class="col-lg-12 p-0 m-0">
-          <div class="d-flex justify-content-between inspired-section bizlyupdate align-items-baseline">
+          <div class="d-flex justify-content-between inspired-section bizlyupdate align-items-baseline  my-2">
             <p style="
                 font-family: Ubuntu;
                 font-size: 1.125rem;
                 font-style: italic;
-                font-weight: 700;
+                font-weight: 500;
                 line-height: 28px;
                 letter-spacing: 0px;
                 text-align: left;
@@ -60,7 +62,7 @@
             <p style="
                 font-family: Roboto;
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 300;
                 line-height: 28px;
                 letter-spacing: 0px;
                 text-align: left;
