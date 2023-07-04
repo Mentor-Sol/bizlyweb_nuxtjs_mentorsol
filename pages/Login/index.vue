@@ -1,6 +1,6 @@
 <template>
     <div class="login-bg d-flex justify-content-center align-items-center">
-        <form class="login-form d-flex align-items-center flex-column px-3 py-5">
+        <form class="login-form d-flex align-items-center flex-column p-0 px-md-5 py-md-4">
             <!-- @submit="(e) => handleFormSubmit(e)" -->
             <div class="logo">
                 <img :src="BizlyLogo" alt="Bizly_Logo">
@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-white bg-white w-100 py-2 submitBtn my-2 mb-4">Sign In</button>
             <div class="seperator-text w-100 d-flex justify-content-center align-items-center px-2 mb-4">
                 <div class="seperator"></div>
-                <p class="mx-1">
+                <p class="mx-2">
                     or
                 </p>
                 <div class="seperator"></div>
@@ -37,7 +37,7 @@
     </div>
 </template>
 <script setup>
-import BizlyLogo from "~/assets/images/logo.svg"
+import BizlyLogo from "~/assets/images/BizlyLogo_White-Wix.png"
 import Google from "~/assets/images/google.svg"
 import Facebook from "~/assets/images/facebook.svg"
 import LinkedIn from "~/assets/images/linkedin.svg"
@@ -76,24 +76,30 @@ onMounted(() => {
 .login-bg {
     width: 100%;
     height: 100vh;
-    background: url("../../assets/images/Hero.png");
+    // background: url("../../assets/images/Hero.png");
+    background: url("../../assets/images/Hero1.jpg");
+    // background: url("../../assets/images/Hero2.jpg");
     background-blend-mode: screen;
     background-size: cover;
     background-repeat: no-repeat;
 
     .login-form {
+        z-index: 1;
         height: 90%;
         width: 40%;
         border-radius: 10px;
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.4);
+        // padding: 20px 50px;
 
         .logo {
             height: 100px;
-            width: 100px;
-            margin-left: -85px !important;
+            // width: 100px;
+            // margin-left: -85px !important;
 
             img {
                 height: 100%;
-                filter: drop-shadow(0 0 10px black);
+                // filter: drop-shadow(0 0 10px black);
             }
         }
 
@@ -103,6 +109,14 @@ onMounted(() => {
                 background-color: rgba(0, 0, 0, 0.4);
                 border: none;
                 color: white;
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.836);
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
             }
 
             .passwordInput {
@@ -127,6 +141,7 @@ onMounted(() => {
 
         .submitBtn {
             border-radius: 30px;
+            font-weight: bold;
         }
 
         .seperator-text {
@@ -151,41 +166,56 @@ onMounted(() => {
                 background-color: white;
                 // padding: 10px !important;
                 border-radius: 50%;
-                height: 60px;
-                width: 60px;
+                height: 40px;
+                width: 40px;
 
                 img {
-                    height: 60%;
-                    width: 60%;
+                    height: 70%;
+                    width: 70%;
                 }
             }
         }
     }
 }
 
+
 @media screen and (max-width:1024px) {
     .login-form {
+        // height: 100% !important;
         width: 80% !important;
     }
 }
 
 @media screen and (max-width:768px) {
     .login-form {
+        height: 100% !important;
         width: 100% !important;
+
+        .logo {
+            height: 80px !important;
+        }
     }
 }
 
 @media screen and (max-width: 480px) {
-    .social-sign-in {
-        justify-content: space-between !important;
+    .login-form {
+        padding: 10px 20px !important;
 
-        button {
-            height: 40px !important;
-            width: 40px !important;
+        .logo {
+            margin-bottom: 40px !important;
+        }
 
-            img {
-                height: 40px;
-                width: 40px;
+        .social-sign-in {
+            justify-content: space-between !important;
+
+            button {
+                height: 40px !important;
+                width: 40px !important;
+
+                img {
+                    height: 40px;
+                    width: 40px;
+                }
             }
         }
     }

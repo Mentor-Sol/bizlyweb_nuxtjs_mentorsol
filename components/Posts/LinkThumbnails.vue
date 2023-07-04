@@ -37,7 +37,6 @@ const setThumbsSwiper = (swiper) => {
 
 const modules = [FreeMode, Navigation, Thumbs];
 function OpenLink(link) {
-    console.log(link)
     window.open(link, "_black")
 }
 </script>

@@ -11,15 +11,8 @@ import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
 import { storeToRefs } from 'pinia';
 import { useStore } from "../store";
-import { onMounted, onUpdated } from 'vue';
 const { loading } = storeToRefs(useStore());
 
-onMounted(() => {
-  console.log(loading.value);
-})
-onUpdated(() => {
-  console.log(loading.value)
-}, loading)
 </script>
 <style>
 .loading-div {

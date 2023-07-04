@@ -1,5 +1,5 @@
-<template>
-  <div>
+<template >
+  <div v-if="route.path != '/login'">
     <div className="mainFooter">
       <div className="container">
         <div className="row align-items-center">
@@ -31,8 +31,8 @@
 <script setup>
 import { ref } from "vue";
 import CustomModal from "./CustomModal.vue";
+import { useRoute } from "nuxt/app";
 const route = useRoute();
-
 let thisModal = ref(null);
 function showModal() {
   thisModal.value.show();
