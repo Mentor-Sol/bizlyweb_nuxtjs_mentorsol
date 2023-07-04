@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Bizly",
-      link: [{ rel: "icon", type: "image/x-icon", href: "assets/images/bizly-notification-icon.png" }],
+      link: [{ rel: "icon", type: "image/x-icon", href: "src/assets/images/bizly-notification-icon.png" }],
       script: [
         {
           src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     },
   ],
 
-  css: ["@/assets/scss/global.scss"],
+  css: ["@/src/assets/scss/global.scss"],
   modules: ["@pinia/nuxt", "nuxt-swiper"],
   plugins: [{ src: "~/plugins/vue-plyr", mode: "client" }],
   logLevel: "silent",

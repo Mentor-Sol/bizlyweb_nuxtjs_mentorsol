@@ -103,7 +103,7 @@ import BizlyupdateCard from "../components/Home/BizlyupdateCard.vue";
 import GetinTouch from "../components/Home/GetinTouch.vue";
 import HomeTabs from "../components/Home/HomeTabs.vue";
 import InsipiredCard from "../components/Home/InsipiredCard.vue";
-import ShareIcon from "~/assets/images/share2.svg";
+import ShareIcon from "~/src/assets/images/share2.svg";
 // import TabSevnthSection from "../components/TabSevnthSection.vue";
 // import TabsEightSection from "../components/TabsEightSection.vue";
 // import TabsNightSection from "../components/TabsNightSection.vue";

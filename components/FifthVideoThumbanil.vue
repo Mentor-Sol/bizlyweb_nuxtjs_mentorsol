@@ -2,15 +2,8 @@
   <div class="video-container">
     <div class="video">
       <div class="thumbnail-overlay" @click="play">
-        <video
-          :src="selectedVideo?.videoUrl"
-          :poster="selectedVideo?.thumbnailUrl"
-          alt="Video Thumbnail"
-          controls
-          class="thumbnail-image"
-          ref="videoRef"
-          autoplay
-        ></video>
+        <video :src="selectedVideo?.videoUrl" :poster="selectedVideo?.thumbnailUrl" alt="Video Thumbnail" controls
+          class="thumbnail-image" ref="videoRef" autoplay></video>
         <div class="play-button">
           <i class="fas fa-play"></i>
         </div>
@@ -35,19 +28,9 @@
     </div>
 
     <div class="thumbnails">
-      <div
-        v-for="video in videos.slice(0, 3)"
-        :key="video.id"
-        class="thumbnail-container"
-        @click="playVideo(video)"
-      >
+      <div v-for="video in videos.slice(0, 3)" :key="video.id" class="thumbnail-container" @click="playVideo(video)">
         <div class="thumbnail-overlay">
-          <video
-            :src="video.videoUrl"
-            :poster="video.thumbnailUrl"
-            alt="Video Thumbnail"
-            class="thumbnail-image"
-          ></video>
+          <video :src="video.videoUrl" :poster="video.thumbnailUrl" alt="Video Thumbnail" class="thumbnail-image"></video>
         </div>
         <div class="video-description">
           <div class="inner-video-description">
@@ -65,9 +48,9 @@
 </template>
 
 <script setup>
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/PlaylistwhiteIcon.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/PlaylistwhiteIcon.png";
 
 const videos = [
   {
@@ -210,6 +193,7 @@ const playVideo = (video) => {
   padding: 4px 8px;
   float: right;
 }
+
 .inner-video-description {
   height: 100%;
   width: 100%;
@@ -226,6 +210,7 @@ const playVideo = (video) => {
   background: #000000;
   padding: 5px;
 }
+
 /* Note: backdrop-filter has minimal browser support */
 
 .thumbnail-container {

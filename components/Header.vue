@@ -4,19 +4,19 @@
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-between">
           <div class="logo">
-            <img src="../assets/images/Logo.svg" alt="" />
+            <img src="../src/assets/images/Logo.svg" alt="" />
           </div>
           <div class="header-icons d-flex gap-3 align-items-center">
             <div class="notification-icon">
-              <img src="../assets/images/bookmark1.svg" alt="" />
+              <img src="../src/assets/images/bookmark1.svg" alt="" />
             </div>
             <div class="notification-icon">
               <!-- @click="toggleNotificationComponent" -->
-              <img src="../assets/images/bell1.svg" alt="" />
+              <img src="../src/assets/images/bell1.svg" alt="" />
               <span>5</span>
             </div>
             <div class="notification-icon">
-              <img src="../assets/images/message1.svg" alt="" />
+              <img src="../src/assets/images/message1.svg" alt="" />
               <span>9+</span>
             </div>
 
@@ -32,7 +32,7 @@
         <div class="col-lg-12 d-flex justify-content-between">
           <div class="d-flex align-items-center gap-1">
             <div class="logo">
-              <img src="../assets/images/landing-header-icon.png" alt="" />
+              <img src="../src/assets/images/landing-header-icon.png" alt="" />
             </div>
             <div class="custom-select">
               <select>
@@ -45,15 +45,15 @@
           </div>
           <div class="header-icons d-flex gap-3 align-items-center">
             <div class="notification-icon">
-              <img src="../assets/images/notification.png" alt="" />
+              <img src="../src/assets/images/notification.png" alt="" />
               <span>5</span>
             </div>
             <div class="notification-icon">
-              <img src="../assets/images/message.png" alt="" />
+              <img src="../src/assets/images/message.png" alt="" />
               <span>9+</span>
             </div>
             <div class="notification-icon">
-              <img src="../assets/images/setting-icon.png" alt="" />
+              <img src="../src/assets/images/setting-icon.png" alt="" />
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ import NotificationComponent from "../components/NotificationDetail.vue";
 const route = useRoute();
 </script>
 <script>
-// import DropdownIcon from "~/assets/images/down-arrow.png";
+// import DropdownIcon from "~/src/assets/images/down-arrow.png";
 
 export default {
   components: {

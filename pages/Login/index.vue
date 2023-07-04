@@ -37,11 +37,11 @@
     </div>
 </template>
 <script setup>
-import BizlyLogo from "~/assets/images/BizlyLogo_White-Wix.png"
-import Google from "~/assets/images/google.svg"
-import Facebook from "~/assets/images/facebook.svg"
-import LinkedIn from "~/assets/images/linkedin.svg"
-import Apple from "~/assets/images/apple.svg"
+import BizlyLogo from "~/src/assets/images/BizlyLogo_White-Wix.png"
+import Google from "~/src/assets/images/google.svg"
+import Facebook from "~/src/assets/images/facebook.svg"
+import LinkedIn from "~/src/assets/images/linkedin.svg"
+import Apple from "~/src/assets/images/apple.svg"
 
 import { storeToRefs } from 'pinia';
 import { useStore } from "../../store";
@@ -76,9 +76,9 @@ onMounted(() => {
 .login-bg {
     width: 100%;
     height: 100vh;
-    // background: url("../../assets/images/Hero.png");
-    background: url("../../assets/images/Hero1.jpg");
-    // background: url("../../assets/images/Hero2.jpg");
+    // background: url("../../src/assets/images/Hero.png");
+    background: url("../../src/assets/images/Hero1.jpg");
+    // background: url("../../src/assets/images/Hero2.jpg");
     background-blend-mode: screen;
     background-size: cover;
     background-repeat: no-repeat;

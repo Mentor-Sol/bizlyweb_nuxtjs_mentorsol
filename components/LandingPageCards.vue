@@ -127,15 +127,15 @@ $font-family_1: 'Roboto';
 
     .inner-cards {
         .inner-card-two {
-            background-image: url(../assets/images/Thumbnail-two.png) !important;
+            background-image: url(../src/assets/images/Thumbnail-two.png) !important;
         }
 
         .inner-card-three {
-            background-image: url(../assets/images/Thumbnail-three.png) !important;
+            background-image: url(../src/assets/images/Thumbnail-three.png) !important;
         }
 
         .inner-card-one {
-            background-image: url(../assets/images/Thumbnail-one.png);
+            background-image: url(../src/assets/images/Thumbnail-one.png);
             background-repeat: no-repeat;
             height: 280px;
             background-size: cover;

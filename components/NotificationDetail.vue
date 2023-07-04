@@ -45,7 +45,7 @@
                         <img :src=" NotificationManImg  " alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
+
                         <p><span>Hahn Miles </span> added a new <span>image gallery titled Bumble Headshots</span></p>
                         <a href="#">View</a>
                         <div class="notification-minutes">
@@ -64,7 +64,7 @@
                         <img :src=" NotificationSecondmanImg " alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
+
                         <p><span>Hahn Miles</span> applied to you <span>gig</span> titled <span> Web Designer</span></p>
                         <a href="#">Manage Applicants</a>
                         <div class="notification-minutes">
@@ -83,8 +83,9 @@
                         <img :src="HeartNotificationsIcon " alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
-                        <p>There are <span>3 opportunities</span> that you saved that close in the next <span>12 hours!</span></p>
+
+                        <p>There are <span>3 opportunities</span> that you saved that close in the next <span>12
+                                hours!</span></p>
                         <a href="#">See Opportunities</a>
                         <div class="notification-minutes">
                             <p>3h</p>
@@ -102,8 +103,9 @@
                         <img :src="NotificationFourmanImg" alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
-                        <p><span>Tiffany Arkansas</span> posted a <span> job</span> that matches your <span> service</span> titled <span>Editor</span></p>
+
+                        <p><span>Tiffany Arkansas</span> posted a <span> job</span> that matches your <span> service</span>
+                            titled <span>Editor</span></p>
                         <a href="#">View Job</a>
                         <div class="notification-minutes">
                             <p>1h</p>
@@ -121,8 +123,9 @@
                         <img :src="NotificationFivemansImg" alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
-                        <p><span>Robert Fox</span> requested to add you as a collaborator on their  <span>  collection </span>  titled  <span> “Welcome Back”</span></p>
+
+                        <p><span>Robert Fox</span> requested to add you as a collaborator on their <span> collection </span>
+                            titled <span> “Welcome Back”</span></p>
                         <div class="d-flex gap-2">
                             <a href="#" class="btn-secondry">Accept</a>
                             <a href="#" class="btn-primary">View Job</a>
@@ -143,7 +146,7 @@
                         <img :src="BizlyNotificationIcon" alt="Self " />
                     </div>
                     <div class="notification-values-description">
-                        
+
                         <p> Check out the latest features we rolled out!</p>
                         <div class="notification-minutes">
                             <p>2m</p>
@@ -161,15 +164,15 @@
 </template>
   
 <script setup>
-import UserNotificationiIcon from "~/assets/images/user-notification-icon.png"
-import MenuTabs from "~/assets/images/Menu_tabs.png"
-import EyeNotificationIcon from "~/assets/images/eye-notification-icon.png"
-import NotificationManImg from "~/assets/images/notification-man-img.png"
-import NotificationSecondmanImg from "~/assets/images/notification-secondman-img.png"
-import HeartNotificationsIcon from "~/assets/images/heart-notifications-icon.png"
-import NotificationFourmanImg from "~/assets/images/notification-fourman-img.png"
-import NotificationFivemansImg from "~/assets/images/notification-fivemans-img.png"
-import BizlyNotificationIcon from "~/assets/images/bizly-notification-icon.png"
+import UserNotificationiIcon from "~/src/assets/images/user-notification-icon.png"
+import MenuTabs from "~/src/assets/images/Menu_tabs.png"
+import EyeNotificationIcon from "~/src/assets/images/eye-notification-icon.png"
+import NotificationManImg from "~/src/assets/images/notification-man-img.png"
+import NotificationSecondmanImg from "~/src/assets/images/notification-secondman-img.png"
+import HeartNotificationsIcon from "~/src/assets/images/heart-notifications-icon.png"
+import NotificationFourmanImg from "~/src/assets/images/notification-fourman-img.png"
+import NotificationFivemansImg from "~/src/assets/images/notification-fivemans-img.png"
+import BizlyNotificationIcon from "~/src/assets/images/bizly-notification-icon.png"
 
 
 
@@ -284,14 +287,16 @@ import BizlyNotificationIcon from "~/assets/images/bizly-notification-icon.png"
 }
 
 .Unread-notification {
-    padding:10px 16px;
+    padding: 10px 16px;
     background: #EFF1F5;
     border-bottom: 1px solid #CDD5E1;
 
 }
-.Unread-notification:last-child{
+
+.Unread-notification:last-child {
     border-radius: 0 0 16px 16px;
 }
+
 .Unread-notification .notification-values-icons {
     background-color: #001F53;
     width: 40px;
@@ -324,7 +329,7 @@ import BizlyNotificationIcon from "~/assets/images/bizly-notification-icon.png"
     color: #8C8C8C;
     margin-top: 10px;
     margin-bottom: 0;
-   
+
 
 }
 
@@ -344,18 +349,19 @@ import BizlyNotificationIcon from "~/assets/images/bizly-notification-icon.png"
     border-radius: 30px;
     padding: 4px 8px;
     text-decoration: none;
-   
+
 }
-.btn-primary{
-  
+
+.btn-primary {
+
     padding: 4px 11px !important;
 
 }
-.btn-secondry{
-   
+
+.btn-secondry {
+
     color: #fff !important;
     background-color: #39537D;
     padding: 4px 13px !important;
-   
-}
-</style>
+
+}</style>

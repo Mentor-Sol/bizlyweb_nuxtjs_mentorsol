@@ -11,7 +11,7 @@
                 </div>
                 <div class="d-flex gap-2 align-items-center inner-title-name">
                   <h1>Alex King</h1>
-                  <a href="#"  @click="showModal = true"><span>bizPro</span></a>
+                  <a href="#" @click="showModal = true"><span>bizPro</span></a>
                   <AboutModal :showModal="showModal"></AboutModal>
                 </div>
               </div>
@@ -35,7 +35,7 @@
               <div class="d-flex gap-2 inner-title-values">
                 <a href="#" @click="clicked">Manage Connections</a>
                 <a href="#" @click="showModal = true">Edit <span>bizCard</span></a>
-               <Modal :showModal="showModal"></Modal>
+                <Modal :showModal="showModal"></Modal>
 
               </div>
 
@@ -44,7 +44,7 @@
               <img :src="BannerEyeIcon" alt="Ambassador" />
               <img :src="BannerDownloadIcon" alt="Ambassador" />
             </div>
-           
+
           </div>
         </div>
       </div>
@@ -52,11 +52,11 @@
   </div>
 </template>
 <script setup>
-import BannerImgIcon from "~/assets/images/banner-img-icon.png";
-import BannerEyeIcon from "~/assets/images/banner-eye-icon.png";
-import BannerDownloadIcon from "~/assets/images/banner-download-icon.png";
-import BannerUserImg from "~/assets/images/banner-user-img.png";
-import BannerNotificationIcon from "~/assets/images/banner-notification-icon.png";
+import BannerImgIcon from "~/src/assets/images/banner-img-icon.png";
+import BannerEyeIcon from "~/src/assets/images/banner-eye-icon.png";
+import BannerDownloadIcon from "~/src/assets/images/banner-download-icon.png";
+import BannerUserImg from "~/src/assets/images/banner-user-img.png";
+import BannerNotificationIcon from "~/src/assets/images/banner-notification-icon.png";
 
 </script>
 <script>
@@ -66,7 +66,7 @@ export default {
   components: {
     Modal,
     AboutModal
-},
+  },
   data() {
     return {
       showModal: false,
@@ -80,7 +80,7 @@ $font-family_1: "Roboto";
 $font-family_2: "Ubuntu";
 
 .main-hero-banner {
-  background-image: url(../assets/images/Hero.png);
+  background-image: url(../src/assets/images/Hero.png);
   background-position: center;
   background-size: cover;
   padding: 80px 100px;

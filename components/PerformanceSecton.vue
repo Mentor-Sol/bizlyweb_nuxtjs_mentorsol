@@ -59,9 +59,9 @@
     </div>
 </template>
 <script setup>
-import StatisticsIcon from "~/assets/images/blue-bag.png"
-import BlueClockIcon from "~/assets/images/Mask-icon.png"
-import UserBlue from "~/assets/images/user-blue.png"
+import StatisticsIcon from "~/src/assets/images/blue-bag.png"
+import BlueClockIcon from "~/src/assets/images/Mask-icon.png"
+import UserBlue from "~/src/assets/images/user-blue.png"
 
 
 
@@ -83,7 +83,7 @@ $color_3: #39537D;
 $color_4: #595959;
 $color_5: #141414;
 $color_6: #3578F8;
-$color_7:#595959 ;
+$color_7: #595959;
 
 $font-family_1: 'Roboto';
 
@@ -167,7 +167,7 @@ $font-family_1: 'Roboto';
             font-weight: 400;
             font-size: 14px;
             line-height: 20px;
-            color:$color_7;
+            color: $color_7;
             margin-bottom: 0;
 
 
@@ -179,11 +179,12 @@ $font-family_1: 'Roboto';
             font-weight: 700;
             font-size: 14px;
             line-height: 20px;
-            color:$color_1 ;
+            color: $color_1 ;
             margin-bottom: 0;
 
 
         }
     }
 
-}</style>
+}
+</style>

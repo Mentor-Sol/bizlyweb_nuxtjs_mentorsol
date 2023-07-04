@@ -517,7 +517,7 @@ div#myTabContent {
         }
 
         &::after {
-          background-image: url("../../assets/images/downArrow.svg");
+          background-image: url("../../src/assets/images/downArrow.svg");
           background-size: 15px 20px;
         }
       }
@@ -1364,7 +1364,7 @@ div#myTabContent {
 .no-data {
   height: 410px;
   width: 100%;
-  background: url("~/assets/images/NoDataImage.png"), rgba(0, 0, 0, 0.1);
+  background: url("~/src/assets/images/NoDataImage.png"), rgba(0, 0, 0, 0.1);
   background-position: center;
   background-size: 50%;
   background-repeat: no-repeat;
@@ -1373,7 +1373,7 @@ div#myTabContent {
 .text-bg {
   height: 410px;
   width: 100%;
-  background: url("~/assets/images/tenthbgimg.png");
+  background: url("~/src/assets/images/tenthbgimg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

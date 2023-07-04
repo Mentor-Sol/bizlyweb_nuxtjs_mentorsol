@@ -2,17 +2,17 @@
     <div>
         <Swiper :height="300" :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
             :effect="'creative'" :autoplay="{
-                delay: 3000,
-                disableOnInteraction: true,
-            }" :creative-effect="{
-    prev: {
-        shadow: false,
-        translate: ['-20%', 0, -1],
-    },
-    next: {
-        translate: ['100%', 0, 0],
-    },
-}">
+                            delay: 3000,
+                            disableOnInteraction: true,
+                        }" :creative-effect="{
+                prev: {
+                    shadow: false,
+                    translate: ['-20%', 0, -1],
+                },
+                next: {
+                    translate: ['100%', 0, 0],
+                },
+            }">
             <SwiperSlide v-for="(slide, idx) in images" :key="idx">
                 <img :src="slide" className=" five_feature_img" />
                 <div className="subContent">
@@ -30,7 +30,7 @@
 </template>
 <script setup>
 
-import MultipleImg from "~/assets/images/multipleImg.svg";
+import MultipleImg from "~/src/assets/images/multipleImg.svg";
 
 const props=defineProps({
     images: Array

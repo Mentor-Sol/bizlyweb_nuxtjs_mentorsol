@@ -87,14 +87,14 @@
 </template>
 
 <script setup>
-import ShareTabImage from "~/assets/images/share-tabs.png";
-import Messagetabs from "~/assets/images/message-tabs.png";
-import bookmarket from "~/assets/images/bookmark-tabs.png";
-import MenuTab from "~/assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoIconBlack from "~/assets/images/videoblackicon.png";
-import VideoIcon from "~/assets/images/video-icon.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoIconBlack from "~/src/assets/images/videoblackicon.png";
+import VideoIcon from "~/src/assets/images/video-icon.png";
 import { usePostCreationTime } from "../../composables/getPostCreatedTime";
 import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 defineProps({

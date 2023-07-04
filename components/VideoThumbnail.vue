@@ -2,15 +2,8 @@
   <div class="video-container">
     <div class="video">
       <div class="thumbnail-overlay">
-        <video
-          :src="selectedVideo?.videoUrl"
-          :poster="selectedVideo?.thumbnailUrl"
-          alt="Video Thumbnail"
-          controls
-          class="thumbnail-image"
-          ref="videoRef"
-          autoplay
-        ></video>
+        <video :src="selectedVideo?.videoUrl" :poster="selectedVideo?.thumbnailUrl" alt="Video Thumbnail" controls
+          class="thumbnail-image" ref="videoRef" autoplay></video>
         <div class="play-button">
           <i class="fas fa-play"></i>
         </div>
@@ -35,19 +28,10 @@
     </div>
 
     <div class="thumbnails">
-      <div
-        v-for="video in videos"
-        :key="video?.id"
-        class="thumbnail-container"
-        @click="playVideo(video)"
-      >
+      <div v-for="video in videos" :key="video?.id" class="thumbnail-container" @click="playVideo(video)">
         <div class="thumbnail-overlay">
-          <video
-            :src="video?.videoUrl"
-            :poster="video?.thumbnailUrl"
-            alt="Video Thumbnail"
-            class="thumbnail-image"
-          ></video>
+          <video :src="video?.videoUrl" :poster="video?.thumbnailUrl" alt="Video Thumbnail"
+            class="thumbnail-image"></video>
         </div>
         <div class="video-description">
           <div class="inner-video-description">
@@ -67,9 +51,9 @@
 </template>
 
 <script setup>
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/videoalbum.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/videoalbum.png";
 const videos = [
   {
     id: 1,
@@ -124,6 +108,7 @@ const playVideo = (video) => {
 .video-container {
   height: 100%;
   overflow: hidden;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -218,6 +203,7 @@ const playVideo = (video) => {
   padding: 4px 8px;
   float: right;
 }
+
 .inner-video-description {
   height: 100%;
   width: 100%;

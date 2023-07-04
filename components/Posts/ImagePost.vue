@@ -73,14 +73,14 @@
 </template>
 
 <script setup>
-import ShareTabImage from "~/assets/images/share-tabs.png";
-import Messagetabs from "~/assets/images/message-tabs.png";
-import UserSlider from "~/assets/images/user-slider.png"
-import TagSlider from "~/assets/images/Tag-slider.png"
-import bookmarket from "~/assets/images/bookmark-tabs.png";
-import MenuTab from "~/assets/images/Menu_tabs.png";
-import ImageIconSlider from "~/assets/images/Image-icon-slider.png"
-import BlackImgIcon from "~/assets/images/BlackImgIcon.png"
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png"
+import TagSlider from "~/src/assets/images/Tag-slider.png"
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png"
+import BlackImgIcon from "~/src/assets/images/BlackImgIcon.png"
 import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({

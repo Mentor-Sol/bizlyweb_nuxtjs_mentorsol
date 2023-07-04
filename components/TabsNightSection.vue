@@ -35,9 +35,7 @@
         libero et velit inter... <a href="#">see more</a>
       </p>
     </div>
-    <div
-      class="main-thums-Slider main-thums-Slider-second collection-thums-slider"
-    >
+    <div class="main-thums-Slider main-thums-Slider-second collection-thums-slider">
       <div>
         <img :src="SecondSectionImg" alt="" class="inner-img-collection" />
         <div class="inner-Collection-wrapper">
@@ -88,17 +86,17 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~//assets/images/nigthbgimg.png";
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import ManTitleImage from "~//assets/images/manImage.png";
-import BlackImgVideo from "~/assets/images/Showcase.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/Showcasewhite.png";
-import CollectionOne from "~/assets/images/collectionone.png";
-import CollectionTwo from "~/assets/images/Collectiontwo.png";
-import CollectionThree from "~/assets/images/CollectionThree.png";
+import SecondSectionImg from "~/src/assets/images/nigthbgimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import ManTitleImage from "~/src/assets/images/manImage.png";
+import BlackImgVideo from "~/src/assets/images/Showcase.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/Showcasewhite.png";
+import CollectionOne from "~/src/assets/images/collectionone.png";
+import CollectionTwo from "~/src/assets/images/Collectiontwo.png";
+import CollectionThree from "~/src/assets/images/CollectionThree.png";
 </script>

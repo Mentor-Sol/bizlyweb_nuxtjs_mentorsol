@@ -9,8 +9,8 @@
                                 <p>Availability</p>
                                 <p :class="data?.available_to_work ? 'available' : 'not-available'">
                                     {{
-                                        data?.available_to_work ? "Available" : "Not Available"
-                                    }}
+                                                                        data?.available_to_work ? "Available" : "Not Available"
+                                                                        }}
                                 </p>
                             </div>
                             <div className="d-flex">
@@ -115,10 +115,10 @@
 <script setup>
 import { FullBizCard } from '../../../models/ProfileData/FullBizCard';
 import TypeofServices from './TypeofServices.vue';
-import Clock from "~/assets/images/clock.svg"
-import Relocation from "~/assets/images/relocation.svg"
-import AnyTimeZone from "~/assets/images/anytimezone.svg"
-import Passport from "~/assets/images/passport.svg"
+import Clock from "~/src/assets/images/clock.svg"
+import Relocation from "~/src/assets/images/relocation.svg"
+import AnyTimeZone from "~/src/assets/images/anytimezone.svg"
+import Passport from "~/src/assets/images/passport.svg"
 defineProps({
     data: FullBizCard
 })

@@ -78,15 +78,15 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~//assets/images/tenthbgimg.png";
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import BlackImgVideo from "~/assets/images/textblack.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/textwhite.png";
+import SecondSectionImg from "~/src/assets/images/tenthbgimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import BlackImgVideo from "~/src/assets/images/textblack.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/textwhite.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";

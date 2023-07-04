@@ -15,11 +15,11 @@
   </div>
 </template>
 <script setup>
-import VideoIcon from "~/assets/images/video-icon.png";
+import VideoIcon from "~/src/assets/images/video-icon.png";
 </script>
 <style scoped lang="scss">
 .bizly-card {
-  background-image: url('~/assets/images/second-card-bg.jpg');
+  background-image: url('~/src/assets/images/second-card-bg.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

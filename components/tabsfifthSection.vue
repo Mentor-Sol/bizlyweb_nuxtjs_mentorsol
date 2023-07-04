@@ -52,11 +52,11 @@
   </div>
 </template>
 <script setup>
-import ShareTabImage from "~/assets/images/share-tabs.png";
-import Messagetabs from "~/assets/images/message-tabs.png";
-import TitleImage from "~/assets/images/title-img.png";
-import BlackImgVideo from "~/assets/images/Playlist.png";
-import bookmarket from "~/assets/images/bookmark-tabs.png";
-import MenuTab from "~/assets/images/Menu_tabs.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import TitleImage from "~/src/assets/images/title-img.png";
+import BlackImgVideo from "~/src/assets/images/Playlist.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
 import FifthVideoThumbanil from "./FifthVideoThumbanil.vue";
 </script>
