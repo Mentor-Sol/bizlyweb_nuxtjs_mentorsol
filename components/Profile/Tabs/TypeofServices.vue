@@ -50,11 +50,11 @@
   </div>
 </template>
 <script setup>
-import ServiceMessage from "~/src/assets/images/servicemessage.svg";
-import SupportingOne from "~/src/assets/images/supportigone.svg";
-import SupportingTwo from "~/src/assets/images/supportingtwo.svg";
-import SupportingFour from "~/src/assets/images/supportingfour.svg";
-import SupportingThree from "~/src/assets/images/supportingthree.svg";
+import ServiceMessage from "~/public/assets/images/servicemessage.svg";
+import SupportingOne from "~/public/assets/images/supportigone.svg";
+import SupportingTwo from "~/public/assets/images/supportingtwo.svg";
+import SupportingFour from "~/public/assets/images/supportingfour.svg";
+import SupportingThree from "~/public/assets/images/supportingthree.svg";
 import { GetRate } from "../../../composables/getRate"
 import { FullBizCard } from "../../../models/ProfileData/FullBizCard";
 

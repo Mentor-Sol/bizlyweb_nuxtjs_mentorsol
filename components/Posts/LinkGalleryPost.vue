@@ -51,11 +51,11 @@
 </template>
 
 <script setup>
-import ShareTabImage from "~/src/assets/images/share-tabs.png";
-import Messagetabs from "~/src/assets/images/message-tabs.png";
-import BlackImgVideo from "~/src/assets/images/Link.png";
-import bookmarket from "~/src/assets/images/bookmark-tabs.png";
-import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import ShareTabImage from "~/public/assets/images/share-tabs.png";
+import Messagetabs from "~/public/assets/images/message-tabs.png";
+import BlackImgVideo from "~/public/assets/images/Link.png";
+import bookmarket from "~/public/assets/images/bookmark-tabs.png";
+import MenuTab from "~/public/assets/images/Menu_tabs.png";
 import LinkThumbnails from "./LinkThumbnails.vue";
 import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 

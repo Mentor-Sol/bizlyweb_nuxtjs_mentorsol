@@ -164,15 +164,15 @@
 </template>
   
 <script setup>
-import UserNotificationiIcon from "~/src/assets/images/user-notification-icon.png"
-import MenuTabs from "~/src/assets/images/Menu_tabs.png"
-import EyeNotificationIcon from "~/src/assets/images/eye-notification-icon.png"
-import NotificationManImg from "~/src/assets/images/notification-man-img.png"
-import NotificationSecondmanImg from "~/src/assets/images/notification-secondman-img.png"
-import HeartNotificationsIcon from "~/src/assets/images/heart-notifications-icon.png"
-import NotificationFourmanImg from "~/src/assets/images/notification-fourman-img.png"
-import NotificationFivemansImg from "~/src/assets/images/notification-fivemans-img.png"
-import BizlyNotificationIcon from "~/src/assets/images/bizly-notification-icon.png"
+import UserNotificationiIcon from "~/public/assets/images/user-notification-icon.png"
+import MenuTabs from "~/public/assets/images/Menu_tabs.png"
+import EyeNotificationIcon from "~/public/assets/images/eye-notification-icon.png"
+import NotificationManImg from "~/public/assets/images/notification-man-img.png"
+import NotificationSecondmanImg from "~/public/assets/images/notification-secondman-img.png"
+import HeartNotificationsIcon from "~/public/assets/images/heart-notifications-icon.png"
+import NotificationFourmanImg from "~/public/assets/images/notification-fourman-img.png"
+import NotificationFivemansImg from "~/public/assets/images/notification-fivemans-img.png"
+import BizlyNotificationIcon from "~/public/assets/images/bizly-notification-icon.png"
 
 
 
@@ -364,4 +364,5 @@ import BizlyNotificationIcon from "~/src/assets/images/bizly-notification-icon.p
     background-color: #39537D;
     padding: 4px 13px !important;
 
-}</style>
+}
+</style>

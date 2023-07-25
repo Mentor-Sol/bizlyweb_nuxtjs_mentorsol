@@ -42,8 +42,8 @@
   </div>
 </template>
 <script setup>
-import StatisticsIcon from "~/src/assets/images/statistics.png";
-import BlueClockIcon from "~/src/assets/images/blue-clock.png";
+import StatisticsIcon from "~/public/assets/images/statistics.png";
+import BlueClockIcon from "~/public/assets/images/blue-clock.png";
 import LandingPageTabs from "./LandingPageTabs.vue";
 </script>
 <style lang="scss" scoped>

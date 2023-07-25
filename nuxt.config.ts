@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Bizly",
-      link: [{ rel: "icon", type: "image/x-icon", href: "src/assets/images/bizly-notification-icon.png" }],
+      link: [{ rel: "icon", type: "image/png", href: "favicon.png" }],
       script: [
         {
           src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",

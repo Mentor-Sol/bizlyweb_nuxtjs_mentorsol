@@ -60,10 +60,10 @@
 
 <script setup>
 import CustomButton from "./CustomButton.vue"
-import SelfEmployeeIcon from "~/src/assets/images/self.svg"
-import LocationIcon from "~/src/assets/images/location.svg"
-import MessageIcon from "~/src/assets/images/message.svg"
-import PlusUserIcon from "~/src/assets/images/ambassador.svg"
+import SelfEmployeeIcon from "~/public/assets/images/self.svg"
+import LocationIcon from "~/public/assets/images/location.svg"
+import MessageIcon from "~/public/assets/images/message.svg"
+import PlusUserIcon from "~/public/assets/images/ambassador.svg"
 
 defineProps({
   data: [Object, Array],

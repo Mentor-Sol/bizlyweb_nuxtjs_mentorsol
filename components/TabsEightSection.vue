@@ -92,15 +92,15 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~/src/assets/images/eightSectionimg.png";
-import ShareTabImage from "~/src/assets/images/share-tabs.png";
-import Messagetabs from "~/src/assets/images/message-tabs.png";
-import BlackImgVideo from "~/src/assets/images/Link.png";
-import bookmarket from "~/src/assets/images/bookmark-tabs.png";
-import MenuTab from "~/src/assets/images/Menu_tabs.png";
-import UserSlider from "~/src/assets/images/user-slider.png";
-import TagSlider from "~/src/assets/images/Tag-slider.png";
-import VideoAlbum from "~/src/assets/images/Link-white.png";
+import SecondSectionImg from "~/public/assets/images/eightSectionimg.png";
+import ShareTabImage from "~/public/assets/images/share-tabs.png";
+import Messagetabs from "~/public/assets/images/message-tabs.png";
+import BlackImgVideo from "~/public/assets/images/Link.png";
+import bookmarket from "~/public/assets/images/bookmark-tabs.png";
+import MenuTab from "~/public/assets/images/Menu_tabs.png";
+import UserSlider from "~/public/assets/images/user-slider.png";
+import TagSlider from "~/public/assets/images/Tag-slider.png";
+import VideoAlbum from "~/public/assets/images/Link-white.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";

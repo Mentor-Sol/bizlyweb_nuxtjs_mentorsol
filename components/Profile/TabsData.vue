@@ -30,9 +30,9 @@
 </template>
 
 <script setup>
-import Contact from "~/src/assets/images/contact.svg";
-import Content from "~/src/assets/images/content.svg";
-// import Services from "~/src/assets/images/services.svg";
+import Contact from "~/public/assets/images/contact.svg";
+import Content from "~/public/assets/images/content.svg";
+// import Services from "~/public/assets/images/services.svg";
 import { useStore } from "@/store/";
 import { storeToRefs } from "pinia";
 import ContactTab from "./Tabs/ContactTab.vue"

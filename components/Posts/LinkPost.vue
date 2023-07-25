@@ -94,14 +94,14 @@
 </template>
 
 <script setup>
-import ShareTabImage from "~/src/assets/images/share-tabs.png";
-import Messagetabs from "~/src/assets/images/message-tabs.png";
-import BlackImgVideo from "~/src/assets/images/Link.png";
-import bookmarket from "~/src/assets/images/bookmark-tabs.png";
-import MenuTab from "~/src/assets/images/Menu_tabs.png";
-import UserSlider from "~/src/assets/images/user-slider.png";
-import TagSlider from "~/src/assets/images/Tag-slider.png";
-import LinkWhite from "~/src/assets/images/Link-white.png";
+import ShareTabImage from "~/public/assets/images/share-tabs.png";
+import Messagetabs from "~/public/assets/images/message-tabs.png";
+import BlackImgVideo from "~/public/assets/images/Link.png";
+import bookmarket from "~/public/assets/images/bookmark-tabs.png";
+import MenuTab from "~/public/assets/images/Menu_tabs.png";
+import UserSlider from "~/public/assets/images/user-slider.png";
+import TagSlider from "~/public/assets/images/Tag-slider.png";
+import LinkWhite from "~/public/assets/images/Link-white.png";
 import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({

@@ -23,11 +23,11 @@
     </div>
 </template>
 <script setup>
-import ContactIcon from "~/src/assets/images/support1.svg"
-import CommunityIcon from "~/src/assets/images/community1.svg"
-import WishIcon from "~/src/assets/images/featurewish1.svg"
-import AmbassadorIconOne from "~/src/assets/images/ambassador1.svg"
-import LogoIcon from "~/src/assets/images/bizlyLogo.svg"
+import ContactIcon from "~/public/assets/images/support1.svg"
+import CommunityIcon from "~/public/assets/images/community1.svg"
+import WishIcon from "~/public/assets/images/featurewish1.svg"
+import AmbassadorIconOne from "~/public/assets/images/ambassador1.svg"
+import LogoIcon from "~/public/assets/images/bizlyLogo.svg"
 
 
 

@@ -16,7 +16,7 @@
     </nav>
 </template>
 <script setup>
-import NoProfilePic from '../../src/assets/images/NoProfilePic.png';
+import NoProfilePic from '../../public/assets/images/NoProfilePic.png';
 
 defineProps({
     data: Object

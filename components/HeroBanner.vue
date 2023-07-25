@@ -52,11 +52,11 @@
   </div>
 </template>
 <script setup>
-import BannerImgIcon from "~/src/assets/images/banner-img-icon.png";
-import BannerEyeIcon from "~/src/assets/images/banner-eye-icon.png";
-import BannerDownloadIcon from "~/src/assets/images/banner-download-icon.png";
-import BannerUserImg from "~/src/assets/images/banner-user-img.png";
-import BannerNotificationIcon from "~/src/assets/images/banner-notification-icon.png";
+import BannerImgIcon from "~/public/assets/images/banner-img-icon.png";
+import BannerEyeIcon from "~/public/assets/images/banner-eye-icon.png";
+import BannerDownloadIcon from "~/public/assets/images/banner-download-icon.png";
+import BannerUserImg from "~/public/assets/images/banner-user-img.png";
+import BannerNotificationIcon from "~/public/assets/images/banner-notification-icon.png";
 
 </script>
 <script>
@@ -80,7 +80,7 @@ $font-family_1: "Roboto";
 $font-family_2: "Ubuntu";
 
 .main-hero-banner {
-  background-image: url(../src/assets/images/Hero.png);
+  background-image: url(../public/assets/images/Hero.png);
   background-position: center;
   background-size: cover;
   padding: 80px 100px;

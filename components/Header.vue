@@ -7,19 +7,19 @@
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-between">
           <div class="logo">
-            <img src="../src/assets/images/Logo.svg" alt="" />
+            <img src="../public/assets/images/Logo.svg" alt="" />
           </div>
           <div class="header-icons d-flex gap-3 align-items-center">
             <div class="notification-icon">
-              <img src="../src/assets/images/bookmark1.svg" alt="" />
+              <img src="../public/assets/images/bookmark1.svg" alt="" />
             </div>
             <div class="notification-icon">
               <!-- @click="toggleNotificationComponent" -->
-              <img src="../src/assets/images/bell1.svg" alt="" />
+              <img src="../public/assets/images/bell1.svg" alt="" />
               <span>5</span>
             </div>
             <div class="notification-icon">
-              <img src="../src/assets/images/message1.svg" alt="" />
+              <img src="../public/assets/images/message1.svg" alt="" />
               <span>9+</span>
             </div>
             <!-- <NotificationComponent v-if="showNotificationComponent" /> -->

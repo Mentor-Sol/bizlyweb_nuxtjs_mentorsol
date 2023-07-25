@@ -66,16 +66,16 @@
   </div>
 </template>
 <script setup>
-import ShareTabImage from "~/src/assets/images/share-tabs.png";
-import Messagetabs from "~/src/assets/images/message-tabs.png";
-import bookmarket from "~/src/assets/images/bookmark-tabs.png";
-import MenuTab from "~/src/assets/images/Menu_tabs.png";
-import UserSlider from "~/src/assets/images/user-slider.png";
-import TagSlider from "~/src/assets/images/Tag-slider.png";
+import ShareTabImage from "~/public/assets/images/share-tabs.png";
+import Messagetabs from "~/public/assets/images/message-tabs.png";
+import bookmarket from "~/public/assets/images/bookmark-tabs.png";
+import MenuTab from "~/public/assets/images/Menu_tabs.png";
+import UserSlider from "~/public/assets/images/user-slider.png";
+import TagSlider from "~/public/assets/images/Tag-slider.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
-import BlackImageAlbum from "~/src/assets/images/BlackImgIcon.png";
-import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png";
+import BlackImageAlbum from "~/public/assets/images/BlackImgIcon.png";
+import ImageIconSlider from "~/public/assets/images/Image-icon-slider.png";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 </script>

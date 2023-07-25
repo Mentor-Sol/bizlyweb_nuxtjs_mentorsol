@@ -115,10 +115,10 @@
 <script setup>
 import { FullBizCard } from '../../../models/ProfileData/FullBizCard';
 import TypeofServices from './TypeofServices.vue';
-import Clock from "~/src/assets/images/clock.svg"
-import Relocation from "~/src/assets/images/relocation.svg"
-import AnyTimeZone from "~/src/assets/images/anytimezone.svg"
-import Passport from "~/src/assets/images/passport.svg"
+import Clock from "~/public/assets/images/clock.svg"
+import Relocation from "~/public/assets/images/relocation.svg"
+import AnyTimeZone from "~/public/assets/images/anytimezone.svg"
+import Passport from "~/public/assets/images/passport.svg"
 defineProps({
     data: FullBizCard
 })
