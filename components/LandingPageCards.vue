@@ -24,10 +24,10 @@
                                             <p>Producer</p>
                                         </div>
                                     </div>
-                                   
-                                    
+
+
                                 </div>
-                                
+
                                 <div class="col-lg-4">
                                     <div class="inner-card-one inner-card-two">
                                         <h5>Robert Fox</h5>
@@ -126,14 +126,16 @@ $font-family_1: 'Roboto';
     border-radius: 16px;
 
     .inner-cards {
-        .inner-card-two{
-            background-image: url(../assets/images/Thumbnail-two.png) !important;
+        .inner-card-two {
+            background-image: url(../src/assets/images/Thumbnail-two.png) !important;
         }
-        .inner-card-three{
-            background-image: url(../assets/images/Thumbnail-three.png) !important;
+
+        .inner-card-three {
+            background-image: url(../src/assets/images/Thumbnail-three.png) !important;
         }
+
         .inner-card-one {
-            background-image: url(../assets/images/Thumbnail-one.png);
+            background-image: url(../src/assets/images/Thumbnail-one.png);
             background-repeat: no-repeat;
             height: 280px;
             background-size: cover;
@@ -142,7 +144,7 @@ $font-family_1: 'Roboto';
             background-position: center;
             display: flex;
             flex-direction: column;
-            justify-content: end;
+            justify-content: flex-end;
             text-align: center;
 
             .inner-card-title {

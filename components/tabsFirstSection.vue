@@ -24,15 +24,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
           <!-- <p>Camera Operator <span>at</span> Paramount Pictures</p> -->
@@ -61,17 +56,17 @@
 </template>
 <script setup>
 import Thumbsgallery from "./Thumbsgallery.vue";
-import ShareTabImage from "~/assets/images/share-tabs.png";
-import Messagetabs from "~/assets/images/message-tabs.png";
-import TitleImage from "~/assets/images/title-img.png";
-import ImageAlbum from "~/assets/images/image album.png";
-import bookmarket from "~/assets/images/bookmark-tabs.png";
-import MenuTab from "~/assets/images/Menu_tabs.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import TitleImage from "~/src/assets/images/title-img.png";
+import ImageAlbum from "~/src/assets/images/image album.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 const { feedData } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 .profile-img {
   width: 60px;
   border-radius: 50%;

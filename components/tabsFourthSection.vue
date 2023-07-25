@@ -21,15 +21,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
         </div>
@@ -71,24 +66,25 @@
   </div>
 </template>
 <script setup>
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
-import BlackImageAlbum from "~/assets/images/BlackImgIcon.png";
-import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
+import BlackImageAlbum from "~/src/assets/images/BlackImgIcon.png";
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 .feed_img {
   width: 100%;
   height: 100%;
 }
+
 .profile-img {
   width: 60px;
   border-radius: 50%;

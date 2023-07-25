@@ -66,14 +66,14 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~//assets/images/secondsectionimg.png";
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import ManTitleImage from "~//assets/images/manImage.png";
-import BlackImageAlbum from "~/assets/images/BlackImgIcon.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import ImageIconSlider from "~/assets/images/Image-icon-slider.png";
+import SecondSectionImg from "~/src/assets/images/secondsectionimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import ManTitleImage from "~/src/assets/images/manImage.png";
+import BlackImageAlbum from "~/src/assets/images/BlackImgIcon.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png";
 </script>

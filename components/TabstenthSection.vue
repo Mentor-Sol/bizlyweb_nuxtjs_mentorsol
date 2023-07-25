@@ -23,15 +23,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
           <!-- <p>CEO <span>at</span> Biz Technologies</p> -->
@@ -42,15 +37,9 @@
           {{ feed?.description }}
         </p>
       </div>
-      <div
-        class="main-thums-Slider main-thums-Slider-second collection-thums-slider"
-      >
+      <div class="main-thums-Slider main-thums-Slider-second collection-thums-slider">
         <div>
-          <img
-            :src="feed?.image || SecondSectionImg"
-            alt=""
-            class="inner-img-collection"
-          />
+          <img :src="feed?.image || SecondSectionImg" alt="" class="inner-img-collection" />
           <div class="inner-text-wrapper">
             <div class="collection-images text-inner-collection">
               <p>
@@ -89,21 +78,21 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~//assets/images/tenthbgimg.png";
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import BlackImgVideo from "~/assets/images/textblack.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/textwhite.png";
+import SecondSectionImg from "~/src/assets/images/tenthbgimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import BlackImgVideo from "~/src/assets/images/textblack.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/textwhite.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
 const { feedData } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 .profile-img {
   width: 60px;
   border-radius: 50%;

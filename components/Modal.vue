@@ -27,7 +27,7 @@
       <div class="tab-content" id="myTabContentHome">
         <div class="tab-pane fade show active" id="contact" role="tabpanel" aria-labelledby="contact-tab">
           <div className="main-thums-Slider About-slider">
-           <AboutModalSlider/>
+            <AboutModalSlider />
           </div>
         </div>
         <div class="tab-pane fade" id="content" role="tabpanel" aria-labelledby="content-tab">
@@ -156,27 +156,27 @@
 <script>
 
 export default {
-    props: {
-        showModal: {
-            type: Boolean,
-            required: true,
-        },
+  props: {
+    showModal: {
+      type: Boolean,
+      required: true,
     },
-    data() {
-        return {
-            text: "",
-            wordCount: 0,
-            characterCount: 0,
-        };
+  },
+  data() {
+    return {
+      text: "",
+      wordCount: 0,
+      characterCount: 0,
+    };
+  },
+  methods: {
+    updateCounts() {
+      const words = this.text.trim().split(" ");
+      this.wordCount = words.length;
+      this.characterCount = this.text.length;
     },
-    methods: {
-        updateCounts() {
-            const words = this.text.trim().split(" ");
-            this.wordCount = words.length;
-            this.characterCount = this.text.length;
-        },
-    },
-    components: { AboutModalSlider }
+  },
+  components: { AboutModalSlider }
 };
 </script>
 
@@ -386,39 +386,44 @@ select {
   margin-bottom: 8px;
 
 }
+
 .text-area-section {
   position: relative;
-  textarea{
-  background: #FFFFFF;
-width: 100%;
-margin-top: 16px;
-border: 1px solid #CDD5E1;
-border-radius: 4px;
-padding: 12px;
-height: 102px;
-font-family: $font-family_1;
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #8F9FB8;
 
-}
-span{
-  font-family: $font-family_1;
-font-style: normal;
-font-weight: 400;
-font-size: 10px;
-line-height: 24px;
-color: #8F9FB8;
-position: absolute;
+  textarea {
+    background: #FFFFFF;
+    width: 100%;
+    margin-top: 16px;
+    border: 1px solid #CDD5E1;
+    border-radius: 4px;
+    padding: 12px;
+    height: 102px;
+    font-family: $font-family_1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8F9FB8;
+
+  }
+
+  span {
+    font-family: $font-family_1;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 24px;
+    color: #8F9FB8;
+    position: absolute;
     bottom: 12px;
     right: 12px;
+  }
 }
-}
-.modal-content{
+
+.modal-content {
   border: none !important;
 }
+
 // About modal End
 .modal {
   position: fixed;
@@ -613,14 +618,14 @@ label {
 }
 </style>
 <script setup>
-import BackArrow from "~/assets/images/back-arrow.png";
-import StatisticsIcon from "~/assets/images/info-icon.png"
-import BlueClockIcon from "~/assets/images/degree-icon.png"
-import UserBlue from "~/assets/images/user-blue.png"
-import MaskIcon from "~/assets/images/Mask-icon.png"
-import BlueBag from "~/assets/images/blue-bag.png"
-import PrivacyIcon from "~/assets/images/Privacy-icon.png"
-import MembershipIcon from "~/assets/images/membership-icon.png"
+import BackArrow from "~/src/assets/images/back-arrow.png";
+import StatisticsIcon from "~/src/assets/images/info-icon.png"
+import BlueClockIcon from "~/src/assets/images/degree-icon.png"
+import UserBlue from "~/src/assets/images/user-blue.png"
+import MaskIcon from "~/src/assets/images/Mask-icon.png"
+import BlueBag from "~/src/assets/images/blue-bag.png"
+import PrivacyIcon from "~/src/assets/images/Privacy-icon.png"
+import MembershipIcon from "~/src/assets/images/membership-icon.png"
 import AboutModalSlider from "./AboutModalSlider.vue";
 
 

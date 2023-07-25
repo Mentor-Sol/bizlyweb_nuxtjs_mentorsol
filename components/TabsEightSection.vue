@@ -23,15 +23,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
           <!-- <p>CEO <span>at</span> Biz Technologies</p> -->
@@ -45,18 +40,11 @@
           {{ feed?.description.toString().slice(0, maxlenght) + "...." }}
         </p>
 
-        <button
-          @click="seeMore(feed?.description)"
-          v-if="!more && feed?.description.lenth > maxlenght"
-          class="more_less_btn"
-        >
+        <button @click="seeMore(feed?.description)" v-if="!more && feed?.description.lenth > maxlenght"
+          class="more_less_btn">
           see more
         </button>
-        <button
-          @click="seeLess(feed?.description)"
-          v-if="more"
-          class="more_less_btn"
-        >
+        <button @click="seeLess(feed?.description)" v-if="more" class="more_less_btn">
           see less
         </button>
       </div>
@@ -65,12 +53,12 @@
           <img :src="SecondSectionImg" alt="" />
           <div class="inner-description-wrapper">
             <a :href="feed.link_type_value" target="_blank">{{
-              feed?.link_type_value
-            }}</a>
+                          feed?.link_type_value
+                          }}</a>
             <p>{{ feed?.title }}</p>
             <span>{{
-              feed?.description.toString().slice(0, 10) + "...."
-            }}</span>
+                          feed?.description.toString().slice(0, 10) + "...."
+                          }}</span>
           </div>
         </div>
         <div class="d-flex justify-content-between slider-inner-icons">
@@ -104,15 +92,15 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~//assets/images/eightSectionimg.png";
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import BlackImgVideo from "~/assets/images/Link.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoAlbum from "~/assets/images/Link-white.png";
+import SecondSectionImg from "~/src/assets/images/eightSectionimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import BlackImgVideo from "~/src/assets/images/Link.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/Link-white.png";
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
@@ -128,7 +116,7 @@ const seeLess = (text) => {
   more.value = false;
 };
 </script>
-<style>
+<style scoped>
 .profile-img {
   width: 60px;
   border-radius: 50%;

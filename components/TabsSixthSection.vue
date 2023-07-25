@@ -23,15 +23,10 @@
         <div class="Tabs-title-name">
           <h5>
             {{ feed?.first_name + " " + feed?.last_name }}
-            <span
-              >{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
+            <span>{{ feed?.pronouns?.[0] ? "(" + feed?.pronouns?.[0] + ")" : "" }}
             </span>
           </h5>
-          <div
-            class="d-flex align-items-center gap-3 Tabs-feilds"
-            v-for="(role, index) in feed?.roles"
-            :key="index"
-          >
+          <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in feed?.roles" :key="index">
             <span>{{ role }}</span>
           </div>
           <!-- <p>Camera Operator <span>at</span> Paramount Pictures</p> -->
@@ -43,29 +38,16 @@
         </p>
       </div>
       <div class="main-thums-Slider main-thums-Slider-second">
-        <template
-          v-if="feed?.video_type_value.startsWith('https://www.youtube.com')"
-        >
+        <template v-if="feed?.video_type_value.startsWith('https://www.youtube.com')">
           <vue-plyr>
             <div class="plyr__video-embed">
-              <iframe
-                :src="feed?.video_type_value"
-                allowfullscreen
-                allowtransparency
-                allow="autoplay"
-                :poster="feed?.thumbnail_image_kit_id"
-              ></iframe>
+              <iframe :src="feed?.video_type_value" allowfullscreen allowtransparency allow="autoplay"
+                :poster="feed?.thumbnail_image_kit_id"></iframe>
             </div>
           </vue-plyr>
         </template>
-        <template
-          v-if="!feed?.video_type_value.startsWith('https://www.youtube.com')"
-        >
-          <video
-            :src="feed?.video_type_value"
-            controls
-            :poster="feed?.thumbnail_image_kit_id"
-          ></video>
+        <template v-if="!feed?.video_type_value.startsWith('https://www.youtube.com')">
+          <video :src="feed?.video_type_value" controls :poster="feed?.thumbnail_image_kit_id"></video>
         </template>
         <div class="d-flex justify-content-between slider-inner-icons">
           <div class="d-flex align-items-center gap-3">
@@ -77,9 +59,7 @@
             </div>
           </div>
           <div>
-            <div
-              class="img-box-value video-img-box d-flex align-items-center gap-2"
-            >
+            <div class="img-box-value video-img-box d-flex align-items-center gap-2">
               <img :src="VideoIcon" alt="" />
               <p>02:34</p>
             </div>
@@ -100,14 +80,14 @@
   </div>
 </template>
 <script setup>
-import ShareTabImage from "~//assets/images/share-tabs.png";
-import Messagetabs from "~//assets/images/message-tabs.png";
-import bookmarket from "~//assets/images/bookmark-tabs.png";
-import MenuTab from "~//assets/images/Menu_tabs.png";
-import UserSlider from "~/assets/images/user-slider.png";
-import TagSlider from "~/assets/images/Tag-slider.png";
-import VideoIconBlack from "~/assets/images/videoblackicon.png";
-import VideoIcon from "~/assets/images/video-icon.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoIconBlack from "~/src/assets/images/videoblackicon.png";
+import VideoIcon from "~/src/assets/images/video-icon.png";
 
 import { useStore } from "../store";
 import { usePostCreationTime } from "../composables/getPostCreatedTime";
@@ -115,11 +95,12 @@ import { usePostCreationTime } from "../composables/getPostCreatedTime";
 import { storeToRefs } from "pinia";
 const { feedData } = storeToRefs(useStore());
 </script>
-<style>
+<style scoped>
 video {
   width: 100%;
   height: 100%;
 }
+
 .profile-img {
   width: 60px;
   border-radius: 50%;

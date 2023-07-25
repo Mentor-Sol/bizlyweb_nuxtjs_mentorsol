@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  devtools: { enabled: false },
+
   app: {
     head: {
-      title: "Mentorsol",
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      title: "Bizly",
+      link: [{ rel: "icon", type: "image/x-icon", href: "src/assets/images/bizly-notification-icon.png" }],
       script: [
         {
           src: "https://code.jquery.com/jquery-3.5.1.slim.min.js",
@@ -14,6 +16,10 @@ export default defineNuxtConfig({
           type: "text/javascript",
           body: true,
         },
+        {
+          src: "https://player.vimeo.com/api/player.js",
+          type: "text/javascript"
+        }
       ],
     },
   },
@@ -25,7 +31,8 @@ export default defineNuxtConfig({
     },
   ],
 
-  css: ["@/assets/scss/global.scss"],
+  css: ["@/src/assets/scss/global.scss"],
   modules: ["@pinia/nuxt", "nuxt-swiper"],
   plugins: [{ src: "~/plugins/vue-plyr", mode: "client" }],
+  logLevel: "silent",
 });
