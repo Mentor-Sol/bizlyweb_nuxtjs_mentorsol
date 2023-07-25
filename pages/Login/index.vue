@@ -37,7 +37,7 @@
     </div>
 </template>
 <script setup>
-import BizlyLogo from "~/src/assets/images/BizlyLogo_White-Wix.png"
+import BizlyLogo from "~/src/assets/images/Logo.svg"
 import Google from "~/src/assets/images/google.svg"
 import Facebook from "~/src/assets/images/facebook.svg"
 import LinkedIn from "~/src/assets/images/linkedin.svg"
@@ -46,14 +46,16 @@ import Apple from "~/src/assets/images/apple.svg"
 import { storeToRefs } from 'pinia';
 import { useStore } from "../../store";
 import { onMounted } from 'vue';
-const { loading } = storeToRefs(useStore());
+const { loading, isAuthenticated } = storeToRefs(useStore());
 const route = useRouter();
 const handleFormSubmit = (e) => {
+    isAuthenticated = true;
     e.preventDefault();
     route.push('/')
 }
 onMounted(() => {
     loading.value = false;
+    isAuthenticated.value = true;
 })
 // var inputType = useState(() => 'password');
 // const togglePasswordShow = () => {
@@ -93,7 +95,7 @@ onMounted(() => {
         // padding: 20px 50px;
 
         .logo {
-            height: 100px;
+            height: 60px;
             // width: 100px;
             // margin-left: -85px !important;
 
@@ -192,7 +194,7 @@ onMounted(() => {
         width: 100% !important;
 
         .logo {
-            height: 80px !important;
+            height: 40px !important;
         }
     }
 }

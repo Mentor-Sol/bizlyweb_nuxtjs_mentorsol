@@ -100,50 +100,6 @@ import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 defineProps({
   data: FeedResponse
 })
-  // var videoObj = {
-  //   id: 121,
-  //   is_bookmarked: false,
-  //   created_on: "2023-05-15T18:45:39.490567Z",
-  //   modified: "2023-05-15T18:45:39.490596Z",
-  //   owner: {
-  //     id: 112,
-  //     first_name: "chadi",
-  //     last_name: "ayari",
-  //     pronouns: [],
-  //     image: "https://storage.googleapis.com/demo-api.bizly.net/media/profiles/2023/05/18/04/02/bfc486b7-5dd.jpg",
-  //     background_images: [
-  //       "https://ik.imagekit.io/bizapp/images/image_picker_19DBD3F3-6999-41DC-842B-143B33F081D2-74133-00000C8831BEA582_UCpvXuBVp.jpg"
-  //     ],
-  //     roles: [
-  //       "Graphics Operator"
-  //     ],
-  //     location: "Tunis, PA",
-  //     occupation: null
-  //   },
-  //   biz_card: 52,
-  //   children: [],
-  //   invited_collaborators: [],
-  //   collaborators: [],
-  //   is_featured: false,
-  //   is_posted: true,
-  //   post_content: "",
-  //   status: "published",
-  //   is_gallery: false,
-  //   title: "YouTube video",
-  //   description: "yay",
-  //   content_type: "video",
-  //   external_type: null,
-  //   audio_file: null,
-  //   external_url: null,
-  //   image_kit_id: "https://vimeo.com/70591644",
-  //   thumbnail_image_kit_id: null,
-  //   image_kit_ids: [],
-  //   tags: [],
-  //   pronouns: [],
-  //   is_contact: false,
-  //   contact_id: null,
-  //   is_following: false
-  // }
 </script>
 <style scoped>
 .img-div {

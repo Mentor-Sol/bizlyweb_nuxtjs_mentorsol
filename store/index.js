@@ -8,7 +8,8 @@ export const useStore = defineStore({
       feedData: [],
       inspirationData: [],
       dataBizCard: {},
-      loading: true
+      loading: true,
+      isAuthenticated: false
     };
   },
   actions: {

@@ -1,18 +1,30 @@
 <template>
-  <div v-if="loading" class="loading-div">
-    <div class="loading-bar"></div>
-  </div>
-  <Header />
-  <slot />
-  <Footer />
+  <template v-if="!isAuthenticated">
+    <LandingPageNew />
+  </template>
+  <template v-if="isAuthenticated">
+    <div v-if="loading" class="loading-div">
+      <div class="loading-bar"></div>
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </template>
 </template>
 <script setup >
 import Header from '../components/Header.vue';
 import Footer from '../components/Footer.vue';
+import LandingPageNew from "../components/LandingPageNew/LandingPageNew.vue";
 import { storeToRefs } from 'pinia';
 import { useStore } from "../store";
-const { loading } = storeToRefs(useStore());
-
+import { onMounted } from 'vue';
+const { loading, isAuthenticated } = storeToRefs(useStore());
+const route = useRouter();
+onMounted(() => {
+  if (!isAuthenticated) {
+    route.push('/login')
+  }
+})
 </script>
 <style>
 .loading-div {
