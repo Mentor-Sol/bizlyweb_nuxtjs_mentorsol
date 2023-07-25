@@ -105,7 +105,7 @@ import BizlyupdateCard from "../components/Home/BizlyupdateCard.vue";
 import GetinTouch from "../components/Home/GetinTouch.vue";
 import HomeTabs from "../components/Home/HomeTabs.vue";
 import InsipiredCard from "../components/Home/InsipiredCard.vue";
-import ShareIcon from "~/public/assets/images/share2.svg";
+import ShareIcon from "~/src/assets/images/share2.svg";
 import PostView from "../components/PostView.vue";
 import LandingPageNew from "../components/LandingPageNew/LandingPageNew.vue";
 import { storeToRefs } from 'pinia';

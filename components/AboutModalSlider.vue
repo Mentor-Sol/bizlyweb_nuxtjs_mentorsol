@@ -1,8 +1,8 @@
 <template>
     <swiper :style="{
-                '--swiper-navigation-color': '#fff',
-                '--swiper-pagination-color': '#fff',
-            }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
+        '--swiper-navigation-color': '#fff',
+        '--swiper-pagination-color': '#fff',
+    }" :spaceBetween="10" :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules"
         class="mySwiper2">
         <swiper-slide><img src="https://swiperjs.com/demos/images/nature-1.jpg" />
         </swiper-slide>
@@ -74,10 +74,10 @@ export default {
 };
 </script>
 <script setup>
-import UserSlider from "~/public/assets/images/delete.png";
-import TagSlider from "~/public/assets/images/pencil.png";
-import ImageIconSlider from "~/public/assets/images/change.png";
-import ImageIconPlus from "~/public/assets/images/plus.png";
+import UserSlider from "~/src/assets/images/delete.png";
+import TagSlider from "~/src/assets/images/pencil.png";
+import ImageIconSlider from "~/src/assets/images/change.png";
+import ImageIconPlus from "~/src/assets/images/plus.png";
 
 </script>
      

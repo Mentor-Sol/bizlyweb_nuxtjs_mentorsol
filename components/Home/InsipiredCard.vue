@@ -21,11 +21,11 @@
 </template>
 
 <script setup>
-import ToggleIconCard from "~/public/assets/images/View_More_Dots.svg";
-import LocationIcon from "~/public/assets/images/location.svg";
-import MessageIcon from "~/public/assets/images/message.svg";
-import PlusUserIcon from "~/public/assets/images/ambassador.svg";
-import NoProfilePic from "~/public/assets/images/NoProfilePic.png";
+import ToggleIconCard from "~/src/assets/images/View_More_Dots.svg";
+import LocationIcon from "~/src/assets/images/location.svg";
+import MessageIcon from "~/src/assets/images/message.svg";
+import PlusUserIcon from "~/src/assets/images/ambassador.svg";
+import NoProfilePic from "~/src/assets/images/NoProfilePic.png";
 import { useStore } from "../../store";
 import { storeToRefs } from "pinia";
 import { onMounted } from 'vue';

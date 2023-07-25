@@ -86,17 +86,17 @@
   </div>
 </template>
 <script setup>
-import SecondSectionImg from "~/public/assets/images/nigthbgimg.png";
-import ShareTabImage from "~/public/assets/images/share-tabs.png";
-import Messagetabs from "~/public/assets/images/message-tabs.png";
-import ManTitleImage from "~/public/assets/images/manImage.png";
-import BlackImgVideo from "~/public/assets/images/Showcase.png";
-import bookmarket from "~/public/assets/images/bookmark-tabs.png";
-import MenuTab from "~/public/assets/images/Menu_tabs.png";
-import UserSlider from "~/public/assets/images/user-slider.png";
-import TagSlider from "~/public/assets/images/Tag-slider.png";
-import VideoAlbum from "~/public/assets/images/Showcasewhite.png";
-import CollectionOne from "~/public/assets/images/collectionone.png";
-import CollectionTwo from "~/public/assets/images/Collectiontwo.png";
-import CollectionThree from "~/public/assets/images/CollectionThree.png";
+import SecondSectionImg from "~/src/assets/images/nigthbgimg.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import ManTitleImage from "~/src/assets/images/manImage.png";
+import BlackImgVideo from "~/src/assets/images/Showcase.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/Showcasewhite.png";
+import CollectionOne from "~/src/assets/images/collectionone.png";
+import CollectionTwo from "~/src/assets/images/Collectiontwo.png";
+import CollectionThree from "~/src/assets/images/CollectionThree.png";
 </script>
