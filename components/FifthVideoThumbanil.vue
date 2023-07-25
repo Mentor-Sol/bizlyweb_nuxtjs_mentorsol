@@ -48,9 +48,9 @@
 </template>
 
 <script setup>
-import UserSlider from "~/public/assets/images/user-slider.png";
-import TagSlider from "~/public/assets/images/Tag-slider.png";
-import VideoAlbum from "~/public/assets/images/PlaylistwhiteIcon.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import VideoAlbum from "~/src/assets/images/PlaylistwhiteIcon.png";
 
 const videos = [
   {

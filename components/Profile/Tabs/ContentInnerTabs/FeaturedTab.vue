@@ -128,11 +128,11 @@
     </div>
 </template>
 <script setup>
-import UserSlider from "~/public/assets/images/user-slider.png"
-import TagSlider from "~/public/assets/images/Tag-slider.png"
-import LinkWhite from "~/public/assets/images/Link-white.png";
-import ImageIconSlider from "~/public/assets/images/Image-icon-slider.png"
-import TextWhite from "~/public/assets/images/textwhite.png";
+import UserSlider from "~/src/assets/images/user-slider.png"
+import TagSlider from "~/src/assets/images/Tag-slider.png"
+import LinkWhite from "~/src/assets/images/Link-white.png";
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png"
+import TextWhite from "~/src/assets/images/textwhite.png";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";

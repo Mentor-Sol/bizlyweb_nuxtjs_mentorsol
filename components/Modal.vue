@@ -618,14 +618,14 @@ label {
 }
 </style>
 <script setup>
-import BackArrow from "~/public/assets/images/back-arrow.png";
-import StatisticsIcon from "~/public/assets/images/info-icon.png"
-import BlueClockIcon from "~/public/assets/images/degree-icon.png"
-import UserBlue from "~/public/assets/images/user-blue.png"
-import MaskIcon from "~/public/assets/images/Mask-icon.png"
-import BlueBag from "~/public/assets/images/blue-bag.png"
-import PrivacyIcon from "~/public/assets/images/Privacy-icon.png"
-import MembershipIcon from "~/public/assets/images/membership-icon.png"
+import BackArrow from "~/src/assets/images/back-arrow.png";
+import StatisticsIcon from "~/src/assets/images/info-icon.png"
+import BlueClockIcon from "~/src/assets/images/degree-icon.png"
+import UserBlue from "~/src/assets/images/user-blue.png"
+import MaskIcon from "~/src/assets/images/Mask-icon.png"
+import BlueBag from "~/src/assets/images/blue-bag.png"
+import PrivacyIcon from "~/src/assets/images/Privacy-icon.png"
+import MembershipIcon from "~/src/assets/images/membership-icon.png"
 import AboutModalSlider from "./AboutModalSlider.vue";
 
 

@@ -54,12 +54,12 @@
       </div>
       <div class="inner-description-wrapper">
         <a :href="data.image_kit_id" target="_blank">{{
-                  data?.image_kit_id
-                  }}</a>
+          data?.image_kit_id
+        }}</a>
         <p>{{ data?.title }}</p>
         <span>{{
-                  data?.description.toString().slice(0, 10) + "...."
-                  }}</span>
+          data?.description.toString().slice(0, 10) + "...."
+        }}</span>
         <span class="accessibility_bar mt-2">
           <div class="d-flex justify-content-between px-4">
             <span class="d-flex align-items-center gap-3">
@@ -94,14 +94,14 @@
 </template>
 
 <script setup>
-import ShareTabImage from "~/public/assets/images/share-tabs.png";
-import Messagetabs from "~/public/assets/images/message-tabs.png";
-import BlackImgVideo from "~/public/assets/images/Link.png";
-import bookmarket from "~/public/assets/images/bookmark-tabs.png";
-import MenuTab from "~/public/assets/images/Menu_tabs.png";
-import UserSlider from "~/public/assets/images/user-slider.png";
-import TagSlider from "~/public/assets/images/Tag-slider.png";
-import LinkWhite from "~/public/assets/images/Link-white.png";
+import ShareTabImage from "~/src/assets/images/share-tabs.png";
+import Messagetabs from "~/src/assets/images/message-tabs.png";
+import BlackImgVideo from "~/src/assets/images/Link.png";
+import bookmarket from "~/src/assets/images/bookmark-tabs.png";
+import MenuTab from "~/src/assets/images/Menu_tabs.png";
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import LinkWhite from "~/src/assets/images/Link-white.png";
 import { FeedResponse } from '../../models/FeedResponse/feedResponse';
 
 defineProps({

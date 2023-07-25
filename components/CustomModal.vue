@@ -24,8 +24,8 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { Modal } from "bootstrap";
-import ModalIcon from "~/public/assets/images/modalicon.svg";
-import CloseIcon from "~/public/assets/images/closeIcon.svg";
+import ModalIcon from "~/src/assets/images/modalicon.svg";
+import CloseIcon from "~/src/assets/images/closeIcon.svg";
 
 let modalEle = ref(null);
 let thisModalObj = null;

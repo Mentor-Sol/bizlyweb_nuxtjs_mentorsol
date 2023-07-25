@@ -59,9 +59,9 @@
     </div>
 </template>
 <script setup>
-import StatisticsIcon from "~/public/assets/images/blue-bag.png"
-import BlueClockIcon from "~/public/assets/images/Mask-icon.png"
-import UserBlue from "~/public/assets/images/user-blue.png"
+import StatisticsIcon from "~/src/assets/images/blue-bag.png"
+import BlueClockIcon from "~/src/assets/images/Mask-icon.png"
+import UserBlue from "~/src/assets/images/user-blue.png"
 
 
 
