@@ -1,5 +1,8 @@
 <template >
-  <div v-if="route.path != '/login'">
+  <template v-if="!isAuthenticated">
+    <!-- CODE HERE -->
+  </template>
+  <template v-if="isAuthenticated">
     <div className="mainFooter">
       <div className="container">
         <div className="row align-items-center">
@@ -26,9 +29,12 @@
     <div className="text-center" v-if="route.path === '/home'">
       Footer will be placed here for new page
     </div>
-  </div>
+  </template>
 </template>
 <script setup>
+import { useStore } from "../store"
+import { storeToRefs } from "pinia"
+const { isAuthenticated } = storeToRefs(useStore())
 import { ref } from "vue";
 import CustomModal from "./CustomModal.vue";
 import { useRoute } from "nuxt/app";

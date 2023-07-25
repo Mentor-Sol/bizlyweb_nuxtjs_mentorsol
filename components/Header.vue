@@ -1,6 +1,9 @@
 <template>
-  <div class="Home-header" v-if="['/', '/home/'].includes(route.path)">
-    <div class="container-fluid">
+  <template v-if="!isAuthenticated">
+    <!-- CODE HERE -->
+  </template>
+  <template v-if="['/', '/home/'].includes(route.path) && isAuthenticated">
+    <div class="Home-header">
       <div class="row">
         <div class="col-lg-12 d-flex justify-content-between">
           <div class="logo">
@@ -19,74 +22,20 @@
               <img src="../src/assets/images/message1.svg" alt="" />
               <span>9+</span>
             </div>
-
-            <NotificationComponent v-if="showNotificationComponent" />
+            <!-- <NotificationComponent v-if="showNotificationComponent" /> -->
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- <div class="Home-header" v-if="route.path === '/Landingpage'">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 d-flex justify-content-between">
-          <div class="d-flex align-items-center gap-1">
-            <div class="logo">
-              <img src="../src/assets/images/landing-header-icon.png" alt="" />
-            </div>
-            <div class="custom-select">
-              <select>
-                <option value="option1">Alex King</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-              </select>
-              <img :src="DropdownIcon" alt="Self " class="dropdown-icon" />
-            </div>
-          </div>
-          <div class="header-icons d-flex gap-3 align-items-center">
-            <div class="notification-icon">
-              <img src="../src/assets/images/notification.png" alt="" />
-              <span>5</span>
-            </div>
-            <div class="notification-icon">
-              <img src="../src/assets/images/message.png" alt="" />
-              <span>9+</span>
-            </div>
-            <div class="notification-icon">
-              <img src="../src/assets/images/setting-icon.png" alt="" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
+  </template>
 </template>
 <script setup>
-// import { useStore } from "@/store/";
-// import { storeToRefs } from "pinia";
-import NotificationComponent from "../components/NotificationDetail.vue";
-// const { data } = storeToRefs(useStore());
-// const myValue = ref("");
+import { useStore } from "../store";
+import { storeToRefs } from "pinia";
+const { isAuthenticated } = storeToRefs(useStore());
 const route = useRoute();
-</script>
-<script>
-// import DropdownIcon from "~/src/assets/images/down-arrow.png";
-
-export default {
-  components: {
-    NotificationComponent,
-  },
-  data() {
-    return {
-      showNotificationComponent: false,
-    };
-  },
-  methods: {
-    toggleNotificationComponent() {
-      this.showNotificationComponent = !this.showNotificationComponent;
-    },
-  },
-};
+// import NotificationComponent from "../components/NotificationDetail.vue";
+import { useRoute } from 'nuxt/app';
 </script>
 <style lang="scss" scoped>
 .custom-select {

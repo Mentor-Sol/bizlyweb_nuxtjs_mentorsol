@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <template v-if="!isAuthenticated">
     <LandingPageNew />
   </template>
@@ -6,10 +7,9 @@
     <div v-if="loading" class="loading-div">
       <div class="loading-bar"></div>
     </div>
-    <Header />
     <slot />
-    <Footer />
   </template>
+  <Footer />
 </template>
 <script setup >
 import Header from '../components/Header.vue';
