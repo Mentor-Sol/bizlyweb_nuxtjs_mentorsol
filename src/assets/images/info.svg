@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" height="40" width="40" data-type="color" role="presentation" aria-hidden="true" aria-labelledby="comp-la2ijy3x6-svgtitle_comp-la2ijy3x6"><title id="comp-la2ijy3x6-svgtitle_comp-la2ijy3x6"></title>
+    <g>
+        <path fill="#EFF1F5" d="M40 20c0 11.046-8.954 20-20 20S0 31.046 0 20 8.954 0 20 0s20 8.954 20 20z" data-color="1"></path>
+        <g clip-path="url(#64f9b70a-d601-42ed-a08b-611631f681ff_comp-la2ijy3x6)">
+            <path fill="#39537D" d="M20 10a10 10 0 1 0 10 10 10.011 10.011 0 0 0-10-10Zm0 18.333A8.333 8.333 0 1 1 28.333 20 8.342 8.342 0 0 1 20 28.333Z" data-color="2"></path>
+            <path fill="#39537D" d="M20 18.333h-.834a.833.833 0 1 0 0 1.667H20v5a.833.833 0 0 0 1.666 0v-5A1.667 1.667 0 0 0 20 18.333Z" data-color="2"></path>
+            <path fill="#39537D" d="M20 16.667a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" data-color="2"></path>
+        </g>
+        <defs fill="none">
+            <clipPath id="64f9b70a-d601-42ed-a08b-611631f681ff_comp-la2ijy3x6">
+                <path transform="translate(10 10)" fill="#ffffff" d="M20 0v20H0V0h20z"></path>
+            </clipPath>
+        </defs>
+    </g>
+</svg>

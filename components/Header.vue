@@ -1,6 +1,18 @@
 <template>
   <template v-if="!isAuthenticated">
-    <!-- CODE HERE -->
+    <div class="landing-header">
+      <div class="Logo">
+        <img :src="Logo" alt="bizly" width="80" height="36" />
+      </div>
+      <div class="nav">
+        <ul>
+          <li>bizlyCard</li>
+          <li>Who is it For</li>
+          <li>Our Mission</li>
+        </ul>
+        <div class="button">join the waitlist</div>
+      </div>
+    </div>
   </template>
   <template v-if="['/', '/home/'].includes(route.path) && isAuthenticated">
     <div class="Home-header">
@@ -32,10 +44,11 @@
 <script setup>
 import { useStore } from "../store";
 import { storeToRefs } from "pinia";
+import Logo from "../src/assets/images/Logo.svg";
 const { isAuthenticated } = storeToRefs(useStore());
 const route = useRoute();
 // import NotificationComponent from "../components/NotificationDetail.vue";
-import { useRoute } from 'nuxt/app';
+import { useRoute } from "nuxt/app";
 </script>
 <style lang="scss" scoped>
 .custom-select {
@@ -45,7 +58,7 @@ import { useRoute } from 'nuxt/app';
 
 .custom-select select {
   width: 120px;
-  padding: 0px 0 0 6px;
+  padding: 0px 0px 0px 6px;
   border: none;
   appearance: none;
   -webkit-appearance: none;
@@ -80,5 +93,91 @@ import { useRoute } from 'nuxt/app';
   border-left: 2px solid #999;
   border-bottom: 2px solid #999;
   transform: rotate(-45deg);
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+}
+
+// .landing-header {
+//   position: fixed;
+//   top: 0%;
+//   width: 100%;
+// }
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.nav ul {
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10rem;
+  margin: 0px;
+  cursor: pointer;
+}
+.nav ul li {
+  list-style: none;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+.nav ul li:hover {
+  color: #2998ff;
+}
+
+.nav .button {
+  color: white;
+  background: repeat padding-box border-box 0% 0% / auto auto scroll
+    linear-gradient(
+      77deg,
+      rgba(41, 152, 255, 0.31) 4%,
+      rgba(41, 152, 255, 0.13) 50%,
+      rgba(41, 152, 255, 0.27) 84%
+    );
+  height: 45px;
+  min-width: 200px;
+  border-radius: 5px;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  display: flex;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2998ff;
+  transition: all 0.3s ease-in-out 0s, visibility 0s;
+  padding: 0px 3rem;
+  box-shadow: -2.83px 2.83px 46px 3px rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+.button:hover {
+  background: repeat padding-box border-box 0% 0% / auto auto scroll
+    linear-gradient(
+      134deg,
+      rgba(41, 152, 255, 0.51) 0%,
+      rgba(41, 152, 255, 0.6) 46%,
+      rgba(41, 152, 255, 0.6) 100%
+    );
+  box-shadow: -2.83px 2.83px 46px 3px rgba(0, 0, 0, 0.65);
+}
+@media screen and (max-width: 768px) {
+  .landing-header {
+    display: none;
+  }
 }
 </style>

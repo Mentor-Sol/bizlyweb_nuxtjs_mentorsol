@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     },
   ],
 
-  css: ["@/src/assets/scss/global.scss"],
+  css: ["@/src/assets/scss/global.scss", "aos/dist/aos.css"],
   modules: ["@pinia/nuxt", "nuxt-swiper"],
   plugins: [{ src: "~/plugins/vue-plyr", mode: "client" }],
   logLevel: "silent",
