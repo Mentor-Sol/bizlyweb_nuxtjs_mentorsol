@@ -43,6 +43,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  @media screen and (max-width: 950px) {
+    display: none;
+  }
   img {
     border-radius: 16px;
     box-shadow: 9.9px 9.9px 42px 19px rgba(0, 0, 0, 0.46);

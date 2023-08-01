@@ -261,11 +261,14 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
     );
   .heading {
     max-width: 1200px;
-
     font-size: 60px;
     color: #ffffff;
     font-weight: 400;
     font-style: normal;
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+      text-align: center;
+    }
     span {
       font-weight: 600;
       font-style: italic;
@@ -273,13 +276,16 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   }
   .para {
     max-width: 1200px;
-
     font-size: 18px;
     font-weight: 400;
     width: 65%;
     margin: auto;
     text-align: center;
     color: #8f9fb8;
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      width: 100%;
+    }
     span {
       font-style: italic;
       font-weight: bold;
@@ -287,11 +293,14 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   }
   .card-wrapper {
     max-width: 1200px;
-
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     gap: 2rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+    }
     .card-body {
       width: 40%;
       border-radius: 35px;
@@ -302,6 +311,9 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
       text-align: center;
       box-shadow: 9.9px 9.9px 42px 19px rgba(0, 0, 0, 0.46);
       background: transparent;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
 
       &:hover {
         transform: scale(1.01);

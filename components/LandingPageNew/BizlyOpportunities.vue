@@ -50,13 +50,24 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
 <style lang="scss" scoped>
 .networkMain {
   display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
   .bizlyNetworkImage {
     width: 50%;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      flex-direction: column;
+    }
     img {
       width: 550px;
       height: 769px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
   .bizlyNetworkSection {
@@ -67,6 +78,11 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
     width: 50%;
     padding: 4rem;
     gap: 2rem;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 2rem;
+      gap: 1rem;
+    }
 
     .opportunities-heading {
       color: #aebacc;
@@ -74,17 +90,29 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       font-size: 21px;
       text-decoration: none;
       text-align: left;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 18px;
+      }
     }
     .opportunities-main-heading {
       font-size: 56px;
       font-weight: 400;
       color: #ffffff;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 35px;
+      }
     }
     .opportunities-para {
       color: #8f9fb8;
       font-size: 21px;
       text-decoration: none;
       text-align: left;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        font-size: 18px;
+      }
     }
     .Find-card {
       background: rgba(0, 0, 0, 0.2);
@@ -95,33 +123,57 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
         color: #ffffff;
         font-size: 21px;
         font-weight: 400;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 18px;
+        }
       }
       .Find-para {
         color: #cdd5e1;
         font-size: 16px;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgb(89, 89, 89);
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 14px;
+        }
       }
 
       .Recruit {
         color: #ffffff;
         font-size: 21px;
         font-weight: 400;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 18spx;
+        }
       }
       .Recruit-para {
         color: #cdd5e1;
         font-size: 16px;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgb(89, 89, 89);
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 14px;
+        }
       }
       .notified {
         color: #ffffff;
         font-size: 21px;
         font-weight: 400;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 18px;
+        }
       }
       .notified-para {
         color: #cdd5e1;
         font-size: 16px;
+        @media screen and (max-width: 768px) {
+          text-align: center;
+          font-size: 14px;
+        }
       }
     }
   }

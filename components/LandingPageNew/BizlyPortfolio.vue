@@ -101,6 +101,10 @@ const handleActive = () => {
   font-weight: 400;
   color: #ffffff;
   text-align: center;
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+    padding: 1rem;
+  }
 }
 .porfolio-main-para {
   font-weight: 400;
@@ -109,11 +113,19 @@ const handleActive = () => {
   text-align: center;
   width: 80%;
   margin: auto;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 }
 .portfolioCardWrapper {
   display: flex;
   gap: 2rem;
   padding: 2rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+  }
   .portfolioCardCreative {
     display: flex;
     flex-direction: column;
@@ -129,6 +141,12 @@ const handleActive = () => {
     transition: all 0.3s ease-in;
     gap: 12rem;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+      height: auto !important;
+      gap: 1rem;
+      padding: 1rem;
+    }
     .portfolio-wrapper {
       display: flex;
       justify-content: space-between;
@@ -139,6 +157,10 @@ const handleActive = () => {
       transition: all 0.7s;
       transform: translateY(85%);
       padding: 0rem 2rem;
+      @media screen and (max-width: 768px) {
+        gap: 2rem !important;
+        padding: 0rem 1rem !important;
+      }
       span {
         display: flex;
         justify-content: space-between;
@@ -150,6 +172,10 @@ const handleActive = () => {
         font-size: 28px;
         font-style: normal;
         text-align: left;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          text-align: center;
+        }
       }
       .plus {
         font-size: 24px;
@@ -157,6 +183,10 @@ const handleActive = () => {
         border-radius: 50%;
         color: #ffffff;
         transition: all 0.4s;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          padding: 0rem 0.5rem !important;
+        }
         span {
           transition: all 0.4s;
         }
@@ -166,6 +196,9 @@ const handleActive = () => {
       color: #cdd5e1;
       line-height: 29px;
       font-size: 18px;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     &:hover {
@@ -201,6 +234,12 @@ const handleActive = () => {
     transition: all 0.3s ease-in;
     gap: 12rem;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+      height: auto !important;
+      gap: 1rem;
+      padding: 1rem;
+    }
     .portfolio-wrapper {
       display: flex;
       justify-content: space-between;
@@ -211,6 +250,10 @@ const handleActive = () => {
       transition: all 0.7s;
       transform: translateY(85%);
       padding: 0rem 2rem;
+      @media screen and (max-width: 768px) {
+        gap: 2rem !important;
+        padding: 0rem 1rem !important;
+      }
       span {
         display: flex;
         justify-content: space-between;
@@ -222,6 +265,10 @@ const handleActive = () => {
         font-size: 28px;
         font-style: normal;
         text-align: left;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          text-align: center;
+        }
       }
       .plus {
         font-size: 24px;
@@ -229,6 +276,10 @@ const handleActive = () => {
         border-radius: 50%;
         color: #ffffff;
         transition: all 0.4s;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          padding: 0rem 0.5rem !important;
+        }
         span {
           transition: all 0.4s;
         }
@@ -238,6 +289,9 @@ const handleActive = () => {
       color: #cdd5e1;
       line-height: 29px;
       font-size: 18px;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     &:hover {
@@ -273,6 +327,12 @@ const handleActive = () => {
     transition: all 0.3s ease-in;
     gap: 12rem;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 100% !important;
+      height: auto !important;
+      gap: 1rem;
+      padding: 1rem;
+    }
     .portfolio-wrapper {
       display: flex;
       justify-content: space-between;
@@ -283,6 +343,10 @@ const handleActive = () => {
       transition: all 0.7s;
       transform: translateY(85%);
       padding: 0rem 4rem;
+      @media screen and (max-width: 768px) {
+        gap: 2rem !important;
+        padding: 0rem 1rem !important;
+      }
       span {
         display: flex;
         justify-content: space-between;
@@ -294,6 +358,10 @@ const handleActive = () => {
         font-size: 28px;
         font-style: normal;
         text-align: left;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          text-align: center;
+        }
       }
       .plus {
         font-size: 24px;
@@ -301,6 +369,10 @@ const handleActive = () => {
         border-radius: 50%;
         color: #ffffff;
         transition: all 0.4s;
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+          padding: 0rem 0.5rem !important;
+        }
         span {
           transition: all 0.4s;
         }
@@ -310,6 +382,9 @@ const handleActive = () => {
       color: #cdd5e1;
       line-height: 29px;
       font-size: 18px;
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+      }
     }
 
     &:hover {

@@ -60,6 +60,9 @@ let pills = [
 <style lang="scss" scoped>
 .pill-section {
   padding: 150px 0px;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   .pill {
     display: flex;
     flex-wrap: wrap;

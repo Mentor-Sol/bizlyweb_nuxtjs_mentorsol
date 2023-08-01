@@ -54,13 +54,19 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
 <style lang="scss" scoped>
 .RoloDexMain {
   display: flex;
+
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .bizlyRoloDexImage {
     width: 50%;
     display: flex;
     justify-content: center;
+    img {
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
     @media screen and (max-width: 768px) {
       width: 100%;
     }
@@ -130,6 +136,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         @media screen and (max-width: 768px) {
           font-size: 14px;
           padding-bottom: 1rem;
+          text-align: center;
         }
       }
 
@@ -139,6 +146,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         font-weight: 400;
         @media screen and (max-width: 768px) {
           font-size: 18px;
+          text-align: center;
         }
       }
       .rolo-categorize-para {
@@ -149,6 +157,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         @media screen and (max-width: 768px) {
           font-size: 14px;
           padding-bottom: 1rem;
+          text-align: center;
         }
       }
       .rolo-collaborate {
@@ -157,6 +166,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         font-weight: 400;
         @media screen and (max-width: 768px) {
           font-size: 18px;
+          text-align: center;
         }
       }
       .rolo-collaborate-para {
@@ -164,6 +174,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         font-size: 16px;
         @media screen and (max-width: 768px) {
           font-size: 14px;
+          text-align: center;
         }
       }
     }

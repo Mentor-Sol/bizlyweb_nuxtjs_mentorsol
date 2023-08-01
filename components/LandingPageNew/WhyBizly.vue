@@ -77,6 +77,9 @@ import Resume from "~/src/assets/images/resume.svg";
     font-size: 80px;
     color: #141414;
     font-weight: 300;
+    @media screen and (max-width: 768px) {
+      font-size: 35px;
+    }
     span {
       font-weight: 600;
     }
@@ -85,12 +88,19 @@ import Resume from "~/src/assets/images/resume.svg";
     font-size: 28px;
     color: #141414;
     font-weight: normal;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   .card-wrapper {
     margin-top: 6rem;
     display: flex;
     gap: 2rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 2rem;
+    }
 
     .card {
       border-radius: 32px;
@@ -99,6 +109,9 @@ import Resume from "~/src/assets/images/resume.svg";
       box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease-in-out 0s;
       cursor: pointer;
+      @media screen and (max-width: 768px) {
+        width: 100% !important;
+      }
       &:hover {
         transform: scale(1.05);
       }
