@@ -54,6 +54,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
 <style lang="scss" scoped>
 .RoloDexMain {
   display: flex;
+  padding: 5rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
@@ -108,6 +109,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
       color: #8f9fb8;
       font-size: 21px;
       text-decoration: none;
+      line-height: normal;
       text-align: left;
       @media screen and (max-width: 768px) {
         text-align: center;
@@ -122,7 +124,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
       .save-heading {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           font-size: 18px;
           text-align: center;
@@ -132,6 +134,8 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         color: #cdd5e1;
         font-size: 16px;
         padding-bottom: 2rem;
+        line-height: normal;
+
         border-bottom: 1px solid rgb(89, 89, 89);
         @media screen and (max-width: 768px) {
           font-size: 14px;
@@ -143,7 +147,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
       .rolo-categorize {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           font-size: 18px;
           text-align: center;
@@ -153,6 +157,8 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
         color: #cdd5e1;
         font-size: 16px;
         padding-bottom: 2rem;
+        line-height: normal;
+
         border-bottom: 1px solid rgb(89, 89, 89);
         @media screen and (max-width: 768px) {
           font-size: 14px;
@@ -163,7 +169,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
       .rolo-collaborate {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           font-size: 18px;
           text-align: center;
@@ -171,6 +177,8 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
       }
       .rolo-collaborate-para {
         color: #cdd5e1;
+        line-height: normal;
+
         font-size: 16px;
         @media screen and (max-width: 768px) {
           font-size: 14px;

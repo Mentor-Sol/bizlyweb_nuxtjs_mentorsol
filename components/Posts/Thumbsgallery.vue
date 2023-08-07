@@ -1,11 +1,30 @@
 <template>
-  <swiper :navigation="true" :thumbs="{ swiper: thumbsSwiper }" :modules="modules" :spaceBetween="10" class="mySwiper2">
-    <swiper-slide v-for="(slide, index) in slides" :key="index"><img :src="slide" /></swiper-slide>
+  <swiper
+    :navigation="true"
+    :thumbs="{ swiper: thumbsSwiper }"
+    :modules="modules"
+    :spaceBetween="10"
+    class="mySwiper2"
+  >
+    <swiper-slide v-for="(slide, index) in slides" :key="index"
+      ><img :src="slide"
+    /></swiper-slide>
   </swiper>
-  <swiper @swiper="setThumbsSwiper" :spaceBetween="10" :slidesPerView="4" :freeMode="true" :watchSlidesProgress="true"
-    :modules="modules" class="mySwiper">
-    <swiper-slide v-for="(slide, index) in slides" :key="index" @click="this.$emit('count', index + 1)"><img
-        :src="slide" /></swiper-slide>
+  <swiper
+    @swiper="setThumbsSwiper"
+    :spaceBetween="10"
+    :slidesPerView="4"
+    :freeMode="true"
+    :watchSlidesProgress="true"
+    :modules="modules"
+    class="mySwiper"
+  >
+    <swiper-slide
+      v-for="(slide, index) in slides"
+      :key="index"
+      @click="this.$emit('count', index + 1)"
+      ><img :src="slide"
+    /></swiper-slide>
   </swiper>
 </template>
 
@@ -47,11 +66,6 @@ const modules = [FreeMode, Navigation, Thumbs];
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-body {
-  background: #000;
-  color: #000;
 }
 
 .swiper {

@@ -50,6 +50,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
 <style lang="scss" scoped>
 .networkMain {
   display: flex;
+  padding: 5rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -86,9 +87,11 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
 
     .opportunities-heading {
       color: #aebacc;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 21px;
+      text-transform: uppercase;
       text-decoration: none;
+      line-height: normal;
       text-align: left;
       @media screen and (max-width: 768px) {
         text-align: center;
@@ -107,6 +110,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
     .opportunities-para {
       color: #8f9fb8;
       font-size: 21px;
+      line-height: normal;
       text-decoration: none;
       text-align: left;
       @media screen and (max-width: 768px) {
@@ -122,7 +126,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .Find-heading {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           text-align: center;
           font-size: 18px;
@@ -131,6 +135,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .Find-para {
         color: #cdd5e1;
         font-size: 16px;
+        line-height: normal;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgb(89, 89, 89);
         @media screen and (max-width: 768px) {
@@ -142,7 +147,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .Recruit {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           text-align: center;
           font-size: 18spx;
@@ -151,6 +156,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .Recruit-para {
         color: #cdd5e1;
         font-size: 16px;
+        line-height: normal;
         padding-bottom: 2rem;
         border-bottom: 1px solid rgb(89, 89, 89);
         @media screen and (max-width: 768px) {
@@ -161,7 +167,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .notified {
         color: #ffffff;
         font-size: 21px;
-        font-weight: 400;
+        font-weight: 500;
         @media screen and (max-width: 768px) {
           text-align: center;
           font-size: 18px;
@@ -170,6 +176,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       .notified-para {
         color: #cdd5e1;
         font-size: 16px;
+        line-height: normal;
         @media screen and (max-width: 768px) {
           text-align: center;
           font-size: 14px;

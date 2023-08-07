@@ -100,13 +100,16 @@ import { useRoute } from "nuxt/app";
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
+  height: 100px;
+  border: none;
+  background-color: transparent !important;
 }
 
-// .landing-header {
-//   position: fixed;
-//   top: 0%;
-//   width: 100%;
-// }
+.landing-header {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
 
 .logo {
   display: flex;

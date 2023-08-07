@@ -59,18 +59,18 @@ let pills = [
 
 <style lang="scss" scoped>
 .pill-section {
-  padding: 150px 0px;
+  background: black;
+
+  padding: 70px 0px;
   @media screen and (max-width: 768px) {
     display: none;
   }
   .pill {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
     box-sizing: border-box;
     gap: 1rem;
-    padding: 1.5rem;
-
+    padding: 1rem;
     .custom-pills {
       display: flex;
       justify-content: center;

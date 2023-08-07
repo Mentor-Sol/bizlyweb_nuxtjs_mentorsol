@@ -209,8 +209,8 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 4rem 2rem;
-  gap: 2rem;
+  padding: 8rem 2rem;
+  gap: 1rem;
   background: radial-gradient(
       circle at 23.75% 3.3333333333333335%,
       #141414 0%,
@@ -259,11 +259,14 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
       100%,
       rgba(255, 255, 255, 0) 100%
     );
+
   .heading {
     max-width: 1200px;
     font-size: 60px;
     color: #ffffff;
     font-weight: 400;
+
+    line-height: normal;
     font-style: normal;
     @media screen and (max-width: 768px) {
       font-size: 35px;
@@ -277,10 +280,13 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   .para {
     max-width: 1200px;
     font-size: 18px;
+    line-height: normal;
     font-weight: 400;
-    width: 65%;
+    width: 70%;
+    letter-spacing: normal;
     margin: auto;
     text-align: center;
+    padding-bottom: 75px;
     color: #8f9fb8;
     @media screen and (max-width: 768px) {
       font-size: 14px;
@@ -304,31 +310,35 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
     .card-body {
       width: 40%;
       border-radius: 35px;
-      padding: 1rem;
-      gap: 1.5rem;
+      padding: 30px;
       border: 0px;
       box-sizing: border-box;
       text-align: center;
-      box-shadow: 9.9px 9.9px 42px 19px rgba(0, 0, 0, 0.46);
+      box-shadow: 4.59px 5.28px 35px 0px rgba(0, 0, 0, 0.89);
       background: transparent;
+      transition: all 0.2s ease-in;
       @media screen and (max-width: 768px) {
         width: 100%;
       }
 
       &:hover {
-        transform: scale(1.01);
+        transform: scale(1.05);
       }
       .card-heading {
         font-size: 21px;
         color: #f7f8fb;
         font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
         font-weight: 500;
-        margin-bottom: 1rem;
+        margin-bottom: 10px;
       }
       .card-para {
         font-size: 16px;
         color: #cdd5e1;
         font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
         font-weight: 400;
         span {
           font-weight: bold;
@@ -340,6 +350,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   .party-heading {
     font-size: 50px;
     font-weight: 400;
+    margin-top: 75px;
     font-style: normal;
     color: #ffffff;
   }

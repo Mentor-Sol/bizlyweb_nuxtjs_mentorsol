@@ -42,6 +42,7 @@ import ProfileMob from "~/src/assets/images/profile-mob.svg";
 <style lang="scss" scoped>
 .networkMain {
   display: flex;
+  padding: 5rem !important;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }

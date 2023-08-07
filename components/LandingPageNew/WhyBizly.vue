@@ -68,7 +68,7 @@ import Resume from "~/src/assets/images/resume.svg";
 <style lang="scss" scoped>
 .whyBizlySection {
   background: linear-gradient(360deg, #cdd5e1 0%, #f7f8fb 60.9375%);
-  padding: 10rem 2rem;
+  padding: 8rem 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,12 +76,13 @@ import Resume from "~/src/assets/images/resume.svg";
   .heading {
     font-size: 80px;
     color: #141414;
-    font-weight: 300;
+    font-weight: 400;
     @media screen and (max-width: 768px) {
       font-size: 35px;
     }
     span {
       font-weight: 600;
+      font-style: italic;
     }
   }
   .para {
@@ -106,7 +107,7 @@ import Resume from "~/src/assets/images/resume.svg";
       border-radius: 32px;
       background: #ffffff5c;
       border: 1px solid #ffffff5c;
-      box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px 9px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease-in-out 0s;
       cursor: pointer;
       @media screen and (max-width: 768px) {
@@ -121,7 +122,7 @@ import Resume from "~/src/assets/images/resume.svg";
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 3rem 1.5rem;
+        padding: 25px;
         img {
           margin-bottom: 1.5rem;
         }
@@ -132,7 +133,9 @@ import Resume from "~/src/assets/images/resume.svg";
           margin-bottom: 0.4rem;
         }
         .card-text {
-          font-size: 14px;
+          font-size: 16px;
+          font-style: normal;
+          line-height: normal;
           color: #7185a4;
           font-weight: 400;
           span {

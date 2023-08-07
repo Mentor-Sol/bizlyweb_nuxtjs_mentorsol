@@ -23,10 +23,19 @@
       <div class="Tabs-title-name">
         <h5>
           {{ data?.owner.first_name + " " + data?.owner.last_name }}
-          <span>{{ data?.owner.pronouns?.[0] ? "(" + data?.owner.pronouns?.[0] + ")" : "" }}
+          <span
+            >{{
+              data?.owner.pronouns?.[0]
+                ? "(" + data?.owner.pronouns?.[0] + ")"
+                : ""
+            }}
           </span>
         </h5>
-        <div class="d-flex align-items-center gap-3 Tabs-feilds" v-for="(role, index) in data?.owner.roles" :key="index">
+        <div
+          class="d-flex align-items-center gap-3 Tabs-feilds"
+          v-for="(role, index) in data?.owner.roles"
+          :key="index"
+        >
           <span>{{ role }}</span>
         </div>
         <!-- <p>Camera Operator <span>at</span> Paramount Pictures</p> -->
@@ -39,7 +48,7 @@
     </div>
     <div class="main-thums-Slider">
       <Thumbsgallery :slides="data?.image_kit_ids" @count="getCount" />
-      <span class=" accessibility_bar mt-2" style="z-index: 1;">
+      <span class="accessibility_bar mt-2" style="z-index: 1">
         <div class="d-flex justify-content-between px-4">
           <span class="d-flex align-items-center gap-3">
             <div class="img-box rounded-circle">
@@ -49,7 +58,7 @@
               <img :src="TagSlider" alt="" />
             </div>
           </span>
-          <span style="justify-self: flex-end;">
+          <span style="justify-self: flex-end">
             <div class="img-box rounded-circle">
               <img :src="ImageIconSlider" alt="" />
             </div>
@@ -77,17 +86,17 @@ import Messagetabs from "~/src/assets/images/message-tabs.png";
 import ImageAlbum from "~/src/assets/images/image album.png";
 import bookmarket from "~/src/assets/images/bookmark-tabs.png";
 import MenuTab from "~/src/assets/images/Menu_tabs.png";
-import UserSlider from "~/src/assets/images/user-slider.png"
-import TagSlider from "~/src/assets/images/Tag-slider.png"
-import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png"
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png";
 import { FeedResponse } from "../../models/FeedResponse/feedResponse";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 defineProps({
-  data: FeedResponse
-})
+  data: FeedResponse,
+});
 function getCount(val) {
   if (val) {
     return val;
@@ -128,11 +137,6 @@ function getCount(val) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-body {
-  background: #000;
-  color: #000;
 }
 
 .swiper {
@@ -190,4 +194,3 @@ body {
   color: black !important;
 }
 </style>
-  

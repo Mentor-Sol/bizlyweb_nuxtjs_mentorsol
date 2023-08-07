@@ -19,8 +19,8 @@
   <div class="portfolioCardWrapper" data-aos="fade-up" data-aos-duration="2300">
     <div
       class="portfolioCardCreative"
-      @click="handleActive"
-      :class="isActive ? 'content-active' : null"
+      @click="handleActive1()"
+      :class="isActiveCard1 ? 'content-active' : null"
     >
       <div class="portfolio-wrapper">
         <span>
@@ -42,8 +42,8 @@
     </div>
     <div
       class="portfolioCardTalent"
-      @click="handleActive"
-      :class="isActive ? 'content-active' : null"
+      @click="handleActive2()"
+      :class="isActiveCard2 ? 'content-active' : null"
     >
       <div class="portfolio-wrapper">
         <span>
@@ -65,8 +65,8 @@
     </div>
     <div
       class="portfolioCardCreative"
-      @click="handleActive"
-      :class="isActive ? 'content-active' : null"
+      @click="handleActive3()"
+      :class="isActiveCard3 ? 'content-active' : null"
     >
       <div class="portfolio-wrapper">
         <span>
@@ -89,9 +89,17 @@
 </template>
 
 <script setup>
-const isActive = useState(() => false);
-const handleActive = () => {
-  isActive.value = !isActive.value;
+const isActiveCard1 = useState(() => false);
+const isActiveCard2 = useState(() => false);
+const isActiveCard3 = useState(() => false);
+const handleActive1 = () => {
+  isActiveCard1.value = !isActiveCard1.value;
+};
+const handleActive2 = () => {
+  isActiveCard2.value = !isActiveCard2.value;
+};
+const handleActive3 = () => {
+  isActiveCard3.value = !isActiveCard3.value;
 };
 </script>
 
@@ -111,6 +119,7 @@ const handleActive = () => {
   font-size: 18px;
   color: #8f9fb8;
   text-align: center;
+  margin-bottom: 80px !important;
   width: 80%;
   margin: auto;
   @media screen and (max-width: 768px) {
@@ -222,7 +231,7 @@ const handleActive = () => {
   .portfolioCardTalent {
     display: flex;
     flex-direction: column;
-    background-image: url("../../src/assets/images/pexels-kyle-loftus.webp");
+    background-image: url("../../src/assets/images/pexels-luca-nardone.svg");
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
     width: 485px;
@@ -315,7 +324,7 @@ const handleActive = () => {
   .portfolioCardCreative {
     display: flex;
     flex-direction: column;
-    background-image: url("../../src/assets/images/pexels-kyle-loftus.webp");
+    background-image: url("../../src/assets/images/pexels-thirdman.svg");
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
     width: 485px;
@@ -342,7 +351,7 @@ const handleActive = () => {
       height: 100%;
       transition: all 0.7s;
       transform: translateY(85%);
-      padding: 0rem 4rem;
+      padding: 0rem 2rem;
       @media screen and (max-width: 768px) {
         gap: 2rem !important;
         padding: 0rem 1rem !important;

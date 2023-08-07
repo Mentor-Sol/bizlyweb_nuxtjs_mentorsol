@@ -6,7 +6,7 @@
     <BizlyRoloDex />
     <BizlyOpportunities />
     <Massonary />
-    <BizlyPortfolio />
+    <!-- <BizlyPortfolio /> -->
     <BizlyPillsSection />
     <WhyBizly />
     <CommunitySection />
@@ -133,6 +133,7 @@ AOS.init();
       100%,
       rgba(255, 255, 255, 0) 100%
     );
+  padding-top: 100px;
   overflow-x: hidden;
 }
 </style>

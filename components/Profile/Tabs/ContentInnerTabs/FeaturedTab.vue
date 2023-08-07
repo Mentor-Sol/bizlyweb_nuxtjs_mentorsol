@@ -1,33 +1,43 @@
 <template>
-    <div className="col-lg-12 col-md-12 col-sm-12 feature m-0 p-0">
-        <!-- <p>{{ data.content }}</p> -->
-        <template v-if="data.content_type == 'image'">
-            <img :src="data.image_kit_id" alt="Content_Image" class="content_image" />
-            <p class="content_desc" v-if="data.title.length > 0">
-                {{ data.title }}
-            </p>
-            <span class=" accessibility_bar mt-2">
-                <div class="d-flex justify-content-between px-4">
-                    <span class="d-flex align-items-center gap-3">
-                        <div class="img-box rounded-circle">
-                            <img :src="UserSlider" alt="" />
-                        </div>
-                        <div class="img-box rounded-circle">
-                            <img :src="TagSlider" alt="" />
-                        </div>
-                    </span>
-                    <span class="d-flex align-items-center gap-2    " style="justify-self: flex-end;">
-                        <span class="badge badge-pill rounded-4"
-                            style="background-color: #3c78ea; font-weight: light; font-size: 1rem;">
-                            Featured</span>
-                        <div class="img-box rounded-circle">
-                            <img :src="ImageIconSlider" alt="" />
-                        </div>
-                    </span>
-                </div>
-            </span>
-        </template>
-        <!-- <template v-if="data.content_type == 'link'">
+  <div className="col-lg-12 col-md-12 col-sm-12 feature m-0 p-0">
+    <!-- <p>{{ data.content }}</p> -->
+    <template v-if="data.content_type == 'image'">
+      <img :src="data.image_kit_id" alt="Content_Image" class="content_image" />
+      <p class="content_desc" v-if="data.title.length > 0">
+        {{ data.title }}
+      </p>
+      <span class="accessibility_bar mt-2">
+        <div class="d-flex justify-content-between px-4">
+          <span class="d-flex align-items-center gap-3">
+            <div class="img-box rounded-circle">
+              <img :src="UserSlider" alt="" />
+            </div>
+            <div class="img-box rounded-circle">
+              <img :src="TagSlider" alt="" />
+            </div>
+          </span>
+          <span
+            class="d-flex align-items-center gap-2"
+            style="justify-self: flex-end"
+          >
+            <span
+              class="badge badge-pill rounded-4"
+              style="
+                background-color: #3c78ea;
+                font-weight: light;
+                font-size: 1rem;
+              "
+            >
+              Featured</span
+            >
+            <div class="img-box rounded-circle">
+              <img :src="ImageIconSlider" alt="" />
+            </div>
+          </span>
+        </div>
+      </span>
+    </template>
+    <!-- <template v-if="data.content_type == 'link'">
             <img v-if="data.thumbnail_image_kit_id" :src="data.thumbnail_image_kit_id" alt="Content_Image" />
             <div v-else class="no-image-div"></div>
             <p class="content_desc">
@@ -125,178 +135,171 @@
                 </div>
             </span>
         </template> -->
-    </div>
+  </div>
 </template>
 <script setup>
-import UserSlider from "~/src/assets/images/user-slider.png"
-import TagSlider from "~/src/assets/images/Tag-slider.png"
+import UserSlider from "~/src/assets/images/user-slider.png";
+import TagSlider from "~/src/assets/images/Tag-slider.png";
 import LinkWhite from "~/src/assets/images/Link-white.png";
-import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png"
+import ImageIconSlider from "~/src/assets/images/Image-icon-slider.png";
 import TextWhite from "~/src/assets/images/textwhite.png";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Autoplay, Thumbs } from "swiper";
-import { FeedResponse } from '../../../../models/FeedResponse/feedResponse';
+import { FeedResponse } from "../../../../models/FeedResponse/feedResponse";
 defineProps({
-    data: FeedResponse
-})
+  data: FeedResponse,
+});
 
 const modules = [FreeMode, Autoplay, Thumbs];
 const OpenUrl = (url) => {
-    window.open(url, '_blank')
-
-}
+  window.open(url, "_blank");
+};
 </script>
 <style scoped lang="scss">
 .feature {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+
+  .img-box {
+    width: 24px;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accessibility_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 1;
+  }
+
+  .custom-btn {
+    background: #262626;
+    box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    padding: 10px 16px;
+    display: inline-block;
+    width: 10% !important;
+    border: none !important;
+  }
+
+  .content-div {
     height: 500px;
-    overflow: hidden;
     position: relative;
 
-    .img-box {
-        width: 24px;
-        height: 24px;
-        background: rgba(0, 0, 0, 0.45);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .content_image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: relative;
     }
 
-    .accessibility_bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1;
+    .content_desc {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      z-index: 1000;
+      font-weight: 400;
+      color: white;
+      font-size: large;
     }
 
-    .custom-btn {
-        background: #262626;
-        box-shadow: 0px 0px 23px rgba(0, 0, 0, 0.15);
-        border-radius: 25px;
-        font-size: 14px;
-        line-height: 20px;
-        color: #fff;
-        padding: 10px 16px;
-        display: inline-block;
-        width: 10% !important;
-        border: none !important;
+    .no-image-div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: #8c8c8c;
     }
 
-    .content-div {
-        height: 500px;
-        position: relative;
-
-        .content_image {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            position: relative;
-
-        }
-
-        .content_desc {
-            position: absolute;
-            bottom: 0;
-            left: 10px;
-            z-index: 1000;
-            font-weight: 400;
-            color: white;
-            font-size: large;
-        }
-
-        .no-image-div {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: #8c8c8c;
-        }
-
-        .fadedbg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(black, transparent);
-            transform: rotate(180deg);
-        }
+    .fadedbg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(black, transparent);
+      transform: rotate(180deg);
     }
+  }
 
-    .swiper {
-        width: 100%;
-        height: 100%;
-    }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
 
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
 
-        /* Center slide text vertically */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    body {
-        background: #000;
-        color: #000;
-    }
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-    .swiper {
-        width: 100%;
-        height: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
 
-    .swiper-slide {
-        background-size: cover;
-        background-position: center;
-    }
+  .main-thums-Slider .swiper-wrapper {
+    position: relative;
+    overflow: unset !important;
+  }
 
-    .main-thums-Slider .swiper-wrapper {
-        position: relative;
-        overflow: unset !important;
-    }
+  .mySwiper2 {
+    height: 100%;
+    width: 100%;
+  }
 
-    .mySwiper2 {
-        height: 100%;
-        width: 100%;
-    }
+  .mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
 
-    .mySwiper {
-        height: 20%;
-        box-sizing: border-box;
-        padding: 10px 0;
-    }
+  .mySwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
 
-    .mySwiper .swiper-slide {
-        width: 25%;
-        height: 100%;
-        opacity: 0.4;
-    }
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 
-    .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
-    }
-
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 </style>
