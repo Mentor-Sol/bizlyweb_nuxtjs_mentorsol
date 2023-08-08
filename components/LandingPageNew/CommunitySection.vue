@@ -199,8 +199,8 @@
       </form>
     </div>
     <div class="social">
-      <img :src="TikTok" alt="TikTok" width="35" height="35" />
-      <img :src="Twitter" alt="Twitter" width="35" height="35" />
+      <img :src="TikTok" alt="TikTok" width="38" height="38" />
+      <img :src="Twitter" alt="Twitter" width="38" height="38" />
     </div>
     <div class="footerLink">
       <div>Terms & Conditions</div>
@@ -224,7 +224,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 8rem 2rem;
+  padding: 8rem 2rem 0rem 2rem;
   gap: 1rem;
   background: radial-gradient(
       circle at 23.75% 3.3333333333333335%,
@@ -528,8 +528,9 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
         font-weight: normal;
         font-style: normal;
         font-size: 16px;
+        font-weight: 500;
         display: flex;
-        letter-spacing: 0.1em;
+        letter-spacing: 0em;
         text-transform: uppercase;
         align-items: center;
         justify-content: center;
@@ -553,7 +554,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   .social {
     display: flex;
     gap: 0.5rem;
-    padding: 4rem 0rem;
+    padding: 3rem 0rem;
   }
 
   .footerLink {
@@ -561,9 +562,9 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.2rem;
     color: #bfbfbf;
-    font-size: 13px;
+    font-size: 14px;
     .divider {
       font-size: 2rem;
       font-weight: 100;
