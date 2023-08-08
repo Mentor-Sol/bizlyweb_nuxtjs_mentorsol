@@ -30,14 +30,14 @@ AOS.init();
 <style lang="scss" scoped>
 .heading-section {
   @media screen and (max-width: 768px) {
-    padding-top: 5rem;
+    padding-top: 1rem;
   }
   .heading {
     color: #ffffff;
     font-size: 80px;
     text-align: center;
     font-weight: 300;
-    line-height: 90px;
+    line-height: 95px;
     @media screen and (max-width: 768px) {
       font-size: 45px;
       line-height: 50px;

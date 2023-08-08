@@ -53,6 +53,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
   padding: 5rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 4rem 0rem;
   }
   .bizlyNetworkImage {
     width: 50%;
@@ -96,6 +97,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       @media screen and (max-width: 768px) {
         text-align: center;
         font-size: 18px;
+        padding: 1rem 0rem;
       }
     }
     .opportunities-main-heading {
@@ -116,6 +118,7 @@ import BizlyOpportunities from "~/src/assets/images/opportunitiesImg.svg";
       @media screen and (max-width: 768px) {
         text-align: center;
         font-size: 18px;
+        padding: 1rem 0rem;
       }
     }
     .Find-card {

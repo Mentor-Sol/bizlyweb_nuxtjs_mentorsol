@@ -59,8 +59,6 @@ let pills = [
 
 <style lang="scss" scoped>
 .pill-section {
-  background: black;
-
   padding: 70px 0px;
   @media screen and (max-width: 768px) {
     display: none;

@@ -1,5 +1,5 @@
 <template>
-  <div class="landing-main">
+  <div class="landing-main" ref="scrollRef" @scroll="handleScroll">
     <LandingMain />
     <AboutBizlyInfoCard />
     <BizlyNetworkSection />
@@ -10,6 +10,7 @@
     <BizlyPillsSection />
     <WhyBizly />
     <CommunitySection />
+    <MobileHeader />
   </div>
 </template>
 <script setup>
@@ -17,18 +18,36 @@ import AboutBizlyInfoCard from "./AboutBizlyInfoCard.vue";
 import BizlyNetworkSection from "./BizlyNetworkSection.vue";
 import BizlyOpportunities from "./BizlyOpportunities.vue";
 import BizlyRoloDex from "./BizlyRoloDex.vue";
-import BizlyPortfolio from "./BizlyPortfolio.vue";
 import BizlyPillsSection from "./BizlyPillsSection.vue";
 import WhyBizly from "./WhyBizly.vue";
 import CommunitySection from "./CommunitySection.vue";
+import MobileHeader from "./mobileHeader.vue";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Massonary from "./Massonary.vue";
-
+import { useScroll } from "../../composables/useScroll";
 AOS.init();
+const isScroll = useScroll();
+const scrollRef = useState(() => null);
+const prevScroll = useState(() => window.screenY);
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+const handleScroll = () => {
+  const currentScrollPos = window.scrollY;
+
+  if (currentScrollPos > prevScroll.value) {
+    isScroll.value = true;
+  } else {
+    isScroll.value = false;
+  }
+  prevScroll.value = currentScrollPos;
+};
 </script>
 <style lang="scss" scoped>
 .landing-main {
+  transition: all 0.4s ease-in;
   background: radial-gradient(
       circle at 75% 100%,
       #141414 0%,

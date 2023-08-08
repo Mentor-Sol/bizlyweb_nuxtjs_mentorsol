@@ -2,34 +2,34 @@
   <div class="main">
     <div class="main-massonary">
       <div class="row-1">
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-1.webp" alt="pic1" />
         </div>
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-2.webp" alt="pic2" />
         </div>
       </div>
       <div class="row-2">
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-3.webp" alt="pic3" />
         </div>
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-4.webp" alt="pic4" />
         </div>
       </div>
       <div class="row-3">
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-5.webp" alt="pic5" />
         </div>
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-6.webp" alt="pic6" />
         </div>
       </div>
       <div class="row-4">
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-7.webp" alt="pic7" />
         </div>
-        <div class="">
+        <div class="" data-aos="fade-up" data-aos-duration="3000">
           <img src="../../src/assets/images/pic-8.webp" alt="pic8" />
         </div>
       </div>
@@ -40,7 +40,10 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import AOS from "aos";
+import "aos/dist/aos.css";
+</script>
 
 <style lang="scss" scoped>
 .main {

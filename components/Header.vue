@@ -1,6 +1,6 @@
 <template>
   <template v-if="!isAuthenticated">
-    <div class="landing-header">
+    <div class="landing-header" v-show="!isScroll">
       <div class="Logo">
         <img :src="Logo" alt="bizly" width="80" height="36" />
       </div>
@@ -12,6 +12,14 @@
         </ul>
         <div class="button">join the waitlist</div>
       </div>
+    </div>
+    <div class="mobileHeader">
+      <div class="mobLogo">
+        <img src="../src/assets/images/Logo.svg" alt="" />
+      </div>
+      <button class="mobNav" @click="toggleHeader()">
+        <img src="../src/assets/images/dot.svg" alt="" />
+      </button>
     </div>
   </template>
   <template v-if="['/', '/home/'].includes(route.path) && isAuthenticated">
@@ -49,6 +57,16 @@ const { isAuthenticated } = storeToRefs(useStore());
 const route = useRoute();
 // import NotificationComponent from "../components/NotificationDetail.vue";
 import { useRoute } from "nuxt/app";
+import { useHeaderModal } from "../composables/useModal";
+import { useScroll } from "../composables/useScroll";
+const isHeaderOpen = useHeaderModal();
+const isScroll = useScroll();
+const toggleHeader = () => {
+  isHeaderOpen.value = !isHeaderOpen.value;
+};
+window.addEventListener("scroll", (e) => {
+  document.scrollHeight;
+});
 </script>
 <style lang="scss" scoped>
 .custom-select {
@@ -71,11 +89,9 @@ import { useRoute } from "nuxt/app";
   line-height: 28px;
   color: #f7f8fb;
 }
-
 .custom-select select:focus-visible {
   outline: none;
 }
-
 .dropdown-icon {
   position: absolute;
   top: 50%;
@@ -83,8 +99,6 @@ import { useRoute } from "nuxt/app";
   transform: translateY(-50%);
   pointer-events: none;
 }
-
-/* Example styling for the dropdown icon */
 .dropdown-icon::before {
   content: "";
   display: inline-block;
@@ -110,7 +124,6 @@ import { useRoute } from "nuxt/app";
   top: 0%;
   width: 100%;
 }
-
 .logo {
   display: flex;
   justify-content: center;
@@ -121,6 +134,9 @@ import { useRoute } from "nuxt/app";
   justify-content: center;
   align-items: center;
   gap: 8rem;
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    gap: 2rem;
+  }
 }
 .nav ul {
   color: #ffffff;
@@ -131,6 +147,9 @@ import { useRoute } from "nuxt/app";
   gap: 10rem;
   margin: 0px;
   cursor: pointer;
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    gap: 2rem;
+  }
 }
 .nav ul li {
   list-style: none;
@@ -152,7 +171,6 @@ import { useRoute } from "nuxt/app";
       rgba(41, 152, 255, 0.27) 84%
     );
   height: 45px;
-  min-width: 200px;
   border-radius: 5px;
   font-weight: normal;
   font-style: normal;
@@ -167,6 +185,12 @@ import { useRoute } from "nuxt/app";
   padding: 0px 3rem;
   box-shadow: -2.83px 2.83px 46px 3px rgba(0, 0, 0, 0);
   cursor: pointer;
+  @media screen and (min-width: 769px) and (max-width: 1200px) {
+    height: 40px;
+    min-width: 100px;
+    font-size: 12px;
+    padding: 0px 1rem;
+  }
 }
 .button:hover {
   background: repeat padding-box border-box 0% 0% / auto auto scroll
@@ -178,8 +202,39 @@ import { useRoute } from "nuxt/app";
     );
   box-shadow: -2.83px 2.83px 46px 3px rgba(0, 0, 0, 0.65);
 }
+
+.mobileHeader {
+  background: #000510;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.25rem 1rem;
+}
+.mobLogo {
+  img {
+    width: 100px;
+    height: 32px;
+  }
+}
+.mobNav {
+  background: transparent;
+  border: 0px;
+  box-shadow: none;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
 @media screen and (max-width: 768px) {
   .landing-header {
+    display: none;
+  }
+  .mobileHeader {
+    display: flex;
+  }
+}
+@media screen and (min-width: 769px) {
+  .mobileHeader {
     display: none;
   }
 }

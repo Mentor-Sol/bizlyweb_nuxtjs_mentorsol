@@ -45,6 +45,7 @@ import ProfileMob from "~/src/assets/images/profile-mob.svg";
   padding: 5rem !important;
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    padding: 2rem 1rem !important;
   }
   .bizlyNetworkImage {
     width: 50%;

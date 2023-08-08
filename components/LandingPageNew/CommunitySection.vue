@@ -57,7 +57,7 @@
           <input type="email" class="form-control" id="inputEmail4" />
         </div>
         <div class="col-md-12">
-          <p>Which industry best defines you?</p>
+          <p class="appCheckLabel">Which industry best defines you?</p>
           <div class="form-check">
             <input
               class="form-check-input"
@@ -65,6 +65,8 @@
               name="flexRadioDefault"
               id="flexRadioDefault1"
             />
+            <label class="industryChecked" for="flexRadioDefault1"></label>
+
             <label class="form-check-label" for="flexRadioDefault1">
               Creative
             </label>
@@ -76,6 +78,8 @@
               name="flexRadioDefault"
               id="flexRadioDefault2"
             />
+            <label class="industryChecked" for="flexRadioDefault2"></label>
+
             <label class="form-check-label" for="flexRadioDefault2">
               Talent / Performer
             </label>
@@ -87,37 +91,44 @@
               name="flexRadioDefault"
               id="flexRadioDefault3"
             />
+            <label class="industryChecked" for="flexRadioDefault3"></label>
+
             <label class="form-check-label" for="flexRadioDefault3">
               Business Professional
             </label>
           </div>
         </div>
         <div class="col-12">
+          <p class="appCheckLabel">What is your main use for the app?</p>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <label class="checked" for="gridCheck"></label>
             <label class="form-check-label" for="gridCheck"> Networking </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck1" />
+            <label class="checked" for="gridCheck1"></label>
             <label class="form-check-label" for="gridCheck1">
               Collaborating
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck3" />
+            <label class="checked" for="gridCheck3"></label>
             <label class="form-check-label" for="gridCheck3">
               Looking For Opportunities
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" id="gridCheck4" />
+            <label class="checked" for="gridCheck4"></label>
             <label class="form-check-label" for="gridCheck4">
               Hiring & Recruiting
             </label>
           </div>
         </div>
         <div class="col-6 firstName">
-          <label for="firstName" class="form-label"
+          <label for="firstName" class="form-label appCheckLabel"
             >List up to three roles that you partake in
           </label>
           <input
@@ -153,6 +164,8 @@
                 value=""
                 id="flexTermService"
               />
+              <label class="checked" for="flexTermService"></label>
+
               <label class="form-check-label" for="flexTermService">
                 I agree to the terms & conditions
                 <a href="#">Views terms of use</a>
@@ -161,15 +174,17 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6 mt-5">
+          <div class="col-md-6 mt-4">
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="checkbox"
                 value=""
-                id="flexTermService"
+                id="flexNewsLetter"
               />
-              <label class="form-check-label" for="flexTermService">
+              <label class="checked" for="flexNewsLetter"></label>
+
+              <label class="form-check-label" for="flexNewsLetter">
                 I want to subscribe to the newsletter.
               </label>
             </div>
@@ -303,6 +318,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
     flex-wrap: wrap;
     width: 80%;
     gap: 2rem;
+    margin-left: 0px;
     @media screen and (max-width: 768px) {
       flex-direction: column;
       width: 100%;
@@ -358,7 +374,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
   .form-wrapper {
     max-width: 1200px;
 
-    width: 80%;
+    width: 70%;
     margin: auto;
     label {
       color: #ffffff;
@@ -390,7 +406,6 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
       input {
         background: transparent;
         border: none;
-
         border-bottom: 2px solid white;
         outline: none;
         border-radius: 0px;
@@ -410,7 +425,6 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
         background: transparent;
         border: none;
         font-size: 13px;
-
         border-bottom: 2px solid white;
         outline: none;
         border-radius: 0px;
@@ -423,6 +437,61 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
         &:hover {
           outline: none;
         }
+      }
+    }
+    .appCheckLabel {
+      font-style: italic;
+      color: #ffffff;
+    }
+    .form-check {
+      display: flex;
+      gap: 10px;
+      padding: 0px;
+      align-items: center;
+      label {
+        font-size: 16px;
+      }
+    }
+    .form-check-input {
+      display: none;
+    }
+    .checked {
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      border: 1px solid white;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .form-check-input:checked + .checked {
+      background-image: url("../../src/assets/images/checked.svg");
+      background-repeat: no-repeat;
+      border: 1px solid #3578f8;
+    }
+    .industryChecked {
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      border: 1px solid white;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .form-check-input:checked + .industryChecked {
+      border: 1px solid #3578f8;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 50%;
+        width: 50%;
+        border-radius: 50%;
+        top: 25.5%;
+        left: 25.7%;
+        background-color: #3578f8;
+        z-index: 1;
       }
     }
     .selectHearAbout {
@@ -469,6 +538,7 @@ import Twitter from "~/src/assets/images/twitterWhite.svg";
 
         cursor: pointer;
       }
+
       .button:hover {
         background: repeat padding-box border-box 0% 0% / auto auto scroll
           linear-gradient(

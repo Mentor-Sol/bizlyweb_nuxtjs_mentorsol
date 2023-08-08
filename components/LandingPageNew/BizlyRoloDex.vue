@@ -58,6 +58,7 @@ import RoloDexMain from "~/src/assets/images/roloDexMain.svg";
 
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
+    padding: 2rem 1rem;
   }
   .bizlyRoloDexImage {
     width: 50%;
